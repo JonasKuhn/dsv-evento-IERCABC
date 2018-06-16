@@ -1,13 +1,23 @@
-// Styling for the footer
-footer {
-  padding: 50px 0 65px;
-  .list-inline {
-    margin: 0;
-    padding: 0;
+footer.sticky-footer {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+
+  width: 100%;
+  height: $sticky-footer-height;
+
+  background-color: $gray-200;
+
+  line-height: 55px;
+  @media (min-width: 992px) {
+    width: calc(100% - #{$sidenav-base-width});
   }
-  .copyright {
-    font-size: 14px;
-    margin-bottom: 0;
-    text-align: center;
+}
+
+body.sidenav-toggled {
+  @media (min-width: 992px) {
+    footer.sticky-footer {
+      width: calc(100% - #{$sidenav-collapsed-width});
+    }
   }
 }

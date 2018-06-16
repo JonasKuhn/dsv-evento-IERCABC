@@ -11,100 +11,117 @@ INSERT INTO `tb_cidade` (`cod_cidade`, `nome_cidade`, `cod_estado`) VALUES
 (5, 'Tunápolis', 2);
 
 
-INSERT INTO `tb_localizacao` (`cod_localizacao`, `nome_rua`, `numero`, `cod_cidade`) VALUES
-(1, 'Rua Rio Pardo', '101', 3),
-(2, 'Rua do Comércio', '221', 1),
-(3, 'Rua Sede Capela', '-', 1),
-(4, 'Rua Afonso Rodrigues', '14', 5),
-(5, 'Rua Gustavo Fetter', '1118', 2),
-(6, 'Rua 25 de Julho', '338', 1),
-(7, 'Local Evento_BD', '000', 4);
+INSERT INTO `tb_tipo_contato` (`cod_tipo_contato`, `decricao_tipo_contato`) VALUES 
+(1, 'Pontos de Venda'),
+(2, 'Organizadores'),
+(3, 'Patrocinadores');
 
 
-INSERT INTO `tb_contato` (`cod_contato`, `nome_contato`, `telefone_contato`, `email_contato`, `cod_localizacao`) VALUES
-(1, 'Agropecuária Bressler', '+55 (49) 3636-1023', null, 1),
-(2, 'Sorveteria Tropical', '+55 (49) 3677-0400', null, 2),
-(3, 'Bar e Lanchonete Capelense', null, null, 3),
-(4, 'Restaurante Pauli', '+55 (49) 3632-1128', null, 4),
-(5, 'Hora Certa Conveniencia e Cervejaria', '+55 (49) 3634-2104', null, 5),
-(6, 'Jonas Kuhn', '+55 (49) 98435-5344', 'jonaskuhn220@gmail.com', 6),
-(7, 'Beno Inácio Bressler', '+55 (49) 99987-1515', null, 7);
+INSERT INTO `tb_contato` (`cod_contato`, `nome_contato`, `telefone_contato`, `email_contato`, `img_contato`, 
+	`rua_contato`, `nr_contato`, `cod_cidade`, `cod_tipo_contato`) VALUES
+(1, 'Agropecuária Bressler', '+55 (49) 3636-1023', null, null, 'Rua Rio Pardo', '101', 3, 1),
+(2, 'Sorveteria Tropical', '+55 (49) 3677-0400', null, null, 'Rua do Comércio', '221', 1, 1),
+(3, 'Bar e Lanchonete Capelense', null, null, null, 'Rua Sede Capela', '-', 1, 1),
+(4, 'Restaurante Pauli', '+55 (49) 3632-1128', null, null, 'Rua Afonso Rodrigues', '14', 5, 1),
+(5, 'Hora Certa Conveniencia e Cervejaria', '+55 (49) 3634-2104', null, null, 'Rua Gustavo Fetter', '1118', 2, 1),
+(6, 'Beno Inácio Bressler', '+55 (49) 99987-1515', null, null, 'Local Evento_BD', '000', 4, 2);
 
 
-INSERT INTO `tb_usuario` (`cod_usuario`, `usuario_usuario`, `senha_usuario`, `cod_contato`) VALUES
-(1, 'jonas', '9c5ddd54107734f7d18335a5245c286b', 6);
+INSERT INTO `tb_admin` (`cod_admin`, `login_admin`, `senha_admin`, `nome_admin`) VALUES
+(1, 'admin', '9c5ddd54107734f7d18335a5245c286b', 'ADMIN');
 
 
 INSERT INTO `tb_cardapio` (`cod_cardapio`, `titulo_cardapio`, `obs_cardapio`) VALUES
-(1, 'Comidas', 'Trazer pratos e talheres.'),
-(2, 'Bebidas', null),
-(3, 'Acompanhamentos', null);
+(1, 'Cardápio do 22º Evento', '');
 
 
-INSERT INTO `tb_evento` (`cod_evento`, `nome_evento`, `data_evento`, `organizacao_evento`, `cod_localizacao`, `cod_cardapio`,`cod_usuario`) VALUES
-(1, 'Nome do Evento_BD', '2018-08-19', 'Instituto Esportivo Recriativo Cultural Assistencial Beneficiente e Colônial', 7, 1, 1);
+INSERT INTO `tb_tipo_item` (`cod_tipo_item`, `descricao_tipo_item`, `valor_tipo_item`, `obs_tipo_item`) VALUES 
+(1, 'Comidas', '20,00', 'Valor apenas do almoço, shows não incluídos.'),
+(2, 'Bebidas', null, null),
+(3, 'Acompanhamentos', null, null);
 
 
-INSERT INTO `tb_oraganizador` (`cod_organizadores`, `descricao_organizador`, `cod_contato`, `cod_evento`) VALUES
-(1, 'Presidente', 7, 1);
+INSERT INTO `tb_item` (`cod_item`, `nome_item`, `descricao_item`, `valor_item`, `img_item`, `cod_tipo_item`) VALUES
+(1, 'Leitão a Paraguaia', null, null, null, 1),
+(2, 'Pernil',             null, null, null, 1),
+(3, 'Lombinho',           null, null, null, 1),
+(4, 'Costela',            null, null, null, 1),
+(5, 'Saladas', 'Repolho, Alface, Tomate, Pepino, Brócolis, Cebola ...', null, null, 3),
+(6, 'Pães',               null, null, null, 3),
+(7, 'Cuca',               null, null, null, 3),
+(8, 'Maionese',           null, null, null, 3),
+(9,  'Skol',            'Garrafas - 600ml / Latas - 350/473ml', '', null, 2),
+(10, 'Brahma',          'Garrafas - 600ml / Latas - 350/473ml', '', null, 2),
+(11, 'Barris de 20L',   'Chopp Fritz',                          '', null, 2),
+(12, 'Barris de 30L',   'Chopp Fritz',                          '', null, 2),
+(13, 'Barris de 50L',   'Chopp Fritz',                          '', null, 2),
+(14, 'Barris de 70L',   'Chopp Fritz',                          '', null, 2),
+(15, 'Caneca de Chopp', 'Chopp Fritz',                          '', null, 2);
 
 
-INSERT INTO `tb_local_venda` (`cod_local_venda`, `cod_contato`, `cod_evento`) VALUES
-(1,1,1),
-(2,2,1),
-(3,3,1),
-(4,4,1),
-(5,5,1);
+INSERT INTO `tb_cardapio_tipo` (`cod_cardapio_tipo`, `cod_cardapio`, `cod_item`) VALUES 
+(1, 1, 1),
+(2, 1, 2),
+(3, 1, 3),
+(4, 1, 4),
+(5, 1, 5),
+(6, 1, 6),
+(7, 1, 7),
+(8, 1, 8),
+(9, 1, 9),
+(10, 1, 10),
+(11, 1, 11),
+(12, 1, 12),
+(13, 1, 13),
+(14, 1, 14),
+(15, 1, 15);
 
 
-INSERT INTO `tb_alimento_bebida` (`cod_alimento_bebida`, `nome`, `complemento`, `valor`, `cod_cardapio`, `cod_imagem`) VALUES
-(1, 'Leitão a Paraguaia', null, null, 1, null),
-(2, 'Pernil', null, null, 1, null),
-(3, 'Lombinho', null, null, 1, null),
-(4, 'Costela', null, null, 1, null),
-(5, 'Saladas', 'Repolho, Alface, Tomate, Pepino, Brócolis, Cebola ...', null, 3, null),
-(6, 'Pães', null, null, 3, null),
-(7, 'Cuca', null, null, 3, null),
-(8, 'Maionese', null, null, 3, null),
-(9, 'Skol', 'Garrafas - 600ml / Latas - 350/473ml', '00,00', 2, null),
-(10, 'Brahma', 'Garrafas - 600ml / Latas - 350/473ml', '00,00', 2, null),
-(11, 'Barris de 20L', 'Chopp Fritz', '00,00', 2, null),
-(12, 'Barris de 30L', 'Chopp Fritz', '00,00', 2, null),
-(13, 'Barris de 50L', 'Chopp Fritz', '00,00', 2, null),
-(14, 'Barris de 70L', 'Chopp Fritz', '00,00', 2, null),
-(15, 'Caneca de Chopp', 'Chopp Fritz', '00,00', 2, null);
+INSERT INTO `tb_evento` (`cod_evento`, `nome_evento`, `nome_organizacao_evento`, `data_evento`, `rua_evento`, `nome_comunidade`, `cod_admin`, `cod_cardapio`, `cod_cidade`) VALUES
+(1, 'Nome do Evento_BD', 'Instituto Esportivo Recriativo Cultural Assistencial Beneficiente e Colônial', '2018-09-19', 'Jaboticaba', '', 1, 1, 3);
 
 
-INSERT INTO `tb_sobre` (`cod_sobre`, `titulo_sobre`, `descricao_sobre`, `cod_imagem`, `cod_evento`) VALUES
+INSERT INTO `tb_evento_contato` (`cod_evento_contato`, `cod_contato`, `cod_evento`) VALUES
+(1, 1, 1),
+(2, 2, 1),
+(3, 3, 1),
+(4, 4, 1),
+(5, 5, 1),
+(6, 6, 1);
+
+
+INSERT INTO `tb_tipo_programacao` (`cod_tipo_prog`, `descricao_tipo`) VALUES
+(1, 'Alvorada Festiva'),
+(2, 'Recepção'),
+(3, 'Pronunciamento / Abertura'),
+(4, 'Almoço'),
+(5, 'Para as Crianças'),
+(6, 'Shows');
+
+
+INSERT INTO `tb_programacao` (`cod_prog`, `descricao_prog`, `obs_prog`, `pavilhao_prog`, `hora_inicio_prog`, `hora_fim_prog`, `img_prog`, `video_prog`, `cod_tipo_prog`, `cod_evento`) VALUES
+(1, 'Inicio da preparação das carnes suínas',               '', 'LOCAL', '06:00:00', null,        '', '', 1, 1),
+(2, 'Comunidade estará a espera de todos os participantes', '', 'LOCAL', '10:00:00', null,        '', '', 2, 1),
+(3, 'Fala do presidente da comunidade e patrocinadores',    '', 'LOCAL', '10:30:00', null,        '', '', 3, 1),
+(4, 'Almoço especial preparado pela comunidade',            '', 'LOCAL', '11:00:00', null,        '', '', 4, 1),
+(5, 'Um parque de diversões.',                              '', 'LOCAL', '10:00:00', '22:00:00',  '', '', 5, 1),
+(6, 'Banda KN',                                             '', 'LOCAL', '10:30:00', '12:30:00',  '', '', 6, 1),
+(7, 'Ireno e Dari',                                         '', 'LOCAL', '13:00:00', '18:00:00',  '', '', 6, 1),
+(8, 'Banda KN',                                             '', 'LOCAL', '15:30:00', '17:30:00',  '', '', 6, 1),
+(9, 'Banda Chopão',                                         '', 'LOCAL', '18:00:00', '22:00:00',  '', '', 6, 1);
+
+
+INSERT INTO `tb_sobre_evento` (`cod_sobre_evento`, `titulo_sobre`, `descricao_sobre`, `img_sobre`, `cod_evento`) VALUES
 (1, 'Nossa História', 'Lorem Ipsum é simplesmente uma simulação de texto da indústria tipográfica e de impressos, 
 	e vem sendo utilizado desde o século XVI, quando um impressor desconhecido pegou uma bandeja de tipos e os 
 	embaralhou para fazer um livro de modelos de tipos. Lorem Ipsum sobreviveu não só a cinco séculos, como 
 	também ao salto para a editoração eletrônica, permanecendo essencialmente inalterado. Se popularizou na 
 	década de 60, quando a Letraset lançou decalques contendo passagens de Lorem Ipsum, e mais recentemente 
-	quando passou a ser integrado a softwares de editoração eletrônica como Aldus PageMaker.', null, 1),
+	quando passou a ser integrado a softwares de editoração eletrônica como Aldus PageMaker.', '', 1),
 (2, 'Como Surgiu?', 'É um fato conhecido de todos que um leitor se distrairá com o conteúdo de texto legível 
 	de uma página quando estiver examinando sua diagramação. A vantagem de usar Lorem Ipsum é que ele tem uma 
 	distribuição normal de letras, ao contrário de "Conteúdo aqui, conteúdo aqui", fazendo com que ele tenha uma 
 	aparência similar a de um texto legível. Muitos softwares de publicação e editores de páginas na internet agora 
 	usam Lorem Ipsum como texto-modelo padrão, e uma rápida busca por lorem ipsum mostra vários websites ainda 
 	em sua fase de construção. Várias versões novas surgiram ao longo dos anos, eventualmente por acidente, e 
-	às vezes de propósito (injetando humor, e coisas do gênero).', null, 1);
-
-
-INSERT INTO `tb_programacao` (`cod_programacao`, `titulo_programacao`, `descricao_programacao`, `hora_inicio`, `hora_fim`, `local_programacao`, `cod_evento`) VALUES
-(1, 'Alvorada Festiva', 'Alguma descrição sobre a alvorada festiva.', '06:00:00', null, 'Falta especificar', 1),
-(2, 'Recepção', 'Alguma descrição sobre a recepção.', '10:00:00', null, 'Falta especificar', 1),
-(3, 'Pronunciamento / Abertura', 'Alguma descrição sobre o Pronunciamento / Abertura.', '11:00:00', null, 'Falta especificar', 1),
-(4, 'Almoço', 'Alguma descrição sobre o Início Almoço.', '11:00:00', null, 'Falta especificar', 1),
-(5, 'Para as crianças', 'Alguma descrição sobre o Para as crianças.', '10:00:00', '22:00:00', 'Falta especificar', 1),
-(6, 'Shows','Alguma descrição sobre o Para as crianças.', '10:30:00', '22:00:00', 'Falta especificar', 1);
-
-
-INSERT INTO `tb_item` (`cod_item`, `titulo_item`, `descricao_item`, `valor_item`, `obs_item`, `hora_inicio`, `hora_fim`, `cod_programacao`,`cod_imagem`) VALUES
-(1, 'Banda KN', 'Alguma descrição para esse item.', '00,00', 'OBS', '10:30:00', '12:30:00', 6, null),
-(2, 'Ireno e Dari', 'Alguma descrição para esse item.', '00,00', 'OBS', '13:00:00', '18:00:00', 6, null),
-(3, 'Banda KN', 'Alguma descrição para esse item.', '00,00', 'OBS', '15:30:00', '17:30:00', 6, null),
-(4, 'Banda Chopão', 'Alguma descrição para esse item.', '00,00', 'OBS', '18:00:00', '22:00:00', 6, null),
-(5, 'Adulto Completo', 'Alguma descrição para esse item.', '00,00', 'OBS', null, null, 6, null),
-(6, 'Adulto', 'Alguma descrição para esse item.', '00,00', 'OBS', null, null, 6, null),
-(7, 'Criança', 'Alguma descrição para esse item.', '00,00', 'OBS', null, null, 6, null);
+	às vezes de propósito (injetando humor, e coisas do gênero).', '', 1);
