@@ -28,7 +28,7 @@ INSERT INTO `tb_contato` (`cod_contato`, `nome_contato`, `telefone_contato`, `em
 
 
 INSERT INTO `tb_admin` (`cod_admin`, `login_admin`, `senha_admin`, `nome_admin`) VALUES
-(1, 'admin', '9c5ddd54107734f7d18335a5245c286b', 'ADMIN');
+(1, 'admin', '21232f297a57a5a743894a0e4a801fc3', 'ADMIN');
 
 
 INSERT INTO `tb_cardapio` (`cod_cardapio`, `titulo_cardapio`, `obs_cardapio`) VALUES
