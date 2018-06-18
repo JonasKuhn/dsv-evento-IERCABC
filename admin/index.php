@@ -9,7 +9,7 @@ if (isset($login_cookie)) {
             <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
             <meta name="description" content="">
             <meta name="author" content="">
-            <title><?= $login_cookie; ?> Intranet</title>
+            <title><?= $login_cookie; ?> - Intranet</title>
 
             <!-- Bootstrap core CSS-->
             <link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
@@ -34,10 +34,35 @@ if (isset($login_cookie)) {
                         include './navegacao.php';
                         include ('./home.php');
                         break;
+                    case 'tipo_programacao.php':
+                        $menu = 'Tipo de Programação';
+                        include './navegacao.php';
+                        include ('./tipo_prog.php');
+                        break;
                     case 'programacao.php':
                         $menu = 'Programação';
                         include './navegacao.php';
                         include ('./programacao.php');
+                        break;
+                    case 'sobre.php':
+                        $menu = 'Sobre';
+                        include './navegacao.php';
+                        include ('./sobre.php');
+                        break;
+                    case 'cardapio.php':
+                        $menu = 'Cardapio';
+                        include './navegacao.php';
+                        include ('./cardapio.php');
+                        break;
+                    case 'contato.php':
+                        $menu = 'Contatos';
+                        include './navegacao.php';
+                        include ('./contato.php');
+                        break;
+                    case 'admin.php':
+                        $menu = 'Admin';
+                        include './navegacao.php';
+                        include ('./admin.php');
                         break;
                     default :
                         $menu = 'Home';
