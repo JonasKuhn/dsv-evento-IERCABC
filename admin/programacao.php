@@ -5,6 +5,7 @@ if (isset($login_cookie)) {
         <div class="card-header">
             <i class="fa fa-table"></i> Programação do Evento</div>
         <div class="card-body">
+            <a href="#" title="Novo <?= $menu; ?>"><i class="fa fa-2x pb-2 pl-2 fa-plus-square"></i></a>
             <div class="table-responsive">
                 <table class="table table-bordered" width="100%" cellspacing="0">
                     <thead>
@@ -37,7 +38,7 @@ if (isset($login_cookie)) {
                             $img = $dados['img_prog'];
                             $video = $dados['video_prog'];
                             $tipo_prog = $dados['cod_tipo_prog'];
-                            
+
                             $selectNomeTipoProg = "select * from tb_tipo_programacao where cod_tipo_prog = '$tipo_prog';";
                             $queryTipoProg = $pdo->query($selectNomeTipoProg);
                             $tipoProg = $queryTipoProg->fetch()

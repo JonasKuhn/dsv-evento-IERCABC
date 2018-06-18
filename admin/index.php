@@ -50,7 +50,7 @@ if (isset($login_cookie)) {
                         include ('./sobre.php');
                         break;
                     case 'cardapio.php':
-                        $menu = 'Cardapio';
+                        $menu = 'Cardápio';
                         include './navegacao.php';
                         include ('./cardapio.php');
                         break;
@@ -63,6 +63,11 @@ if (isset($login_cookie)) {
                         $menu = 'Admin';
                         include './navegacao.php';
                         include ('./admin.php');
+                        break;
+                    case 'evento.php':
+                        $menu = 'Evento';
+                        include './navegacao.php';
+                        include ('./evento.php');
                         break;
                     default :
                         $menu = 'Home';

@@ -11,6 +11,12 @@
                     <span class="nav-link-text">Painel de Controle</span>
                 </a>
             </li>
+            <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Evento">
+                <a class="nav-link" href="?url=evento.php">
+                    <i class="fa fa-fw fa-puzzle-piece"></i>
+                    <span class="nav-link-text">Evento</span>
+                </a>
+            </li>
             <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Tipo de Programação">
                 <a class="nav-link" href="?url=tipo_programacao.php">
                     <i class="fa fa-fw fa-calendar-o"></i>
