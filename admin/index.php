@@ -19,6 +19,12 @@ if (isset($login_cookie)) {
             <link href="../vendor/datatables/dataTables.bootstrap4.css" rel="stylesheet" type="text/css"/>
             <!-- Custom styles for this template-->
             <link href="../css/sb-admin.css" rel="stylesheet" type="text/css"/>
+
+            <script>
+                function excluir(valor) {
+                    return confirm('Deseja realmente excluir o registro ' + valor + '?');
+                }
+            </script>
         </head>
         <body class="fixed-nav sticky-footer bg-dark" id="page-top">
             <!-- Menu -->
@@ -29,6 +35,7 @@ if (isset($login_cookie)) {
                 $url = $_GET['url'];
 
                 switch ($url) {
+                    // CASE PARA OS MENUS
                     case 'home.php':
                         $menu = 'Home';
                         include './navegacao.php';
@@ -68,6 +75,15 @@ if (isset($login_cookie)) {
                         $menu = 'Evento';
                         include './navegacao.php';
                         include ('./evento.php');
+                        break;
+
+                    case 'adc_evento.php':
+                        $menu = '<a href="?url=evento.php">Evento</a> / Adicionar Evento';
+                        include './navegacao.php';
+                        include ('./adicionar/adc_evento.php');
+                        break;
+                    case 'excBD_evento.php':
+                        include ('./excluir/excBD_evento.php');
                         break;
                     default :
                         $menu = 'Home';

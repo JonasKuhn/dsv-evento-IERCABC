@@ -5,7 +5,7 @@ if (isset($login_cookie)) {
         <div class="card-header">
             <i class="fa fa-table"></i> Evento</div>
         <div class="card-body">
-            <a href="#" title="Novo <?= $menu; ?>"><i class="fa fa-2x pb-2 pl-2 fa-plus-square"></i></a>
+            <a href="?url=adc_evento.php" title="Novo <?= $menu; ?>"><i class="fa fa-2x pb-2 pl-2 fa-plus-square"></i></a>
             <div class="table-responsive">
                 <table class="table table-bordered" width="100%" cellspacing="0">
                     <thead>
@@ -26,16 +26,18 @@ if (isset($login_cookie)) {
                         <?php
                         include '../conexao.php';
 
-                        $selectEvento = "select e.nome_evento, e.nome_organizacao_evento, e.data_evento, e.rua_evento, e.nome_comunidade, a.nome_admin, c.titulo_cardapio, ci.nome_cidade, es.uf
-                                        from tb_evento as e, tb_cardapio as c, tb_admin as a, tb_cidade as ci, tb_estado as es
-                                        where e.cod_admin = a.cod_admin
-                                        and e.cod_cardapio = c.cod_cardapio
-                                        and e.cod_cidade = ci.cod_cidade
-                                        and ci.cod_estado = es.cod_estado;";
+                        $selectEvento = "SELECT e.cod_evento ,e.nome_evento, e.nome_organizacao_evento, e.data_evento, e.rua_evento, e.nome_comunidade, a.nome_admin, c.titulo_cardapio, ci.nome_cidade, es.uf
+                                        FROM tb_evento as e, tb_cardapio as c, tb_admin as a, tb_cidade as ci, tb_estado as es
+                                        WHERE e.cod_admin = a.cod_admin
+                                        AND e.cod_cardapio = c.cod_cardapio
+                                        AND e.cod_cidade = ci.cod_cidade
+                                        AND ci.cod_estado = es.cod_estado
+                                        ORDER BY e.cod_evento ASC;";
 
                         $queryEvento = $pdo->query($selectEvento);
 
                         while ($dados = $queryEvento->fetch()) {
+                            $cod = $dados['cod_evento'];
                             $nome = $dados['nome_evento'];
                             $nome_sociedade = $dados['nome_organizacao_evento'];
                             $data = $dados['data_evento'];
@@ -58,7 +60,7 @@ if (isset($login_cookie)) {
                                 <td><?= $uf; ?></td>
                                 <td>
                                     <a href="#" title="EDITAR"><i class="fa fa-2x fa-edit pr-3 pl-3"></i></a>
-                                    <a href="#" title="EXCLUIR"><i class="fa fa-2x fa-trash-o"></i></a>
+                                    <a href="?url=excBD_evento.php&id=<?= $cod ?>" onclick="return excluir('<?=$nome?>');" title="EXCLUIR"><i class="fa fa-2x fa-trash-o"></i></a>
                                 </td>
                             </tr>
                             <?php

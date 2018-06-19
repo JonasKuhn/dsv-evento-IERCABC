@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="description" content="">
+        <meta name="author" content="">
+
+        <!-- Bootstrap core CSS-->
+        <link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+        <!-- Custom fonts for this template-->
+        <link href="../vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+        <!-- Page level plugin CSS-->
+        <link href="../vendor/datatables/dataTables.bootstrap4.css" rel="stylesheet" type="text/css"/>
+        <!-- Custom styles for this template-->
+        <link href="../css/sb-admin.css" rel="stylesheet" type="text/css"/>
+    </head>
+    <body>
+        <div class="container">
+            <form action="select.php" method="post">
+                <B>Qual seu processador?</B><br>
+                <select name=processador>
+                    <option value=Pentium>Pentium</option>
+                    <option value=AMD>AMD</option>
+                    <option value=Celeron>Celeron</option>
+                </select><BR><BR>
+                <B>Livros que deseja comprar?</B><br>
+                Obs: segure "CTRL" para selecionar mais de um.<BR>
+                <select name="livros[]" multiple>
+                    <option value="Biblia do PHP 4">Biblia do PHP 4</option>
+                    <option value="PHP Professional">PHP Professional</option>
+                    <option value="Iniciando em PHP">Iniciando em PHP</option>
+                    <option value="Novidades do PHP 5">Novidades do PHP 5</option>
+                    <option value="Biblia do MySQL">Biblia do MySQL</option>
+                </select><BR><BR>
+                <input type=submit>
+            </form>
+        </div>
+    </body>
+</html>

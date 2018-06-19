@@ -9,8 +9,8 @@ include '../conexao.php';
 <?php
 $sql = "Select hora_inicio_prog, hora_fim_prog, obs_prog, img_prog, pavilhao_prog, video_prog "
         . "from tb_programacao";
-$query = $mysqli->query($sql);
-while ($dados = $query->fetch_array()) {
+$query = $pdo->query($sql);
+while ($dados = $query->fetch()) {
     $hora_inicio_prog = $dados['hora_inicio_prog'];
     $hora_fim_prog = $dados['hora_fim_prog'];
     $obs_prog = $dados['obs_prog'];
@@ -40,5 +40,4 @@ while ($dados = $query->fetch_array()) {
     </div>
 </div>
 <?php
-include './rodape.php';
 ?>
