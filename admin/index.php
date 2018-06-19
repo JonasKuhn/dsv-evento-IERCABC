@@ -85,6 +85,11 @@ if (isset($login_cookie)) {
                     case 'excBD_evento.php':
                         include ('./excluir/excBD_evento.php');
                         break;
+                    case 'edit_evento.php':
+                        $menu = '<a href="?url=evento.php">Evento</a> / Editar Evento';
+                        include './navegacao.php';
+                        include ('./editar/edit_evento.php');
+                        break;
                     default :
                         $menu = 'Home';
                         include './navegacao.php';
