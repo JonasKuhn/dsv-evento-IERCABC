@@ -76,7 +76,7 @@ if (isset($login_cookie)) {
                         include './navegacao.php';
                         include ('./evento.php');
                         break;
-
+                    //EVENTO
                     case 'adc_evento.php':
                         $menu = '<a href="?url=evento.php">Evento</a> / Adicionar Evento';
                         include './navegacao.php';
@@ -89,6 +89,20 @@ if (isset($login_cookie)) {
                         $menu = '<a href="?url=evento.php">Evento</a> / Editar Evento';
                         include './navegacao.php';
                         include ('./editar/edit_evento.php');
+                        break;
+                    //TIPO PROGRMAÇÃO
+                    case 'adc_tipo_prog.php':
+                        $menu = '<a href="?url=tipo_programacao.php">Tipo de Programação</a> / Adicionar Tipo de Programação';
+                        include './navegacao.php';
+                        include ('./adicionar/adc_tipo_prog.php');
+                        break;
+                    case 'excBD_tipo_prog.php':
+                        include ('./excluir/excBD_tipo_prog.php');
+                        break;
+                    case 'edit_tipo_prog.php':
+                        $menu = '<a href="?url=tipo_programacao.php">Tipo de Programação</a> / Editar Tipo de Programação';
+                        include './navegacao.php';
+                        include ('./editar/edit_tipo_prog.php');
                         break;
                     default :
                         $menu = 'Home';

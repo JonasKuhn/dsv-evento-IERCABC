@@ -45,13 +45,11 @@ if (isset($login_cookie)) {
                         <?php
                         include '../conexao.php';
 
-                        $selectCidade = "select c.*"
-                                . "from tb_cidade as c, tb_estado as e "
-                                . "where c.cod_estado = e.cod_estado;";
+                        $selectCidadeEstado = "call sel_cidade_estado()";
 
-                        $queryCidade = $pdo->query($selectCidade);
+                        $queryCidadeEstado = $pdo->query($selectCidadeEstado);
 
-                        while ($dados = $queryCidade->fetch()) {
+                        while ($dados = $queryCidadeEstado->fetch()) {
                             $nome_cidade = $dados['nome_cidade'];
                             $cod_cidade = $dados['cod_cidade'];
                             ?>
@@ -70,8 +68,7 @@ if (isset($login_cookie)) {
                         <?php
                         include '../conexao.php';
 
-                        $selectCardapio = "select *"
-                                . "from tb_cardapio";
+                        $selectCardapio = "select * from tb_cardapio";
 
                         $queryCardapio = $pdo->query($selectCardapio);
 

@@ -1,8 +1,8 @@
 <?php
 
 include './../conexao.php';
-$cod = $_GET['id'];
-$sql = "delete from tb_evento where cod_evento = $cod;";
+$xx = $_GET['id'];
+$sql = "CALL del_evento($xx)";
 
 if ($pdo->query($sql)) {
     echo "'<SCRIPT Language='javascript'>

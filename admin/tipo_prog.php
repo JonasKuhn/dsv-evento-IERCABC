@@ -5,7 +5,7 @@ if (isset($login_cookie)) {
         <div class="card-header">
             <i class="fa fa-table"></i> Menu de Tipos de Programação</div>
         <div class="card-body">
-            <a href="#" title="Novo <?= $menu; ?>"><i class="fa fa-2x pb-2 pl-2 fa-plus-square"></i></a>
+            <a href="?url=adc_tipo_prog.php" title="Novo <?= $menu; ?>"><i class="fa fa-2x pb-2 pl-2 fa-plus-square"></i></a>
             <div class="table-responsive">
                 <table class="table table-bordered" width="100%" cellspacing="0">
                     <thead>
@@ -23,13 +23,14 @@ if (isset($login_cookie)) {
                         $queryTipoProg = $pdo->query($selectTipoProg);
 
                         while ($dados = $queryTipoProg->fetch()) {
+                            $cod = $dados['cod_tipo_prog'];
                             $tipo = $dados['descricao_tipo'];
                             ?>
                             <tr>
                                 <td><?= $tipo; ?></td>
                                 <td>
-                                    <a href="#" title="EDITAR"><i class="fa fa-2x fa-edit pr-3 pl-3"></i></a>
-                                    <a href="#" title="EXCLUIR"><i class="fa fa-2x fa-trash-o"></i></a>
+                                    <a href="?url=edit_tipo_prog.php&id=<?= $cod; ?>" title="EDITAR"><i class="fa fa-2x fa-edit pr-3 pl-3"></i></a>
+                                    <a href="?url=excBD_tipo_prog.php&id=<?= $cod; ?>" onclick="return excluir('<?=$tipo?>');" title="EXCLUIR"><i class="fa fa-2x fa-trash-o"></i></a>
                                 </td>
                             </tr>
                             <?php

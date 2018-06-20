@@ -26,13 +26,7 @@ if (isset($login_cookie)) {
                         <?php
                         include '../conexao.php';
 
-                        $selectEvento = "SELECT e.cod_evento ,e.nome_evento, e.nome_organizacao_evento, e.data_evento, e.rua_evento, e.nome_comunidade, a.nome_admin, c.titulo_cardapio, ci.nome_cidade, es.uf
-                                        FROM tb_evento as e, tb_cardapio as c, tb_admin as a, tb_cidade as ci, tb_estado as es
-                                        WHERE e.cod_admin = a.cod_admin
-                                        AND e.cod_cardapio = c.cod_cardapio
-                                        AND e.cod_cidade = ci.cod_cidade
-                                        AND ci.cod_estado = es.cod_estado
-                                        ORDER BY e.cod_evento ASC;";
+                        $selectEvento = "CALL sel_eventos();";
 
                         $queryEvento = $pdo->query($selectEvento);
 
