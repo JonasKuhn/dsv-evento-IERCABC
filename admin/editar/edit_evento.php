@@ -2,7 +2,7 @@
 if (isset($login_cookie)) {
     include './../conexao.php';
     $id = $_GET['id'];
-    $selectEventoConfigs = "SELECT e.nome_evento, e.nome_organizacao_evento, e.data_evento, e.rua_evento, e.nome_comunidade, a.nome_admin, a.cod_admin, c.titulo_cardapio, ci.cod_cidade, ci.nome_cidade, es.uf
+    $selectEventoConfigs = "SELECT *
                     FROM tb_evento as e, tb_cardapio as c, tb_admin as a, tb_cidade as ci, tb_estado as es
                     WHERE e.cod_admin = a.cod_admin
                     AND e.cod_cardapio = c.cod_cardapio

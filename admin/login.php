@@ -17,8 +17,10 @@ if (isset($entrar)) {
         setcookie("usuario", $dado['nome_admin']);
         header("Location: ./index.php");
     } else {
-        header("Location: ./login.php");
-        echo"<script language='javascript' type='text/javascript'>alert('Login e/ou senha incorretos');window.location.href='login.html';</script>";
+        echo "'<SCRIPT Language='javascript'>
+            window.alert('Login e/ou senha incorretos!');
+            location.href='login.html';
+            </SCRIPT>'";
         die();
     }
 }

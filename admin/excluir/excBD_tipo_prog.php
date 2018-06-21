@@ -2,7 +2,7 @@
 
 include './../conexao.php';
 $cod = $_GET['id'];
-$sql = "delete from tb_tipo_programacao where cod_tipo_prog = $cod;";
+$sql = "CALL del_tipo_prog($cod)";
 
 if ($pdo->query($sql)) {
     echo "'<SCRIPT Language='javascript'>

@@ -19,7 +19,6 @@ if (isset($login_cookie)) {
             <link href="../vendor/datatables/dataTables.bootstrap4.css" rel="stylesheet" type="text/css"/>
             <!-- Custom styles for this template-->
             <link href="../css/sb-admin.css" rel="stylesheet" type="text/css"/>
-
             <script>
                 function excluir(valor) {
                     return confirm('Deseja realmente excluir o registro ' + valor + '?');
@@ -104,6 +103,22 @@ if (isset($login_cookie)) {
                         include './navegacao.php';
                         include ('./editar/edit_tipo_prog.php');
                         break;
+
+                    // PROGRAMAÇÃO
+                    case 'adc_prog.php':
+                        $menu = '<a href="?url=programacao.php">Programação</a> / Adicionar Programação';
+                        include './navegacao.php';
+                        include ('./adicionar/adc_prog.php');
+                        break;
+                    case 'excBD_prog.php':
+                        include ('./excluir/excBD_prog.php');
+                        break;
+                    case 'edit_prog.php':
+                        $menu = '<a href="?url=programacao.php">Programação</a> / Editar Programação';
+                        include './navegacao.php';
+                        include ('./editar/edit_prog.php');
+                        break;
+                    
                     default :
                         $menu = 'Home';
                         include './navegacao.php';
