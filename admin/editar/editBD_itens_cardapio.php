@@ -23,15 +23,15 @@ $x5 = $_POST['tipo_item'];
 $sql = "CALL atualiza_cardapio_item('$xx','$yy', '$x1','$x2','$x3','$x4','$x5');";
 
 if ($pdo->query($sql)) {
-    header('location: ../index.php?url=programacao.php');
+    header('location: ../index.php?url=itens_cardapio.php');
     exit();
 } else {
     echo "<SCRIPT Language='javascript'>
             var confirma = confirm('Erro inesperado não tratado pelo servido!');
             if (confirma) {
-            location.href='index.php?url=programacao.php';
+            location.href='index.php?url=itens_cardapio.php';
             } else {
-            location.href='index.php?url=programacao.php';
+            location.href='index.php?url=itens_cardapio.php';
             }
             </SCRIPT>";
 }

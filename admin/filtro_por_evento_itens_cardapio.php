@@ -1,9 +1,8 @@
-
 <div class="card-header">
-    <i class="fa fa-table"></i> Cardápio
+    <i class="fa fa-table"></i> Itens Cardápio
 
     <div class="float-right col-sm-4">
-        <form method="POST" action="index.php?url=cardapio.php" enctype="multipart/form-data">
+        <form method="POST" action="index.php?url=itens_cardapio.php" enctype="multipart/form-data">
             <div class="float-left m-t-0 col-sm-9">
                 <select class="form-control" required name="cod_evento">
                     <?php

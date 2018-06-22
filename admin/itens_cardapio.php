@@ -9,14 +9,13 @@ if (isset($login_cookie)) {
     }
     ?>
     <div class="card mb-3">
-        <?php include './filtro_por_evento.php'; ?>
+        <?php include './filtro_por_evento_itens_cardapio.php'; ?>
         <div class="card-body">
-            <a href="?url=adc_cardapio.php" title="Novo <?= $menu; ?>"><i class="fa fa-2x pb-2 pl-2 fa-plus-square"></i></a>
+            <a href="?url=adc_itens_cardapio.php" title="Novo <?= $menu; ?>"><i class="fa fa-2x pb-2 pl-2 fa-plus-square"></i></a>
             <div class="table-responsive">
                 <table class="table table-bordered" width="100%" cellspacing="0">
                     <thead>
                         <tr>
-                            <th>Cardápio</th>
                             <th>Tipo</th>
                             <th>Nome do Item</th>
                             <th>Valor (Do Item)</th>
@@ -49,15 +48,14 @@ if (isset($login_cookie)) {
                             $img = $dados['img_item'];
                             ?>
                             <tr>
-                                <td><?= $cardapio; ?></td>
                                 <td><?= $tipo; ?></td>
                                 <td><?= $nomeItem; ?></td>
                                 <td><?= $valorItem; ?></td>
                                 <td><?= $descricaoItem; ?></td>
                                 <td><?= $img; ?></td>
                                 <td>
-                                    <a href="?url=edit_cardapio.php&id=<?= $cod; ?>&c=<?= $cod_c; ?>" title="EDITAR"><i class="fa fa-2x fa-edit pr-3 pl-3"></i></a>
-                                    <a href="?url=excBD_cardapio.php&id=<?= $cod; ?>" title="EXCLUIR"><i class="fa fa-2x fa-trash-o"></i></a>
+                                    <a href="?url=edit_itens_cardapio.php&id=<?= $cod; ?>&c=<?= $cod_c; ?>" title="EDITAR"><i class="fa fa-2x fa-edit pr-3 pl-3"></i></a>
+                                    <a href="?url=excBD_itens_cardapio.php&id=<?= $cod; ?>" title="EXCLUIR"><i class="fa fa-2x fa-trash-o"></i></a>
                                 </td>
                             </tr>
                             <?php

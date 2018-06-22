@@ -17,15 +17,15 @@ $x4 = $nome;
 $sql = "CALL insere_cardapio('$x1', '$x2', '$x3', '$x4', '$x5', '$x6');";
 
 if ($pdo->query($sql)) {
-    header('location: ../index.php?url=cardapio.php');
+    header('location: ../index.php?url=itens_cardapio.php');
     exit();
 } else {
     echo "<SCRIPT Language='javascript'>
             var confirma = confirm('Erro inesperado não tratado pelo servido!');
             if (confirma) {
-            location.href='index.php?url=cardapio.php';
+            location.href='index.php?url=itens_cardapio.php';
             } else {
-            location.href='index.php?url=cardapio.php';
+            location.href='index.php?url=itens_cardapio.php';
             }
             </SCRIPT>";
 }

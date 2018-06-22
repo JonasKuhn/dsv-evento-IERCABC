@@ -116,12 +116,12 @@ if (isset($login_cookie)) {
 
                             if ($cod_evento == $cod_ev) {
                                 ?>
-                                <option selected="true" value="<?= $cod_evento; ?>"><?= $cod_evento; ?> - <?= $nome_evento; ?></option>
+                                <option selected="true" value="<?= $cod_ev; ?>"><?= $cod_ev; ?> - <?= $nome_evento; ?></option>
                                 <?php
                             }
                             if ($cod_evento != $cod_ev) {
                                 ?>
-                                <option value="<?= $cod_evento; ?>"><?= $cod_evento; ?> - <?= $nome_evento; ?></option>
+                                <option value="<?= $cod_ev; ?>"><?= $cod_ev; ?> - <?= $nome_evento; ?></option>
                                 <?php
                             }
                         }

@@ -1,9 +1,15 @@
 <?php
 if (isset($login_cookie)) {
+    $cod_eve = $_POST['cod_evento'];
+    
+    if($cod_eve != ''){
+        
+    }else {
+        $cod_eve = 1;
+    }
     ?>
     <div class="card mb-3">
-        <div class="card-header">
-            <i class="fa fa-table"></i> Sobre do Evento</div>
+        <?php include './filtro_por_evento_sobre.php'; ?>
         <div class="card-body">
             <a href="?url=adc_sobre.php" title="Novo <?= $menu; ?>"><i class="fa fa-2x pb-2 pl-2 fa-plus-square"></i></a>
             <div class="table-responsive">
@@ -21,7 +27,8 @@ if (isset($login_cookie)) {
                         <?php
                         include '../conexao.php';
 
-                        $selectSobre = "select * from tb_sobre_evento;";
+                        $selectSobre = "select * from tb_sobre_evento "
+                                . "where cod_evento = '$cod_eve';";
 
                         $querySobre = $pdo->query($selectSobre);
 

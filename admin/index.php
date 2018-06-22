@@ -55,10 +55,10 @@ if (isset($login_cookie)) {
                         include './navegacao.php';
                         include ('./sobre.php');
                         break;
-                    case 'cardapio.php':
-                        $menu = 'Cardápio';
+                    case 'itens_cardapio.php':
+                        $menu = 'Itens Cardápio';
                         include './navegacao.php';
-                        include ('./cardapio.php');
+                        include ('./itens_cardapio.php');
                         break;
                     case 'contato.php':
                         $menu = 'Contatos';
@@ -137,18 +137,18 @@ if (isset($login_cookie)) {
                         break;
 
                     // CARDÁPIO
-                    case 'adc_cardapio.php':
-                        $menu = '<a href="?url=cardapio.php">Cardápio</a> / Adicionar Cardápio';
+                    case 'adc_itens_cardapio.php':
+                        $menu = '<a href="?url=itens_cardapio.php">Itens Cardápio</a> / Adicionar Itens Cardápio';
                         include './navegacao.php';
-                        include ('./adicionar/adc_cardapio.php');
+                        include ('./adicionar/adc_itens_cardapio.php');
                         break;
-                    case 'excBD_cardapio.php':
-                        include ('./excluir/excBD_cardapio.php');
+                    case 'excBD_itens_cardapio.php':
+                        include ('./excluir/excBD_itens_cardapio.php');
                         break;
-                    case 'edit_cardapio.php':
-                        $menu = '<a href="?url=cardapio.php">Sobre</a> / Editar Cardápio';
+                    case 'edit_itens_cardapio.php':
+                        $menu = '<a href="?url=itens_cardapio.php">Itens Cardápio</a> / Editar Item Cardápio';
                         include './navegacao.php';
-                        include ('./editar/edit_cardapio.php');
+                        include ('./editar/edit_itens_cardapio.php');
                         break;
 
                     default :

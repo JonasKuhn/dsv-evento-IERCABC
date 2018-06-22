@@ -35,11 +35,20 @@
                     <span class="nav-link-text">Sobre</span>
                 </a>
             </li>
-            <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Cardapio">
-                <a class="nav-link" href="?url=cardapio.php">
+            <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Cardápio">
+                <a class="nav-link nav-link-collapse collapsed"  data-toggle="collapse" 
+                   href="#collapseComponents" data-parent="#exampleAccordion">
                     <i class="fa fa-fw fa-cutlery"></i>
-                    <span class="nav-link-text">Cardapio</span>
+                    <span class="nav-link-text">Cardápio</span>
                 </a>
+                <ul class="sidenav-second-level collapse" id="collapseComponents">
+                    <li>
+                        <a href="#">Lista de Cardápios</a>
+                    </li>
+                    <li>
+                        <a href="?url=itens_cardapio.php">Itens Cardápio</a>
+                    </li>
+                </ul>
             </li>
             <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Contatos">
                 <a class="nav-link" href="?url=contato.php">

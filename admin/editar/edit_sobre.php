@@ -51,17 +51,17 @@ if (isset($login_cookie)) {
                         $queryEvento = $pdo->query($selectEvento);
 
                         while ($dados = $queryEvento->fetch()) {
-                            $cod_ev = $dados['cod_evento'];
+                            $cod_e = $dados['cod_evento'];
                             $nome_evento = $dados['nome_evento'];
 
-                            if ($cod_evento == $cod_ev) {
+                            if ($cod_evento == $cod_e) {
                                 ?>
-                                <option selected="true" value="<?= $cod_evento; ?>"><?= $cod_evento; ?> - <?= $nome_evento; ?></option>
+                                <option selected="true" value="<?= $cod_e; ?>"><?= $cod_e; ?> - <?= $nome_evento; ?></option>
                                 <?php
                             }
-                            if ($cod_evento != $cod_ev) {
+                            if ($cod_evento != $cod_e) {
                                 ?>
-                                <option value="<?= $cod_evento; ?>"><?= $cod_evento; ?> - <?= $nome_evento; ?></option>
+                                <option value="<?= $cod_e; ?>"><?= $cod_e; ?> - <?= $nome_evento; ?></option>
                                 <?php
                             }
                         }
