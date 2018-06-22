@@ -1,6 +1,6 @@
 DELIMITER $$
 CREATE PROCEDURE 
-insere_cardapio(nome VARCHAR(100), valor FLOAT(10,2), descricao VARCHAR(1000), img VARCHAR(100), tipo_item INTEGER, cardapio INTEGER)
+insere_item_cardapio(nome VARCHAR(100), valor FLOAT(10,2), descricao VARCHAR(1000), img VARCHAR(100), tipo_item INTEGER, cardapio INTEGER)
 BEGIN
 	DECLARE aux INT;
     SET aux = 0;

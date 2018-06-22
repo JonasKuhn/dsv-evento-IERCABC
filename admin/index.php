@@ -60,6 +60,11 @@ if (isset($login_cookie)) {
                         include './navegacao.php';
                         include ('./itens_cardapio.php');
                         break;
+                    case 'lista_cardapio.php':
+                        $menu = 'Lista de Cardápio';
+                        include './navegacao.php';
+                        include ('./lista_cardapio.php');
+                        break;
                     case 'contato.php':
                         $menu = 'Contatos';
                         include './navegacao.php';
@@ -149,6 +154,20 @@ if (isset($login_cookie)) {
                         $menu = '<a href="?url=itens_cardapio.php">Itens Cardápio</a> / Editar Item Cardápio';
                         include './navegacao.php';
                         include ('./editar/edit_itens_cardapio.php');
+                        break;
+                    
+                    case 'adc_lista_cardapio.php':
+                        $menu = '<a href="?url=lista_cardapio.php">Lista de Cardápio</a> / Adicionar Cardápio';
+                        include './navegacao.php';
+                        include ('./adicionar/adc_lista_cardapio.php');
+                        break;
+                    case 'excBD_lista_cardapio.php':
+                        include ('./excluir/excBD_lista_cardapio.php');
+                        break;
+                    case 'edit_lista_cardapio.php':
+                        $menu = '<a href="?url=lista_cardapio.php">Lista de Cardápio</a> / Editar Lista de Cardápio';
+                        include './navegacao.php';
+                        include ('./editar/edit_lista_cardapio.php');
                         break;
 
                     default :

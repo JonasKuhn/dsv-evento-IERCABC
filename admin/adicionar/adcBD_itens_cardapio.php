@@ -14,7 +14,7 @@ $x2 = $_POST['valor_item'];
 $x3 = $_POST['descricao_item'];
 $x4 = $nome;
 
-$sql = "CALL insere_cardapio('$x1', '$x2', '$x3', '$x4', '$x5', '$x6');";
+$sql = "CALL insere_item_cardapio('$x1', '$x2', '$x3', '$x4', '$x5', '$x6');";
 
 if ($pdo->query($sql)) {
     header('location: ../index.php?url=itens_cardapio.php');
