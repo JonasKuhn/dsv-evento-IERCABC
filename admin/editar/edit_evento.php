@@ -78,7 +78,7 @@ if (isset($login_cookie)) {
                         <?php
                         include '../../conexao.php';
 
-                        $selectCidade = "select c.*"
+                        $selectCidade = "select *"
                                 . "from tb_cidade as c, tb_estado as e "
                                 . "where c.cod_estado = e.cod_estado;";
 

@@ -55,7 +55,8 @@ if (isset($login_cookie)) {
             <div>
                 <label class="col-sm-5 control-label">Tipo da Programação:</label>
                 <div class="col-sm-12">
-                    <select class="form-control" required name="tipo_prog">
+                    <select class="form-control" required name="tipo_prog"> 
+                        <option value="">Selecione um Tipo</option>
                         <?php
                         include '../conexao.php';
 

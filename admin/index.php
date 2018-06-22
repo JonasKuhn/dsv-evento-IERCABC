@@ -75,6 +75,7 @@ if (isset($login_cookie)) {
                         include './navegacao.php';
                         include ('./evento.php');
                         break;
+
                     //EVENTO
                     case 'adc_evento.php':
                         $menu = '<a href="?url=evento.php">Evento</a> / Adicionar Evento';
@@ -89,6 +90,7 @@ if (isset($login_cookie)) {
                         include './navegacao.php';
                         include ('./editar/edit_evento.php');
                         break;
+
                     //TIPO PROGRMAÇÃO
                     case 'adc_tipo_prog.php':
                         $menu = '<a href="?url=tipo_programacao.php">Tipo de Programação</a> / Adicionar Tipo de Programação';
@@ -118,7 +120,37 @@ if (isset($login_cookie)) {
                         include './navegacao.php';
                         include ('./editar/edit_prog.php');
                         break;
-                    
+
+                    // SOBRE
+                    case 'adc_sobre.php':
+                        $menu = '<a href="?url=sobre.php">Sobre</a> / Adicionar Sobre';
+                        include './navegacao.php';
+                        include ('./adicionar/adc_sobre.php');
+                        break;
+                    case 'excBD_sobre.php':
+                        include ('./excluir/excBD_sobre.php');
+                        break;
+                    case 'edit_sobre.php':
+                        $menu = '<a href="?url=sobre.php">Sobre</a> / Editar Sobre';
+                        include './navegacao.php';
+                        include ('./editar/edit_sobre.php');
+                        break;
+
+                    // CARDÁPIO
+                    case 'adc_cardapio.php':
+                        $menu = '<a href="?url=cardapio.php">Cardápio</a> / Adicionar Cardápio';
+                        include './navegacao.php';
+                        include ('./adicionar/adc_cardapio.php');
+                        break;
+                    case 'excBD_cardapio.php':
+                        include ('./excluir/excBD_cardapio.php');
+                        break;
+                    case 'edit_cardapio.php':
+                        $menu = '<a href="?url=cardapio.php">Sobre</a> / Editar Cardápio';
+                        include './navegacao.php';
+                        include ('./editar/edit_cardapio.php');
+                        break;
+
                     default :
                         $menu = 'Home';
                         include './navegacao.php';
@@ -153,6 +185,14 @@ if (isset($login_cookie)) {
                 <script src="../js/sb-admin.min.js" type="text/javascript"></script>
                 <script src="../js/sb-admin-datatables.min.js" type="text/javascript"></script>
                 <script src="../js/sb-admin-charts.min.js" type="text/javascript"></script>
+                <script src="../vendor/jquery/jquery.maskMoney.js" type="text/javascript"></script>
+
+                <script type="text/javascript">
+                $(function () {
+                    $("#valor").maskMoney({symbol: '',
+                        showSymbol: true, thousands: '.', decimal: '.', symbolStay: true});
+                });
+                </script>
             </div>
         </body>
     </html>

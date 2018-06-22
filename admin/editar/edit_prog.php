@@ -54,7 +54,7 @@ if (isset($login_cookie)) {
             </div>
             <hr class="b-s-dashed">
             <div class="form-group">
-                <label class="col-sm-4 control-label">Imagem: <?= $img_prog; ?></label>
+                <label class="col-sm-8 control-label">Imagem: <?= $img_prog; ?></label>
                 <div class="col-sm-12">
                     <input type="file" class="form-control" name="img_prog">
                 </div>

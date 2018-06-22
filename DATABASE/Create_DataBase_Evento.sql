@@ -102,7 +102,7 @@ CREATE TABLE `tb_cardapio` (
 CREATE TABLE `tb_item` (
     `cod_item` INTEGER NOT NULL AUTO_INCREMENT,
     `nome_item` VARCHAR(100),
-    `valor_item` FLOAT(3,2),
+    `valor_item` FLOAT(10,2),
     `descricao_item` VARCHAR(1000),
     `img_item` VARCHAR(100),
     `cod_tipo_item` INTEGER,
@@ -116,7 +116,7 @@ CREATE TABLE `tb_item` (
 CREATE TABLE `tb_tipo_item` (
     `cod_tipo_item` INTEGER NOT NULL AUTO_INCREMENT,
     `descricao_tipo_item` VARCHAR(100),
-    `valor_tipo_item` FLOAT(3,2),
+    `valor_tipo_item` FLOAT(10,2),
     `obs_tipo_item` VARCHAR(1000),
     CONSTRAINT `PK_tb_tipo_item` PRIMARY KEY (`cod_tipo_item`)
 );

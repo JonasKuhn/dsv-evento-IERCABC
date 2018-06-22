@@ -45,7 +45,7 @@ if (isset($login_cookie)) {
                         <?php
                         include '../conexao.php';
 
-                        $selectCidadeEstado = "call sel_cidade_estado()";
+                        $selectCidadeEstado = "call sel_cidade_estado();";
 
                         $queryCidadeEstado = $pdo->query($selectCidadeEstado);
 
