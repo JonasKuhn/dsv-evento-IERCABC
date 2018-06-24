@@ -3,10 +3,10 @@ include './cabecalho.php';
 include './menu.php';
 ?>
 <!DOCTYPE html>
-<html>
+<html lang="en">
     <head>
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" style="text\css" href=".css">
+        <link rel="stylesheet" style="text\css" href="../css/list.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
         <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
         <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
@@ -15,14 +15,12 @@ include './menu.php';
     </head>
     <body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
         <div id="portfolio" class="container-fluid text-center bg-grey">
-            <h2>Programação.</h2><br>
-            <h4>Venha e participar você também.</h4>
+            <h2>Programação</h2><br>
             <div class="row text-center slideanim">
                 <div class="col-sm-4">
                     <div class="thumbnail">
                         <img src="img/asus zenfone go.jpg" alt="ASUS" width="400" height="300">
-                        <p>Smartphone Asus Zenfone Go ZB500KG-3H028BR, Quad Core, Android 5.1, Tela 5´, 8GB, 8MP, 3G, Dual Chip Desbloqueado - Prata</p>
-                    </div>
+                        <p>Ireno e Dari Banda Festão</div>
                 </div>
                 <div class="col-sm-4">
                     <div class="thumbnail">
@@ -36,30 +34,48 @@ include './menu.php';
                         <p>Smartphone LG K10 K430TV, Octa Core, Android 6.0, Tela 5.3´, 16GB, 13MP, 4G, Dual Chip, Desbloqueado - Indigo </p>
                     </div>
                 </div>
-                <div class="col-sm-4">
-                    <div class="thumbnail">
-                        <img src="img/monitoracer.jpg" alt="LG" width="400" height="300">
-                        <p>Monitor Acer 21,5´ Full HD 5ms VGA/DVI Ajuste de Inclinação de -5 a 25 Graus VESA K222HQL</p>
-                    </div>
-                </div>
-                <div class="col-sm-4">
-                    <div class="thumbnail">
-                        <img src="img/monitorlg.jpg" alt="LG" width="400" height="300">
-                        <p>Monitor LG 19.5´ com Ajuste de Altura DVI Black Piano 20M35PD-M</p>
-                    </div>
-                </div>
-                <div class="col-sm-4">
-                    <div class="thumbnail">
-                        <img src="img/monitoraoc.jpg" alt="LG" width="400" height="300">
-                        <p>Monitor AOC LED 18.5´ HD Widescreen Ultra High DCR OSD VGA E970SWNL Preto</p>
-                    </div>
-                </div>
-            </div><br>
+            </div>
             <footer class="container-fluid text-center">
                 <a href="#myPage" title="To Top">
                     <span class="glyphicon glyphicon-chevron-up"></span>
                 </a>
                 <p>Voltar ao Início.</p>
             </footer>
+            <script>
+                $(document).ready(function () {
+                    // Add smooth scrolling to all links in navbar + footer link
+                    $(".navbar a, footer a[href='#myPage']").on('click', function (event) {
+                        // Make sure this.hash has a value before overriding default behavior
+                        if (this.hash !== "") {
+                            // Prevent default anchor click behavior
+                            event.preventDefault();
+
+                            // Store hash
+                            var hash = this.hash;
+
+                            // Usando o método animate () do jQuery para adicionar uma página suave
+                            // The optional number (900) specifies the number of milliseconds it takes to scroll to the specified area
+                            $('html, body').animate({
+                                scrollTop: $(hash).offset().top
+                            }, 900, function () {
+
+                                // Add hash (#) to URL when done scrolling (default click behavior)
+                                window.location.hash = hash;
+                            });
+                        } // End if
+                    });
+
+                    $(window).scroll(function () {
+                        $(".slideanim").each(function () {
+                            var pos = $(this).offset().top;
+
+                            var winTop = $(window).scrollTop();
+                            if (pos < winTop + 600) {
+                                $(this).addClass("slide");
+                            }
+                        });
+                    });
+                })
+            </script>
     </body>
 </html>
