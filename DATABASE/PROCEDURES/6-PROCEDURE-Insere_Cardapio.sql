@@ -5,6 +5,6 @@ BEGIN
 		insert into tb_cardapio(titulo_cardapio, obs_cardapio)
 		VALUES(titulo,obs);
 	ELSE
-		select 'Preencha todos os campos.';
+		Select 'Campo Nome Cardápio está Vazio!';
 	END IF;
 END $$;

@@ -11,7 +11,7 @@ INSERT INTO `tb_cidade` (`cod_cidade`, `nome_cidade`, `cod_estado`) VALUES
 (5, 'Tunápolis', 2);
 
 
-INSERT INTO `tb_tipo_contato` (`cod_tipo_contato`, `descricao_tipo_contato`) VALUES 
+INSERT INTO `tb_tipo_contato` (`cod_tipo_contato`, `decricao_tipo_contato`) VALUES 
 (1, 'Pontos de Venda'),
 (2, 'Organizadores'),
 (3, 'Patrocinadores');
@@ -19,12 +19,12 @@ INSERT INTO `tb_tipo_contato` (`cod_tipo_contato`, `descricao_tipo_contato`) VAL
 
 INSERT INTO `tb_contato` (`cod_contato`, `nome_contato`, `telefone_contato`, `email_contato`, `img_contato`, 
 	`rua_contato`, `nr_contato`, `cod_cidade`, `cod_tipo_contato`) VALUES
-(1, 'Agropecuária Bressler', '(49) 93636-1023', null, null, 'Rua Rio Pardo', '101', 3, 1),
-(2, 'Sorveteria Tropical', '(49) 93677-0400', null, null, 'Rua do Comércio', '221', 1, 1),
+(1, 'Agropecuária Bressler', '+55 (49) 3636-1023', null, null, 'Rua Rio Pardo', '101', 3, 1),
+(2, 'Sorveteria Tropical', '+55 (49) 3677-0400', null, null, 'Rua do Comércio', '221', 1, 1),
 (3, 'Bar e Lanchonete Capelense', null, null, null, 'Rua Sede Capela', '-', 1, 1),
-(4, 'Restaurante Pauli', '(49) 93632-1128', null, null, 'Rua Afonso Rodrigues', '14', 5, 1),
-(5, 'Hora Certa Conveniencia e Cervejaria', '(49) 3634-2104', null, null, 'Rua Gustavo Fetter', '1118', 2, 1),
-(6, 'Beno Inácio Bressler', '(49) 99987-1515', null, null, 'Local Evento_BD', '000', 4, 2);
+(4, 'Restaurante Pauli', '+55 (49) 3632-1128', null, null, 'Rua Afonso Rodrigues', '14', 5, 1),
+(5, 'Hora Certa Conveniencia e Cervejaria', '+55 (49) 3634-2104', null, null, 'Rua Gustavo Fetter', '1118', 2, 1),
+(6, 'Beno Inácio Bressler', '+55 (49) 99987-1515', null, null, 'Local Evento_BD', '000', 4, 2);
 
 
 INSERT INTO `tb_admin` (`cod_admin`, `login_admin`, `senha_admin`, `nome_admin`) VALUES

@@ -3,8 +3,7 @@ if (isset($login_cookie)) {
     ?>
     <div class="card mb-3">
         <div class="card-header">
-            <h3 class="text-center">Admin</h3>
-        </div>
+            <i class="fa fa-table"></i> Sobre do Evento</div>
         <div class="card-body">
             <div class="table-responsive">
                 <table class="table table-bordered" width="100%" cellspacing="0">

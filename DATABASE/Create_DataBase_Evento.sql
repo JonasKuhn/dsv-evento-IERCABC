@@ -144,7 +144,7 @@ CREATE TABLE `tb_contato` (
 
 CREATE TABLE `tb_tipo_contato` (
     `cod_tipo_contato` INTEGER NOT NULL AUTO_INCREMENT,
-    `descricao_tipo_contato` VARCHAR(100),
+    `decricao_tipo_contato` VARCHAR(100),
     CONSTRAINT `PK_tb_tipo_contato` PRIMARY KEY (`cod_tipo_contato`)
 );
 

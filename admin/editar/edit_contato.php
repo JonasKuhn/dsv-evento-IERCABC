@@ -3,11 +3,11 @@ if (isset($login_cookie)) {
     include './../conexao.php';
     $id = $_GET['id'];
     $cod_e = $_GET['e'];
-    $sql = "select * from tb_contato as c, tb_evento_contato as ec, tb_evento as e "
-            . "where c.cod_contato = ec.cod_contato "
-            . "and ec.cod_evento = e.cod_evento "
-            . "and e.cod_evento = '$cod_e' "
-            . "and c.cod_contato = '$id'";
+    $sql = "select * from tb_contato as c, tb_evento_contato as ec, tb_evento as e
+where c.cod_contato = ec.cod_contato
+and ec.cod_evento = e.cod_evento
+and e.cod_evento = '$cod_e'
+and c.cod_contato = '$id'";
 
     $query = $pdo->query($sql);
 
@@ -36,7 +36,7 @@ if (isset($login_cookie)) {
                         $queryTipoContato = $pdo->query($selectTipoContato);
 
                         while ($dados = $queryTipoContato->fetch()) {
-                            $nome_tipo_contato = $dados['descricao_tipo_contato'];
+                            $nome_tipo_contato = $dados['decricao_tipo_contato'];
                             $cod_tipo_contato = $dados['cod_tipo_contato'];
 
                             if ($cod_tipo_contato == $tipo) {
@@ -102,7 +102,7 @@ if (isset($login_cookie)) {
             </div>
             <hr class="b-s-dashed">
             <div>
-                <label class="col-sm-4 control-label" required >Nome da Cidade:</label>
+                <label class="col-sm-5 control-label" required >Nome da Cidade:</label>
                 <div class="col-sm-12">
                     <select class="form-control" name="cidade">
                         <?php
@@ -130,8 +130,8 @@ if (isset($login_cookie)) {
                 </div>
             </div>
             <hr class="b-s-dashed">
-            <div class="col-sm-12">
-                <label class="col-sm-4 control-label" required >Nome do Evento:</label>
+            <div>
+                <label class="col-sm-5 control-label" required >Nome do Evento:</label>
                 <select class="form-control" required name="cod_evento">
                     <?php
                     include '../conexao.php';
@@ -158,7 +158,7 @@ if (isset($login_cookie)) {
                 </select>
             </div>
             <hr class="b-s-dashed">
-            <input class="btn btn-dark btn-block" type="submit" onclick="return excluir('<?=$nome?>');" value="ATUALIZAR" name="ATUALIZAR">
+            <input class="btn btn-dark btn-block" type="submit" value="Salvar" name="Salvar">
         </form>
     </div>
 <?php } ?>

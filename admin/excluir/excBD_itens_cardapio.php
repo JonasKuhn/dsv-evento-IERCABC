@@ -3,8 +3,7 @@
 include './../conexao.php';
 
 $xx = $_GET['id'];
-$yy = $_GET['c'];
-$sql = "CALL del_cardapio_item($xx, $yy)";
+$sql = "CALL del_cardapio_item($xx)";
 
 if ($pdo->query($sql)) {
     echo "'<SCRIPT Language='javascript'>

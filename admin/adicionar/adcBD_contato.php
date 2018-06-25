@@ -19,14 +19,13 @@ $x8 = $_POST['tipo_contato'];
 $x9 = $_POST['cod_evento'];
 
 $sql = "CALL insere_contato('$x1', '$x2', '$x3', '$x4', '$x5', '$x6', '$x7', '$x8', '$x9');";
-try {
-    $pdo->query($sql);
+
+if ($pdo->query($sql)) {
     header('location: ../index.php?url=contato.php');
     exit();
-} catch (PDOException $e) {
-
+} else {
     echo "<SCRIPT Language='javascript'>
-            var confirma = confirm('$e->getMessage()');
+            var confirma = confirm('Erro inesperado não tratado pelo servido!');
             if (confirma) {
             location.href='index.php?url=contato.php';
             } else {

@@ -1,7 +1,6 @@
 DELIMITER $$
 CREATE PROCEDURE 
-insere_contato(nome VARCHAR(100), telefone VARCHAR(15),email VARCHAR(100),
-				img VARCHAR(100),rua VARCHAR(100),nr VARCHAR(10),cidade int, tipo int,evento int)
+insere_contato(nome VARCHAR(100), telefone VARCHAR(15),email VARCHAR(100),img VARCHAR(100),rua VARCHAR(100),nr VARCHAR(10),cidade int,tipo int,evento int)
 BEGIN
 	DECLARE aux INT;
     SET aux = 0;
@@ -15,7 +14,7 @@ BEGIN
         INSERT INTO tb_evento_contato(cod_contato, cod_evento) 
         VALUES (aux, evento);
     ELSE
-		select 'Preencha todos os campos.';
+		SELECT 'Preencha todos os campos!!';
     END IF;
 END $$
 DELIMITER ;

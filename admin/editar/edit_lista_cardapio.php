@@ -27,7 +27,7 @@ if (isset($login_cookie)) {
                 </div>
             </div>
             <hr class="b-s-dashed">
-            <input class="btn btn-dark btn-block" type="submit" onclick="return editar('<?=$titulo_cardapio?>');" value="ATUALIZAR" name="ATUALIZAR">
+            <input class="btn btn-dark btn-block" type="submit" value="Salvar" name="Salvar">
         </form>
     </div>
 <?php } ?>
