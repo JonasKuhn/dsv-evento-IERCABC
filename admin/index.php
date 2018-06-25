@@ -19,7 +19,6 @@ if (isset($login_cookie)) {
             <link href="../vendor/datatables/dataTables.bootstrap4.css" rel="stylesheet" type="text/css"/>
             <!-- Custom styles for this template-->
             <link href="../css/sb-admin.css" rel="stylesheet" type="text/css"/>
-
             <script>
                 function excluir(valor) {
                     return confirm('Deseja realmente excluir o registro ' + valor + '?');
@@ -56,10 +55,15 @@ if (isset($login_cookie)) {
                         include './navegacao.php';
                         include ('./sobre.php');
                         break;
-                    case 'cardapio.php':
-                        $menu = 'Cardápio';
+                    case 'itens_cardapio.php':
+                        $menu = 'Itens Cardápio';
                         include './navegacao.php';
-                        include ('./cardapio.php');
+                        include ('./itens_cardapio.php');
+                        break;
+                    case 'lista_cardapio.php':
+                        $menu = 'Lista de Cardápio';
+                        include './navegacao.php';
+                        include ('./lista_cardapio.php');
                         break;
                     case 'contato.php':
                         $menu = 'Contatos';
@@ -77,6 +81,7 @@ if (isset($login_cookie)) {
                         include ('./evento.php');
                         break;
 
+                    //EVENTO
                     case 'adc_evento.php':
                         $menu = '<a href="?url=evento.php">Evento</a> / Adicionar Evento';
                         include './navegacao.php';
@@ -85,6 +90,86 @@ if (isset($login_cookie)) {
                     case 'excBD_evento.php':
                         include ('./excluir/excBD_evento.php');
                         break;
+                    case 'edit_evento.php':
+                        $menu = '<a href="?url=evento.php">Evento</a> / Editar Evento';
+                        include './navegacao.php';
+                        include ('./editar/edit_evento.php');
+                        break;
+
+                    //TIPO PROGRMAÇÃO
+                    case 'adc_tipo_prog.php':
+                        $menu = '<a href="?url=tipo_programacao.php">Tipo de Programação</a> / Adicionar Tipo de Programação';
+                        include './navegacao.php';
+                        include ('./adicionar/adc_tipo_prog.php');
+                        break;
+                    case 'excBD_tipo_prog.php':
+                        include ('./excluir/excBD_tipo_prog.php');
+                        break;
+                    case 'edit_tipo_prog.php':
+                        $menu = '<a href="?url=tipo_programacao.php">Tipo de Programação</a> / Editar Tipo de Programação';
+                        include './navegacao.php';
+                        include ('./editar/edit_tipo_prog.php');
+                        break;
+
+                    // PROGRAMAÇÃO
+                    case 'adc_prog.php':
+                        $menu = '<a href="?url=programacao.php">Programação</a> / Adicionar Programação';
+                        include './navegacao.php';
+                        include ('./adicionar/adc_prog.php');
+                        break;
+                    case 'excBD_prog.php':
+                        include ('./excluir/excBD_prog.php');
+                        break;
+                    case 'edit_prog.php':
+                        $menu = '<a href="?url=programacao.php">Programação</a> / Editar Programação';
+                        include './navegacao.php';
+                        include ('./editar/edit_prog.php');
+                        break;
+
+                    // SOBRE
+                    case 'adc_sobre.php':
+                        $menu = '<a href="?url=sobre.php">Sobre</a> / Adicionar Sobre';
+                        include './navegacao.php';
+                        include ('./adicionar/adc_sobre.php');
+                        break;
+                    case 'excBD_sobre.php':
+                        include ('./excluir/excBD_sobre.php');
+                        break;
+                    case 'edit_sobre.php':
+                        $menu = '<a href="?url=sobre.php">Sobre</a> / Editar Sobre';
+                        include './navegacao.php';
+                        include ('./editar/edit_sobre.php');
+                        break;
+
+                    // CARDÁPIO
+                    case 'adc_itens_cardapio.php':
+                        $menu = '<a href="?url=itens_cardapio.php">Itens Cardápio</a> / Adicionar Itens Cardápio';
+                        include './navegacao.php';
+                        include ('./adicionar/adc_itens_cardapio.php');
+                        break;
+                    case 'excBD_itens_cardapio.php':
+                        include ('./excluir/excBD_itens_cardapio.php');
+                        break;
+                    case 'edit_itens_cardapio.php':
+                        $menu = '<a href="?url=itens_cardapio.php">Itens Cardápio</a> / Editar Item Cardápio';
+                        include './navegacao.php';
+                        include ('./editar/edit_itens_cardapio.php');
+                        break;
+                    
+                    case 'adc_lista_cardapio.php':
+                        $menu = '<a href="?url=lista_cardapio.php">Lista de Cardápio</a> / Adicionar Cardápio';
+                        include './navegacao.php';
+                        include ('./adicionar/adc_lista_cardapio.php');
+                        break;
+                    case 'excBD_lista_cardapio.php':
+                        include ('./excluir/excBD_lista_cardapio.php');
+                        break;
+                    case 'edit_lista_cardapio.php':
+                        $menu = '<a href="?url=lista_cardapio.php">Lista de Cardápio</a> / Editar Lista de Cardápio';
+                        include './navegacao.php';
+                        include ('./editar/edit_lista_cardapio.php');
+                        break;
+
                     default :
                         $menu = 'Home';
                         include './navegacao.php';
@@ -119,6 +204,14 @@ if (isset($login_cookie)) {
                 <script src="../js/sb-admin.min.js" type="text/javascript"></script>
                 <script src="../js/sb-admin-datatables.min.js" type="text/javascript"></script>
                 <script src="../js/sb-admin-charts.min.js" type="text/javascript"></script>
+                <script src="../vendor/jquery/jquery.maskMoney.js" type="text/javascript"></script>
+
+                <script type="text/javascript">
+                $(function () {
+                    $("#valor").maskMoney({symbol: '',
+                        showSymbol: true, thousands: '.', decimal: '.', symbolStay: true});
+                });
+                </script>
             </div>
         </body>
     </html>

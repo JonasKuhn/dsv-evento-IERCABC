@@ -17,17 +17,20 @@
                     <span class="nav-link-text">Evento</span>
                 </a>
             </li>
-            <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Tipo de Programação">
-                <a class="nav-link" href="?url=tipo_programacao.php">
-                    <i class="fa fa-fw fa-calendar-o"></i>
-                    <span class="nav-link-text">Tipos de Programação</span>
-                </a>
-            </li>
             <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Programação">
-                <a class="nav-link" href="?url=programacao.php">
-                    <i class="fa fa-fw fa-calendar"></i>
+                <a class="nav-link nav-link-collapse collapsed"  data-toggle="collapse" 
+                   href="#menuProg" data-parent="#menuProg">
+                    <i class="fa fa-fw fa-cutlery"></i>
                     <span class="nav-link-text">Programação</span>
                 </a>
+                <ul class="sidenav-second-level collapse" id="menuProg">
+                    <li>
+                        <a href="?url=programacao.php">Item da Programação</a>
+                    </li>
+                    <li>
+                        <a href="?url=tipo_programacao.php">Tipos de Programação</a>
+                    </li>
+                </ul>
             </li>
             <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Sobre">
                 <a class="nav-link" href="?url=sobre.php">
@@ -35,11 +38,20 @@
                     <span class="nav-link-text">Sobre</span>
                 </a>
             </li>
-            <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Cardapio">
-                <a class="nav-link" href="?url=cardapio.php">
+            <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Cardápio">
+                <a class="nav-link nav-link-collapse collapsed"  data-toggle="collapse" 
+                   href="#menuCardapio" data-parent="#menuCardapio">
                     <i class="fa fa-fw fa-cutlery"></i>
-                    <span class="nav-link-text">Cardapio</span>
+                    <span class="nav-link-text">Cardápio</span>
                 </a>
+                <ul class="sidenav-second-level collapse" id="menuCardapio">
+                    <li>
+                        <a href="?url=lista_cardapio.php">Lista de Cardápios</a>
+                    </li>
+                    <li>
+                        <a href="?url=itens_cardapio.php">Itens Cardápio</a>
+                    </li>
+                </ul>
             </li>
             <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Contatos">
                 <a class="nav-link" href="?url=contato.php">

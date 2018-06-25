@@ -11,11 +11,18 @@ $x6 = '1';
 $x7 = $_POST['cardapio'];
 $x8 = $_POST['cidade'];
 
-$sql = "CALL insere_evento('$x1', '$x2', '$x3', '$x4', '$x5', '$x6', '$x7', '$x8'); ";
+$sql = "CALL insere_evento('$x1', '$x2', '$x3', '$x4', '$x5', '$x6', '$x7', '$x8');";
 
 if ($pdo->query($sql)) {
     header('location: ../index.php?url=evento.php');
     exit();
 } else {
-    echo("Erro: %s\n" . $mysqli - error);
+    echo "<SCRIPT Language='javascript'>
+            var confirma = confirm('Erro inesperado não tratado pelo servido!');
+            if (confirma) {
+            location.href='index.php?url=evento.php';
+            } else {
+            location.href='index.php?url=evento.php';
+            }
+            </SCRIPT>";
 }
