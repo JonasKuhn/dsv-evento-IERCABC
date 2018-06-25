@@ -19,6 +19,16 @@ if (isset($login_cookie)) {
                     return confirm('Deseja realmente excluir o registro ' + valor + '?');
                 }
             </script>
+            <script>
+                function editar(valor) {
+                    return confirm('Deseja realmente salvar as alterações em ' + valor + '?');
+                }
+            </script>
+            <script>
+                function salvar() {
+                    return confirm('Deseja realmente salvar as alterações?');
+                }
+            </script>
         </head>
         <body class="fixed-nav sticky-footer bg-dark" id="page-top">
             <!-- Menu -->
@@ -176,7 +186,7 @@ if (isset($login_cookie)) {
                         include ('./excluir/excBD_contato.php');
                         break;
                     case 'edit_contato.php':
-                        $menu = '<a href="?url=lista_cardapio.php">Contato</a> / Editar Contato';
+                        $menu = '<a href="?url=contato.php">Contato</a> / Editar Contato';
                         include './navegacao.php';
                         include ('./editar/edit_contato.php');
                         break;

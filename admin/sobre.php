@@ -50,7 +50,7 @@ if (isset($login_cookie)) {
                                 <td><?= $img; ?></td>
                                 <td>
                                     <a href="?url=edit_sobre.php&id=<?= $cod; ?>" title="EDITAR"><i class="fa fa-2x fa-edit pr-3 pl-3"></i></a>
-                                    <a href="?url=excBD_sobre.php&id=<?= $cod; ?>" title="EXCLUIR"><i class="fa fa-2x fa-trash-o"></i></a>
+                                    <a href="?url=excBD_sobre.php&id=<?= $cod; ?>" onclick="return excluir('<?=$titulo?>');" title="EXCLUIR"><i class="fa fa-2x fa-trash-o"></i></a>
                                 </td>
                             </tr>
                             <?php
