@@ -48,7 +48,7 @@ if (isset($login_cookie)) {
                 </div>
             </div>
             <hr class="b-s-dashed">
-            <input class="btn btn-dark btn-block" type="submit" value="Salvar" name="Salvar">
+            <input class="btn btn-dark btn-block" type="submit"  onclick="return salvar();" value="ADICIONAR" name="ADICIONAR">
         </form>
     </div>
 <?php } ?>

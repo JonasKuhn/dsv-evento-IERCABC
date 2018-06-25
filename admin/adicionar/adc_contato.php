@@ -15,7 +15,7 @@ if (isset($login_cookie)) {
                         $queryTipoContato = $pdo->query($selectTipoContato);
 
                         while ($dados = $queryTipoContato->fetch()) {
-                            $nome_tipo_contato = $dados['decricao_tipo_contato'];
+                            $nome_tipo_contato = $dados['descricao_tipo_contato'];
                             $cod_tipo_contato = $dados['cod_tipo_contato'];
                             ?>
                             <option value="<?= $cod_tipo_contato; ?>"><?= $cod_tipo_contato; ?> - <?= $nome_tipo_contato; ?></option>
@@ -96,7 +96,7 @@ if (isset($login_cookie)) {
                 </div>
             </div>
             <hr class="b-s-dashed">
-            <div>
+            <div class="col-sm-12">
                 <label class="col-sm-5 control-label" required >Nome do Evento:</label>
                 <select class="form-control" required name="cod_evento">
                     <?php
@@ -124,7 +124,7 @@ if (isset($login_cookie)) {
                 </select>
             </div>
             <hr class="b-s-dashed">
-            <input class="btn btn-dark btn-block" type="submit" value="Salvar" name="Salvar">
+            <input class="btn btn-dark btn-block" type="submit" onclick="return salvar();" value="ADICIONAR" name="ADICIONAR">
         </form>
     </div>
 <?php } ?>

@@ -2,8 +2,9 @@
 if (isset($login_cookie)) {
     ?>
     <div class="card mb-3">
-        <div class="card-header">
-            <i class="fa fa-table"></i> Evento</div>
+        <div class="card-header text-center">
+            <h3>Eventos</h3>
+        </div>
         <div class="card-body">
             <a href="?url=adc_evento.php" title="Novo <?= $menu; ?>"><i class="fa fa-2x pb-2 pl-2 fa-plus-square"></i></a>
             <div class="table-responsive">
@@ -54,7 +55,7 @@ if (isset($login_cookie)) {
                                 <td><?= $uf; ?></td>
                                 <td>
                                     <a href="?url=edit_evento.php&id=<?= $cod; ?>" title="EDITAR"><i class="fa fa-2x fa-edit pr-3 pl-3"></i></a>
-                                    <a href="?url=excBD_evento.php&id=<?= $cod; ?>" onclick="return excluir('<?=$nome?>');" title="EXCLUIR"><i class="fa fa-2x fa-trash-o"></i></a>
+                                    <a href="?url=excBD_evento.php&id=<?= $cod; ?>" onclick="return excluir('<?= $nome ?>');" title="EXCLUIR"><i class="fa fa-2x fa-trash-o"></i></a>
                                 </td>
                             </tr>
                             <?php

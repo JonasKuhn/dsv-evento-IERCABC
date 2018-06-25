@@ -11,7 +11,7 @@ if ($pdo->query($sql)) {
             </SCRIPT>'";
 } else {
     echo "<SCRIPT Language='javascript'>
-            var confirma = confirm('Falha ao excluir o Registro!');
+            var confirma = confirm('Não foi possível excluír: Este item esta sendo utilizado por um Cardápio!');
             if (confirma) {
             location.href='index.php?url=evento.php';
             } else {
