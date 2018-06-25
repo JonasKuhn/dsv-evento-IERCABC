@@ -10,14 +10,9 @@ if (isset($login_cookie)) {
             <meta name="description" content="">
             <meta name="author" content="">
             <title><?= $login_cookie; ?> - Intranet</title>
-
-            <!-- Bootstrap core CSS-->
             <link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
-            <!-- Custom fonts for this template-->
             <link href="../vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
-            <!-- Page level plugin CSS-->
             <link href="../vendor/datatables/dataTables.bootstrap4.css" rel="stylesheet" type="text/css"/>
-            <!-- Custom styles for this template-->
             <link href="../css/sb-admin.css" rel="stylesheet" type="text/css"/>
             <script>
                 function excluir(valor) {
@@ -141,7 +136,7 @@ if (isset($login_cookie)) {
                         include ('./editar/edit_sobre.php');
                         break;
 
-                    // CARDÁPIO
+                    // CARDÁPIO ITEM
                     case 'adc_itens_cardapio.php':
                         $menu = '<a href="?url=itens_cardapio.php">Itens Cardápio</a> / Adicionar Itens Cardápio';
                         include './navegacao.php';
@@ -155,7 +150,8 @@ if (isset($login_cookie)) {
                         include './navegacao.php';
                         include ('./editar/edit_itens_cardapio.php');
                         break;
-                    
+
+                    // CARDÁPIO 
                     case 'adc_lista_cardapio.php':
                         $menu = '<a href="?url=lista_cardapio.php">Lista de Cardápio</a> / Adicionar Cardápio';
                         include './navegacao.php';
@@ -168,6 +164,21 @@ if (isset($login_cookie)) {
                         $menu = '<a href="?url=lista_cardapio.php">Lista de Cardápio</a> / Editar Lista de Cardápio';
                         include './navegacao.php';
                         include ('./editar/edit_lista_cardapio.php');
+                        break;
+
+                    // CONTATO 
+                    case 'adc_contato.php':
+                        $menu = '<a href="?url=contato.php">Contato</a> / Adicionar Contato';
+                        include './navegacao.php';
+                        include ('./adicionar/adc_contato.php');
+                        break;
+                    case 'excBD_contato.php':
+                        include ('./excluir/excBD_contato.php');
+                        break;
+                    case 'edit_contato.php':
+                        $menu = '<a href="?url=lista_cardapio.php">Contato</a> / Editar Contato';
+                        include './navegacao.php';
+                        include ('./editar/edit_contato.php');
                         break;
 
                     default :
@@ -205,13 +216,14 @@ if (isset($login_cookie)) {
                 <script src="../js/sb-admin-datatables.min.js" type="text/javascript"></script>
                 <script src="../js/sb-admin-charts.min.js" type="text/javascript"></script>
                 <script src="../vendor/jquery/jquery.maskMoney.js" type="text/javascript"></script>
-
+                <script src="../vendor/jquery/jquery.mask.min.js" type="text/javascript"></script>
                 <script type="text/javascript">
                 $(function () {
                     $("#valor").maskMoney({symbol: '',
                         showSymbol: true, thousands: '.', decimal: '.', symbolStay: true});
                 });
                 </script>
+                <script type="text/javascript">$("#txttelefone").mask("(99) 99999-9999");</script>
             </div>
         </body>
     </html>

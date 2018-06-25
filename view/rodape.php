@@ -4,20 +4,25 @@
             <h4>Pontos de venda</h4>
             <ul><h5>São João do Oeste</h5>
                 <li><a href='https://www.facebook.com/Agropecuaria.05'>Agropecuária Bressler</a></li>
-            </ul><h5></h5>
+                <li>Fone:</li>
+            </ul>
             <ul><h5>Itapiranga</h5>
                 <li><a href="https://www.facebook.com/sorveteriatropicalfw/">Sorveteria Tropical</a></li>
+                <li>Fone:</li>
             </ul>
             <ul><h5>Sede Capela</h5>
                 <li><a href="https://www.facebook.com/pages/Bar-e-Lanchonete-Capelense/193612621463936">Bar e Lanchonete Capelense</a></li>
+                <li>Fone:</li>
             </ul>
             <ul><h5>Tunapúlis</h5>
                 <li><a href='https://www.facebook.com/Restaurante-Pauli-Ltda-660073460750774/'>Restaurante Pauli Ltda</a></li>
+                <li>Fone:</li>
             </ul>
             <ul><h5>Iporã do Oeste</h5>
                 <li><a href="https://www.facebook.com/hcerta/">Hora Certa Conveniência e Cervejaria<a></li>
-                            </ul> 
-                            </div>
+                <li>Fone:</li>
+            </ul> 
+            </div>
                             <div>
                                 <ul>
                                     <li></li>

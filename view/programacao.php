@@ -15,22 +15,23 @@ include './menu.php';
     </head>
     <body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
         <div id="portfolio" class="container-fluid text-center bg-grey">
-            <h2>Programação</h2><br>
+            <h2>Programação</h2><br><br><br>
             <div class="row text-center slideanim">
                 <div class="col-sm-4">
                     <div class="thumbnail">
-                        <img src="img/asus zenfone go.jpg" alt="ASUS" width="400" height="300">
-                        <p>Ireno e Dari Banda Festão</div>
-                </div>
-                <div class="col-sm-4">
-                    <div class="thumbnail">
-                        <img src="img/iphone7.jpg" alt="APPLE" width="400" height="300">
-                        <p>Apple iPhone 7, Chip A10, iOS 10, Tela 4,7´, 32GB, Câmera 12MP, 4G, Desbloqueado MN8X2/A Dourado</p>
+                        <img src="../img/list/1.jpg" alt="Banda KN" width="400" height="300">
+                        <p>Banda KN</p>
                     </div>
                 </div>
                 <div class="col-sm-4">
                     <div class="thumbnail">
-                        <img src="img/lgk10.jpg" alt="LG" width="400" height="300">
+                        <img src="../img/list/2.jpg" alt="Ireno e Dari Banda Festão" width="400" height="300">
+                        <p>Ireno e Dari Banda Festão</p>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="thumbnail">
+                        <img src="../img/list/3.jpg" alt="LG" width="400" height="300">
                         <p>Smartphone LG K10 K430TV, Octa Core, Android 6.0, Tela 5.3´, 16GB, 13MP, 4G, Dual Chip, Desbloqueado - Indigo </p>
                     </div>
                 </div>
