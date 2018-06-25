@@ -17,4 +17,5 @@ BEGIN
     ELSE
 		select 'Preencha todos os campos.';
     END IF;
-END $$;
+END $$
+DELIMITER ;
