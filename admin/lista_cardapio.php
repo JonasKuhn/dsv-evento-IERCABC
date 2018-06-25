@@ -10,7 +10,8 @@ if (isset($login_cookie)) {
     ?>
     <div class="card mb-3">
         <div class="card-header">
-            <i class="fa fa-table"></i> Lista de Cardápio</div>
+            <h3 class="text-center">Lista de Cardápio</h3>
+        </div>
         <div class="card-body">
             <a href="?url=adc_lista_cardapio.php" title="Novo <?= $menu; ?>"><i class="fa fa-2x pb-2 pl-2 fa-plus-square"></i></a>
             <div class="table-responsive">
@@ -40,7 +41,7 @@ if (isset($login_cookie)) {
                                 <td><?= $obs_cardapio; ?></td>
                                 <td>
                                     <a href="?url=edit_lista_cardapio.php&id=<?= $cod; ?>" title="EDITAR"><i class="fa fa-2x fa-edit pr-3 pl-3"></i></a>
-                                    <a href="?url=excBD_lista_cardapio.php&id=<?= $cod; ?>" title="EXCLUIR"><i class="fa fa-2x fa-trash-o"></i></a>
+                                    <a href="?url=excBD_lista_cardapio.php&id=<?= $cod; ?>" onclick="return excluir('<?= $titulo_cardapio ?>');" title="EXCLUIR"><i class="fa fa-2x fa-trash-o"></i></a>
                                 </td>
                             </tr>
                             <?php

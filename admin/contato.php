@@ -1,18 +1,41 @@
 <?php
 if (isset($login_cookie)) {
     $cod_eve = $_POST['cod_evento'];
-    $cod_tip = $_POST['tipo_contato'];
-    
-    if($cod_eve != ''){
-        
-    }else {
-        $cod_eve = 1;
-    }
-    
-    if($cod_tip != ''){
-        
-    }else {
-        $cod_tip = 1;
+    $cod_tip = $_POST['cod_contato'];
+    if($cod_tip != 0) {
+        if ($cod_eve != '') {
+            
+        } else {
+            $cod_eve = 1;
+        }
+
+        if ($cod_tip != '') {
+            
+        } else {
+            $cod_tip = 1;
+        }
+        $selectContato = "select * from tb_evento as e, tb_evento_contato as ec, tb_contato as c, tb_tipo_contato as tc, tb_cidade as ci, tb_estado as es "
+                . "where e.cod_evento = ec.cod_evento "
+                . "and ec.cod_contato = c.cod_contato "
+                . "and c.cod_tipo_contato = tc.cod_tipo_contato "
+                . "and c.cod_cidade = ci.cod_cidade "
+                . "and ci.cod_estado = es.cod_estado "
+                . "and tc.cod_tipo_contato = '$cod_tip' "
+                . "and e.cod_evento = '$cod_eve';";
+
+    } else{
+        if ($cod_eve != '') {
+            
+        } else {
+            $cod_eve = 1;
+        }
+        $selectContato = "select * from tb_evento as e, tb_evento_contato as ec, tb_contato as c, tb_tipo_contato as tc, tb_cidade as ci, tb_estado as es "
+                . "where e.cod_evento = ec.cod_evento "
+                . "and ec.cod_contato = c.cod_contato "
+                . "and c.cod_tipo_contato = tc.cod_tipo_contato "
+                . "and c.cod_cidade = ci.cod_cidade "
+                . "and ci.cod_estado = es.cod_estado "
+                . "and e.cod_evento = '$cod_eve';";
     }
     ?>
     <div class="card mb-3">
@@ -38,16 +61,6 @@ if (isset($login_cookie)) {
                         <?php
                         include '../conexao.php';
 
-                        $selectContato = "select *
-                                        from tb_evento as e, tb_evento_contato as ec, tb_contato as c, tb_tipo_contato as tc, tb_cidade as ci, tb_estado as es
-                                        where e.cod_evento = ec.cod_evento
-                                        and ec.cod_contato = c.cod_contato
-                                        and c.cod_tipo_contato = tc.cod_tipo_contato
-                                        and c.cod_cidade = ci.cod_cidade
-                                        and ci.cod_estado = es.cod_estado
-                                        and tc.cod_tipo_contato = '$cod_tip'
-                                        and e.cod_evento = '$cod_eve';";
-
                         $queryContato = $pdo->query($selectContato);
 
                         while ($dados = $queryContato->fetch()) {
@@ -72,7 +85,7 @@ if (isset($login_cookie)) {
                                 <td><?= $uf; ?></td>
                                 <td>
                                     <a href="?url=edit_contato.php&id=<?= $cod; ?>&e=<?= $cod_eve; ?>" title="EDITAR"><i class="fa fa-2x fa-edit pr-3 pl-3"></i></a>
-                                    <a href="?url=excBD_contato.php&id=<?= $cod; ?>" title="EXCLUIR"><i class="fa fa-2x fa-trash-o"></i></a>
+                                    <a href="?url=excBD_contato.php&id=<?= $cod; ?>" onclick="return excluir('<?=$nome?>');" title="EXCLUIR"><i class="fa fa-2x fa-trash-o"></i></a>
                                 </td>
                             </tr>
                             <?php
