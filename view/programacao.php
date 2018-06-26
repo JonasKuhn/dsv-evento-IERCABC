@@ -5,11 +5,11 @@ include './menu.php';
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" style="text\css" href="../css/list.css">
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-        <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
-        <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="description" content="">
+        <meta name="author" content="">
+        <link rel="stylesheet" style="text\css" href="../css/.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     </head>
@@ -31,8 +31,8 @@ include './menu.php';
                 </div>
                 <div class="col-sm-4">
                     <div class="thumbnail">
-                        <img src="../img/list/3.jpg" alt="LG" width="400" height="300">
-                        <p>Smartphone LG K10 K430TV, Octa Core, Android 6.0, Tela 5.3´, 16GB, 13MP, 4G, Dual Chip, Desbloqueado - Indigo </p>
+                        <img src="../img/list/3.jpg" alt="Banda Choppão" width="400" height="300">
+                        <p>Banda Choppão</p>
                     </div>
                 </div>
             </div>
