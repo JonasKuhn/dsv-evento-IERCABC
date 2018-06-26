@@ -83,42 +83,9 @@ include '../conexao.php';
 <div class="trava"></div>
 <div>
     <p><span class="organizadores"><strong>Organizadores:</strong><br></span>
-                            <span class="org"><?=$nome_contato?>,<br></span>
-                        <span class="org"><?=$telefone_contato?>,<br></span> 
-                        <span class="org"><?=$email_contato?>,<br></span> 
-                        <span class="org"><?=$rua_contato?>,<br></span> 
+                            <span class="org">Nome: <?=$nome_contato?><br></span>
+                        <span class="org">Telefone: <?=$telefone_contato?><br></span> 
+                        <span class="org">Email: <?=$email_contato?><br></span> 
+                        <span class="org"><?=$rua_contato?><br></span> 
                         <span class="org"><?=$nr_contato?><br></span></p>
-                    <p><span class="orgn">Locais disponíveis para compra de ingressos e almoços:</span><?=$descricao_tipo_contato?></p>
-                </div>
-                <div class="i2Style">
-                    <a href="#openModal">Ingressos disponíveis</a>
-                </div>
-                <div id="openModal" class="modalWindow">
-    <div>
-        
-        <div class="modalHeader">
-            <h2>Ingressos disponíveis em:</h2>
-            <a href="#close" title="Close" class="close">X</a>
-        </div>
-        
-        <div class="modalContent">
-            <p>São João do Oeste:</p>
-            <p>Agropecuária Bressler</p>
-            <p>Itapiranga:</p>
-            <p>Sorveteria Tropical</p>
-            <p>Itapiranga (Sede Capela):</p>
-            <p>Bar Capelense</p>
-            <p>Tunápolis:</p>
-            <p>Restaurante Pauli</p>
-            <p>Iporã do Oeste:</p>
-            <p>Hora Certa</p>
-        </div>
-        
-        <div class="modalFooter">
-            <a href="#cancel" title="Cancel" class="cancel">Cancel</a>
-            <a href="#ok" title="Ok" class="ok">Apply</a>
-            <p>Keep in mind that this is a demo</p>
-            <div class="clear"></div>
-        </div>
-    </div>
-</div>
+                </div>  

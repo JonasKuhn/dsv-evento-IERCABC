@@ -140,5 +140,15 @@ footer .glyphicon {
     background-color: black;
    }
 }
-.ul {
-    list-style-type: none;}
+.rodape{
+    font-family: arial, Helvetica ou Verdana;
+    border: 1px solid black;
+    color: black;
+    background-color: #868686;
+}
+.rodape ul{
+    list-style-type: none;
+}
+.rodape h3{
+    padding-left: 20px;
+}
