@@ -144,11 +144,19 @@ footer .glyphicon {
     font-family: arial, Helvetica ou Verdana;
     border: 1px solid black;
     color: black;
-    background-color: #868686;
+    background-color: graytext;
 }
 .rodape ul{
     list-style-type: none;
 }
 .rodape h3{
     padding-left: 20px;
+}
+.mapa{
+    float: right;
+    margin-bottom: 50px;
+}
+.container_rodape{
+    width: 50%;
+    float: left;
 }

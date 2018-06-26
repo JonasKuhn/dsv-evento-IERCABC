@@ -61,7 +61,7 @@
         
         <div class="rodape">
             <footer>
-        <div class="container">
+        <div class="container_rodape">
             <div>
                 <h3>Pontos de venda</h3>
                 <ul class="list-style-type"><h5>São João do Oeste</h5>
@@ -76,7 +76,7 @@
                     <li><a href="https://www.facebook.com/pages/Bar-e-Lanchonete-Capelense/193612621463936">Bar e Lanchonete Capelense</a></li>
                     <li>Fone:</li>
                 </ul>
-                <ul class="list-style-type"><h5>Tunapúlis</h5>
+                <ul class="list-style-type"><h5>Tunápolis</h5>
                     <li><a href='https://www.facebook.com/Restaurante-Pauli-Ltda-660073460750774/'>Restaurante Pauli Ltda</a></li>
                     <li>Fone:</li>
                 </ul>
@@ -85,6 +85,11 @@
                                 <li>Fone:</li>
                                 </ul> 
                                 </div>
+                                </div>
+                                <div class="mapa">
+                                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1497.5973737223667!2d-53.63836532479368!3d-27.141147294873765!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94fbb13ab8dfaee7%3A0x86fb4a55813d5cbe!2sUnnamed+Road%2C+S%C3%A3o+Jo%C3%A3o+do+Oeste+-+SC%2C+89897-000!5e1!3m2!1spt-BR!2sbr!4v1529433693442" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+                                 </div>
+                                <div class="trava"></div>
                                 <div class="row">
                                     <div class="col-lg-8 col-md-10 mx-auto">
                                         <ul class="list-inline text-center">
@@ -116,9 +121,8 @@
                                         <p class="copyright text-muted">Copyright &copy; Your Website 2018</p>
                                     </div>
                                 </div>
-                                </div>
-                                </footer>
-            
+                                
+            </footer>
         </div>
     </body>
 </html>
