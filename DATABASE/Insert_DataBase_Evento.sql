@@ -105,10 +105,10 @@ INSERT INTO `tb_programacao` (`cod_prog`, `descricao_prog`, `obs_prog`, `pavilha
 (3, 'Fala do presidente da comunidade e patrocinadores',    '', 'LOCAL', '10:30:00', null,        '', '', 3, 1),
 (4, 'Almoço especial preparado pela comunidade',            '', 'LOCAL', '11:00:00', null,        '', '', 4, 1),
 (5, 'Um parque de diversões.',                              '', 'LOCAL', '10:00:00', '22:00:00',  '', '', 5, 1),
-(6, 'Banda KN',                                             '', 'LOCAL', '10:30:00', '12:30:00',  '', '', 6, 1),
-(7, 'Ireno e Dari',                                         '', 'LOCAL', '13:00:00', '18:00:00',  '', '', 6, 1),
-(8, 'Banda KN',                                             '', 'LOCAL', '15:30:00', '17:30:00',  '', '', 6, 1),
-(9, 'Banda Chopão',                                         '', 'LOCAL', '18:00:00', '22:00:00',  '', '', 6, 1);
+(6, 'Banda KN',                                             '', 'LOCAL', '10:30:00', '12:30:00',  '1.jpg', 'https://youtu.be/YvldBs1_p8A', 6, 1),
+(7, 'Ireno e Dari',                                         '', 'LOCAL', '13:00:00', '18:00:00',  '2.jpg', 'https://youtu.be/pNluSRVkJZw', 6, 1),
+(8, 'Banda KN',                                             '', 'LOCAL', '15:30:00', '17:30:00',  '',      '', 6, 1),
+(9, 'Banda Chopão',                                         '', 'LOCAL', '18:00:00', '22:00:00',  '3.jpg', 'https://youtu.be/oXVv9fwAAc4', 6, 1);
 
 
 INSERT INTO `tb_sobre_evento` (`cod_sobre_evento`, `titulo_sobre`, `descricao_sobre`, `img_sobre`, `cod_evento`) VALUES
