@@ -26,15 +26,15 @@ $x8 = $_POST['tipo_contato'];
 $sql = "CALL atualiza_contato('$xx','$yy', '$x1','$x2','$x3','$x4','$x5','$x6','$x7','$x8');";
 
 if ($pdo->query($sql)) {
-    header('location: ../index.php?url=itens_cardapio.php');
+    header('location: ../index.php?url=contato.php');
     exit();
 } else {
     echo "<SCRIPT Language='javascript'>
             var confirma = confirm('Erro inesperado não tratado pelo servido!');
             if (confirma) {
-            location.href='index.php?url=itens_cardapio.php';
+            location.href='index.php?url=contato.php';
             } else {
-            location.href='index.php?url=itens_cardapio.php';
+            location.href='index.php?url=contato.php';
             }
             </SCRIPT>";
 }
