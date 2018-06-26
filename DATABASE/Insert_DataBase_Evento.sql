@@ -27,10 +27,6 @@ INSERT INTO `tb_contato` (`cod_contato`, `nome_contato`, `telefone_contato`, `em
 (6, 'Beno Inácio Bressler', '(49) 99987-1515', null, null, 'Local Evento_BD', '000', 4, 2);
 
 
-INSERT INTO `tb_admin` (`cod_admin`, `login_admin`, `senha_admin`, `nome_admin`) VALUES
-(1, 'admin', '21232f297a57a5a743894a0e4a801fc3', 'ADMIN');
-
-
 INSERT INTO `tb_cardapio` (`cod_cardapio`, `titulo_cardapio`, `obs_cardapio`) VALUES
 (1, 'Cardápio do 22º Evento', '');
 
@@ -77,8 +73,12 @@ INSERT INTO `tb_cardapio_tipo` (`cod_cardapio_tipo`, `cod_cardapio`, `cod_item`)
 (15, 1, 15);
 
 
-INSERT INTO `tb_evento` (`cod_evento`, `nome_evento`, `nome_organizacao_evento`, `data_evento`, `rua_evento`, `nome_comunidade`, `cod_admin`, `cod_cardapio`, `cod_cidade`) VALUES
-(1, 'Nome do Evento_BD', 'Instituto Esportivo Recriativo Cultural Assistencial Beneficiente e Colônial', '2018-09-19', 'Jaboticaba', '', 1, 1, 3);
+INSERT INTO `tb_evento` (`cod_evento`, `nome_evento`, `nome_organizacao_evento`, `data_evento`, `rua_evento`, `nome_comunidade`, `cod_cardapio`, `cod_cidade`) VALUES
+(1, 'Nome do Evento_BD', 'Instituto Esportivo Recriativo Cultural Assistencial Beneficiente e Colônial', '2018-09-19', 'Jaboticaba', '', 1, 3);
+
+
+INSERT INTO `tb_admin` (`cod_admin`, `login_admin`, `senha_admin`, `nome_admin`, `cod_evento`) VALUES
+(1, 'admin', '21232f297a57a5a743894a0e4a801fc3', 'ADMIN', '1');
 
 
 INSERT INTO `tb_evento_contato` (`cod_evento_contato`, `cod_contato`, `cod_evento`) VALUES

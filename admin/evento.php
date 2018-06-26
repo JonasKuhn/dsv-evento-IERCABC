@@ -17,7 +17,6 @@ if (isset($login_cookie)) {
                             <th>Rua Evento</th>
                             <th>Nome da Comunidade</th>
                             <th>Cidade</th>
-                            <th>Admin</th>
                             <th>Cardápio</th>
                             <th>UF</th>
                             <th>Editar | Excluir</th>
@@ -38,7 +37,6 @@ if (isset($login_cookie)) {
                             $data = $dados['data_evento'];
                             $rua = $dados['rua_evento'];
                             $comunidade = $dados['nome_comunidade'];
-                            $nomeAdmin = $dados['nome_admin'];
                             $cardapio = $dados['titulo_cardapio'];
                             $cidade = $dados['nome_cidade'];
                             $uf = $dados['uf'];
@@ -50,7 +48,6 @@ if (isset($login_cookie)) {
                                 <td><?= $rua; ?></td>
                                 <td><?= $comunidade; ?></td>
                                 <td><?= $cidade; ?></td>
-                                <td><?= $nomeAdmin; ?></td>
                                 <td><?= $cardapio; ?></td>
                                 <td><?= $uf; ?></td>
                                 <td>

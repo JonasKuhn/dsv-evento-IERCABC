@@ -1,5 +1,5 @@
 DELIMITER $$
-CREATE PROCEDURE del_contato(x INT)
+CREATE PROCEDURE del_contato(x INT, y INT)
 BEGIN
 	DECLARE aux_ec INT;
 	SET aux_ec = 0;
@@ -8,9 +8,12 @@ BEGIN
     where cod_contato = x INTO aux_ec;
     
     IF(aux_ec != 0)THEN
-		SELECT 'Contato esta sendo usado por um Evento!';
+		DELETE FROM tb_evento_contato 
+        WHERE cod_contato = x
+        AND cod_evento = y;
 	ELSE
 		DELETE FROM tb_evento_contato WHERE cod_contato = x;
 		DELETE FROM tb_contato WHERE cod_contato = x;
     END IF;
-END$$;
+END $$
+DELIMITER ;

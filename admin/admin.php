@@ -13,28 +13,31 @@ if (isset($login_cookie)) {
                             <th>Nome</th>
                             <th>Login</th>
                             <th>Senha</th>
-                            <th>Editar | Excluir</th>
+                            <th>Evento Ativo</th>
+                            <th>Editar</th>
                         </tr>
                     </thead>
                     <tbody>
                         <?php
                         include '../conexao.php';
 
-                        $selectAdmin = "select login_admin, nome_admin from tb_admin;";
+                        $selectAdmin = "select * from tb_admin;";
 
                         $queryAdmin = $pdo->query($selectAdmin);
 
                         while ($dados = $queryAdmin->fetch()) {
+                            $cod = $dados['cod_admin'];
                             $login = $dados['login_admin'];
                             $nome = $dados['nome_admin'];
+                            $evento_ativo = $dados['cod_evento'];
                             ?>
                             <tr>
                                 <td><?= $nome; ?></td>
                                 <td><?= $login; ?></td>
-                                <td>xxxxxxx</td>
+                                <td>xxxxxxxxxxxxxx</td>
+                                <td><?= $evento_ativo; ?></td>
                                 <td>
-                                    <a href="#" title="EDITAR"><i class="fa fa-2x fa-edit pr-3 pl-3"></i></a>
-                                    <a href="#" title="EXCLUIR"><i class="fa fa-2x fa-trash-o"></i></a>
+                                    <a href="?url=edit_admin.php&c=<?= $cod; ?>" title="EDITAR"><i class="fa fa-2x fa-edit pr-3 pl-3"></i></a>
                                 </td>
                             </tr>
                             <?php

@@ -25,7 +25,6 @@ CREATE TABLE `tb_evento` (
     `data_evento` DATE,
     `rua_evento` VARCHAR(100),
     `nome_comunidade` VARCHAR(200) NOT NULL,
-    `cod_admin` INTEGER,
     `cod_cardapio` INTEGER,
     `cod_cidade` INTEGER,
     CONSTRAINT `PK_tb_evento` PRIMARY KEY (`cod_evento`)
@@ -68,6 +67,7 @@ CREATE TABLE `tb_admin` (
     `login_admin` VARCHAR(100),
     `senha_admin` VARCHAR(100),
     `nome_admin` VARCHAR(100),
+    `cod_evento` INTEGER NOT NULL,
     CONSTRAINT `PK_tb_admin` PRIMARY KEY (`cod_admin`)
 );
 
@@ -196,9 +196,6 @@ CREATE TABLE `tb_cardapio_tipo` (
 # Foreign key constraints                                                #
 # ---------------------------------------------------------------------- #
 
-ALTER TABLE `tb_evento` ADD CONSTRAINT `tb_admin_tb_evento` 
-    FOREIGN KEY (`cod_admin`) REFERENCES `tb_admin` (`cod_admin`);
-
 ALTER TABLE `tb_evento` ADD CONSTRAINT `tb_cardapio_tb_evento` 
     FOREIGN KEY (`cod_cardapio`) REFERENCES `tb_cardapio` (`cod_cardapio`);
 
@@ -209,6 +206,9 @@ ALTER TABLE `tb_programacao` ADD CONSTRAINT `tb_tipo_programacao_tb_programacao`
     FOREIGN KEY (`cod_tipo_prog`) REFERENCES `tb_tipo_programacao` (`cod_tipo_prog`);
 
 ALTER TABLE `tb_programacao` ADD CONSTRAINT `tb_evento_tb_programacao` 
+    FOREIGN KEY (`cod_evento`) REFERENCES `tb_evento` (`cod_evento`);
+
+ALTER TABLE `tb_admin` ADD CONSTRAINT `tb_evento_tb_admin` 
     FOREIGN KEY (`cod_evento`) REFERENCES `tb_evento` (`cod_evento`);
 
 ALTER TABLE `tb_sobre_evento` ADD CONSTRAINT `tb_evento_tb_sobre_evento` 

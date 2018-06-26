@@ -3,7 +3,8 @@
 include './../conexao.php';
 
 $xx = $_GET['id'];
-$sql = "CALL del_contato($xx)";
+$yy = $_GET['e'];
+$sql = "CALL del_contato($xx, $yy)";
 
 if ($pdo->query($sql)) {
     echo "'<SCRIPT Language='javascript'>

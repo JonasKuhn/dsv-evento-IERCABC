@@ -85,7 +85,7 @@ if (isset($login_cookie)) {
                                 <td><?= $uf; ?></td>
                                 <td>
                                     <a href="?url=edit_contato.php&id=<?= $cod; ?>&e=<?= $cod_eve; ?>" title="EDITAR"><i class="fa fa-2x fa-edit pr-3 pl-3"></i></a>
-                                    <a href="?url=excBD_contato.php&id=<?= $cod; ?>" onclick="return excluir('<?=$nome?>');" title="EXCLUIR"><i class="fa fa-2x fa-trash-o"></i></a>
+                                    <a href="?url=excBD_contato.php&id=<?= $cod; ?>&e=<?= $cod_eve; ?>" onclick="return excluir('<?=$nome?>');" title="EXCLUIR"><i class="fa fa-2x fa-trash-o"></i></a>
                                 </td>
                             </tr>
                             <?php

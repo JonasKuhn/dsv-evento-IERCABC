@@ -11,7 +11,7 @@ if (isset($login_cookie)) {
             </div>
             <hr class="b-s-dashed">
             <div class="form-group">
-                <label class="col-sm-4 control-label">Nome da Sociedade:</label>
+                <label class="col-sm-12 control-label">Nome da Sociedade:</label>
                 <div class="col-sm-12">
                     <input type="text" class="form-control" name="nome_sociedade" required placeholder="Digite o nome da sociedade...">
                 </div>

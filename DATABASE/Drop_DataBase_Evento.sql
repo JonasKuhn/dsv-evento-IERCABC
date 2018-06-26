@@ -5,15 +5,13 @@
 # Project name:                                                          #
 # Author:                                                                #
 # Script type:           Database drop script                            #
-# Created on:            2018-06-15 15:21                                #
+# Created on:            2018-06-26 08:51                                #
 # ---------------------------------------------------------------------- #
 
 
 # ---------------------------------------------------------------------- #
 # Drop foreign key constraints                                           #
 # ---------------------------------------------------------------------- #
-
-ALTER TABLE `tb_evento` DROP FOREIGN KEY `tb_admin_tb_evento`;
 
 ALTER TABLE `tb_evento` DROP FOREIGN KEY `tb_cardapio_tb_evento`;
 
@@ -22,6 +20,8 @@ ALTER TABLE `tb_evento` DROP FOREIGN KEY `tb_cidade_tb_evento`;
 ALTER TABLE `tb_programacao` DROP FOREIGN KEY `tb_tipo_programacao_tb_programacao`;
 
 ALTER TABLE `tb_programacao` DROP FOREIGN KEY `tb_evento_tb_programacao`;
+
+ALTER TABLE `tb_admin` DROP FOREIGN KEY `tb_evento_tb_admin`;
 
 ALTER TABLE `tb_sobre_evento` DROP FOREIGN KEY `tb_evento_tb_sobre_evento`;
 
@@ -88,6 +88,22 @@ ALTER TABLE `tb_sobre_evento` DROP PRIMARY KEY;
 # Drop table #
 
 DROP TABLE `tb_sobre_evento`;
+
+# ---------------------------------------------------------------------- #
+# Drop table "tb_admin"                                                  #
+# ---------------------------------------------------------------------- #
+
+# Remove autoinc for PK drop #
+
+ALTER TABLE `tb_admin` MODIFY `cod_admin` INTEGER NOT NULL;
+
+# Drop constraints #
+
+ALTER TABLE `tb_admin` DROP PRIMARY KEY;
+
+# Drop table #
+
+DROP TABLE `tb_admin`;
 
 # ---------------------------------------------------------------------- #
 # Drop table "tb_programacao"                                            #
@@ -232,22 +248,6 @@ ALTER TABLE `tb_cardapio` DROP PRIMARY KEY;
 # Drop table #
 
 DROP TABLE `tb_cardapio`;
-
-# ---------------------------------------------------------------------- #
-# Drop table "tb_admin"                                                  #
-# ---------------------------------------------------------------------- #
-
-# Remove autoinc for PK drop #
-
-ALTER TABLE `tb_admin` MODIFY `cod_admin` INTEGER NOT NULL;
-
-# Drop constraints #
-
-ALTER TABLE `tb_admin` DROP PRIMARY KEY;
-
-# Drop table #
-
-DROP TABLE `tb_admin`;
 
 # ---------------------------------------------------------------------- #
 # Drop table "tb_tipo_programacao"                                       #

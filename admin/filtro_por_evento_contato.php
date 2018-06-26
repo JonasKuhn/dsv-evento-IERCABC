@@ -1,5 +1,5 @@
 <div class="card-header">
-    <h3 class="text-center">Itens Cardápio</h3>
+    <h3 class="text-center">Contatos</h3>
     <hr>
     <div class="float-right col-sm-12">
         <form method="POST" action="index.php?url=contato.php" enctype="multipart/form-data">

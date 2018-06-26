@@ -191,6 +191,13 @@ if (isset($login_cookie)) {
                         include ('./editar/edit_contato.php');
                         break;
 
+                    // ADMIN
+                    case 'edit_admin.php':
+                        $menu = '<a href="?url=admin.php">Admin</a> / Editar Admin';
+                        include './navegacao.php';
+                        include ('./editar/edit_admin.php');
+                        break;
+                    
                     default :
                         $menu = 'Home';
                         include './navegacao.php';

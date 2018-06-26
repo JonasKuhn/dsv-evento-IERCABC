@@ -4,8 +4,7 @@ if (isset($login_cookie)) {
     $id = $_GET['id'];
     $selectEventoConfigs = "SELECT *
                     FROM tb_evento as e, tb_cardapio as c, tb_admin as a, tb_cidade as ci, tb_estado as es
-                    WHERE e.cod_admin = a.cod_admin
-                    AND e.cod_cardapio = c.cod_cardapio
+                    WHERE e.cod_cardapio = c.cod_cardapio
                     AND e.cod_cidade = ci.cod_cidade
                     AND ci.cod_estado = es.cod_estado
                     AND e.cod_evento = '$id'";
@@ -20,7 +19,6 @@ if (isset($login_cookie)) {
     $rua = $dados['rua_evento'];
     $comunidade = $dados['nome_comunidade'];
     $nomeAdmin = $dados['nome_admin'];
-    $cod_a = $dados['cod_admin'];
     $cod_car = $dados['cod_cardapio'];
     $cardapio = $dados['titulo_cardapio'];
     $cod_ci = $dados['cod_cidade'];
@@ -37,7 +35,7 @@ if (isset($login_cookie)) {
             </div>
             <hr class="b-s-dashed">
             <div class="form-group">
-                <label class="col-sm-4 control-label">Nome da Sociedade:</label>
+                <label class="col-sm-8 control-label">Nome da Sociedade:</label>
                 <div class="col-sm-12">
                     <input type="text" class="form-control" name="nome_sociedade" value="<?= $nome_sociedade; ?>" required placeholder="Digite o nome da sociedade...">
                 </div>
@@ -61,13 +59,6 @@ if (isset($login_cookie)) {
                 <label class="col-sm-5 control-label" >Nome da Comunidade:</label>
                 <div class="col-sm-12">
                     <input type="text" class="form-control" required name="nome_comunidade" value="<?= $comunidade; ?>" placeholder="Digite o nome da comunnidade...">
-                </div>
-            </div>
-            <hr class="b-s-dashed">
-            <div>
-                <label class="col-sm-5 control-label" >Admin:</label>
-                <div class="col-sm-12">
-                    <input type="text" class="form-control" name="admin" value="<?= $cod_a; ?> - <?= $nomeAdmin; ?>" disabled required placeholder="Digite o nome da comunnidade...">
                 </div>
             </div>
             <hr class="b-s-dashed">
