@@ -19,19 +19,19 @@ include './menu.php';
             <div class="row text-center slideanim">
                 <div class="col-sm-4">
                     <div class="thumbnail">
-                        <img src="../img/list/1.jpg" alt="Banda KN" width="400" height="300">
+                        <img src="../img/list/1.jpg" alt="Banda KN" width="300" height="300">
                         <p>Banda KN</p>
                     </div>
                 </div>
                 <div class="col-sm-4">
                     <div class="thumbnail">
-                        <img src="../img/list/2.jpg" alt="Ireno e Dari Banda Festão" width="400" height="300">
+                        <img src="../img/list/2.jpg" alt="Ireno e Dari Banda Festão" width="300" height="300">
                         <p>Ireno e Dari Banda Festão</p>
                     </div>
                 </div>
                 <div class="col-sm-4">
                     <div class="thumbnail">
-                        <img src="../img/list/3.jpg" alt="Banda Choppão" width="400" height="300">
+                        <img src="../img/list/3.jpg" alt="Banda Choppão" width="300" height="300">
                         <p>Banda Choppão</p>
                     </div>
                 </div>
