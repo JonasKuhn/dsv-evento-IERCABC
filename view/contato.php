@@ -18,26 +18,26 @@ include '../conexao.php';
         </div>
     </div>
 </header>
-        <?php
-        $sql = "Select nome_contato, telefone_contato, email_contato, img_contato, rua_contato, nr_contato "
-                . "from tb_contato";
-        $query = $pdo->query($sql);
-        while ($dados = $query->fetch()) {
-            $nome_contato = $dados['nome_contato'];
-            $telefone_contato = $dados['telefone_contato'];
-            $email_contato = $dados['email_contato'];
-            $img_contato = $dados['img_contato'];
-            $rua_contato = $dados['rua_contato'];
-            $nr_contato = $dados['nr_contato'];
-            ?>
-            <?php
-        }
-        ?>
+<?php
+$sql = "Select nome_contato, telefone_contato, email_contato, img_contato, rua_contato, nr_contato "
+        . "from tb_contato";
+$query = $pdo->query($sql);
+while ($dados = $query->fetch()) {
+    $nome_contato = $dados['nome_contato'];
+    $telefone_contato = $dados['telefone_contato'];
+    $email_contato = $dados['email_contato'];
+    $img_contato = $dados['img_contato'];
+    $rua_contato = $dados['rua_contato'];
+    $nr_contato = $dados['nr_contato'];
+    ?>
+    <?php
+}
+?>
 <!-- Main Content -->
-    <div class="mapas">
-        <h2>Nossa Localizaçao</h2>
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1497.5973737223667!2d-53.63836532479368!3d-27.141147294873765!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94fbb13ab8dfaee7%3A0x86fb4a55813d5cbe!2sUnnamed+Road%2C+S%C3%A3o+Jo%C3%A3o+do+Oeste+-+SC%2C+89897-000!5e1!3m2!1spt-BR!2sbr!4v1529433693442" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
-                </div>
+<div class="mapas">
+    <h2>Nossa Localizaçao</h2>
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1497.5973737223667!2d-53.63836532479368!3d-27.141147294873765!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94fbb13ab8dfaee7%3A0x86fb4a55813d5cbe!2sUnnamed+Road%2C+S%C3%A3o+Jo%C3%A3o+do+Oeste+-+SC%2C+89897-000!5e1!3m2!1spt-BR!2sbr!4v1529433693442" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+</div>
 <div class="container">
     <div class="row">
         <div class="col-lg-8 col-md-10 mx-auto">
@@ -83,9 +83,9 @@ include '../conexao.php';
 <div class="trava"></div>
 <div>
     <p><span class="organizadores"><strong>Organizadores:</strong><br></span>
-                            <span class="org">Nome: <?=$nome_contato?><br></span>
-                        <span class="org">Telefone: <?=$telefone_contato?><br></span> 
-                        <span class="org">Email: <?=$email_contato?><br></span> 
-                        <span class="org"><?=$rua_contato?><br></span> 
-                        <span class="org"><?=$nr_contato?><br></span></p>
-                </div>  
+        <span class="org">Nome: <?= $nome_contato ?><br></span>
+        <span class="org">Telefone: <?= $telefone_contato ?><br></span> 
+        <span class="org">Email: <?= $email_contato ?><br></span> 
+        <span class="org"><?= $rua_contato ?><br></span> 
+        <span class="org"><?= $nr_contato ?><br></span></p>
+</div>  
