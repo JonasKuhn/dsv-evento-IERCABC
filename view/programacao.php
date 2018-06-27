@@ -17,66 +17,56 @@ include './menu.php';
         <div id="portfolio" class="container-fluid text-center bg-grey">
             <h2>Programação</h2><br><br><br>
             <div class="row text-center slideanim">
-                <div class="col-sm-4">
-                    <div class="thumbnail">
-                        <img src="../img/list/1.jpg" alt="Banda KN" width="300" height="300">
-                        <p>Banda KN</p>
+                <?php
+                include './conexao.php';
+                $sql = "Select p.* 
+                        from tb_admin as a, tb_evento as e, tb_programacao as p, tb_tipo_programacao as tp
+                        where a.cod_evento = e.cod_evento
+                        and e.cod_evento = p.cod_evento
+                        and p.cod_tipo_prog = tp.cod_tipo_prog
+                        and tp.cod_tipo_prog = 6";
+                $query = $mysqli->query($sql);
+                while ($dados = $query->fetch_array()) {
+                    $descricao_prog = $dados['descricao_prog'];
+                    $diretorio = '../admin/upload/img/programacao/';
+                    $img_ok = $diretorio . $dados['img_prog'];
+                    ?>
+                    <div class="col-sm-4">
+                        <div class="thumbnail">
+                            <img src="<?= $img_ok ?>" alt="<?= $descricao_prog; ?> " width="300" height="300">
+                            <p><?= $descricao_prog; ?></p>
+                        </div>
                     </div>
-                </div>
-                <div class="col-sm-4">
-                    <div class="thumbnail">
-                        <img src="../img/list/2.jpg" alt="Ireno e Dari Banda Festão" width="300" height="300">
-                        <p>Ireno e Dari Banda Festão</p>
-                    </div>
-                </div>
-                <div class="col-sm-4">
-                    <div class="thumbnail">
-                        <img src="../img/list/3.jpg" alt="Banda Choppão" width="300" height="300">
-                        <p>Banda Choppão</p>
-                    </div>
-                </div>
+                    <?php
+                }
+                ?>
             </div>
-            <footer class="container-fluid text-center">
-                <a href="#myPage" title="To Top">
-                    <span class="glyphicon glyphicon-chevron-up"></span>
-                </a>
-                <p>Voltar ao Início.</p>
-            </footer>
-            <script>
-                $(document).ready(function () {
-                    // Add smooth scrolling to all links in navbar + footer link
-                    $(".navbar a, footer a[href='#myPage']").on('click', function (event) {
-                        // Make sure this.hash has a value before overriding default behavior
-                        if (this.hash !== "") {
-                            // Prevent default anchor click behavior
-                            event.preventDefault();
-
-                            // Store hash
-                            var hash = this.hash;
-
-                            // Usando o método animate () do jQuery para adicionar uma página suave
-                            // The optional number (900) specifies the number of milliseconds it takes to scroll to the specified area
-                            $('html, body').animate({
-                                scrollTop: $(hash).offset().top
-                            }, 900, function () {
-
-                                // Add hash (#) to URL when done scrolling (default click behavior)
-                                window.location.hash = hash;
-                            });
-                        } // End if
-                    });
-
-                    $(window).scroll(function () {
-                        $(".slideanim").each(function () {
-                            var pos = $(this).offset().top;
-
-                            var winTop = $(window).scrollTop();
-                            if (pos < winTop + 600) {
-                                $(this).addClass("slide");
-                            }
-                        });
-                    });
-                })
-            </script>
+            <div class="">
+                <?php
+                include './conexao.php';
+                $sql = "Select p.* 
+                        from tb_admin as a, tb_evento as e, tb_programacao as p, tb_tipo_programacao as tp
+                        where a.cod_evento = e.cod_evento
+                        and e.cod_evento = p.cod_evento
+                        and p.cod_tipo_prog = tp.cod_tipo_prog
+                        and tp.cod_tipo_prog = 6";
+                $query = $mysqli->query($sql);
+                while ($dados = $query->fetch_array()) {
+                    $descricao_prog = $dados['descricao_prog'];
+                    
+                    ?>
+                    <div class="col-sm-4">
+                        <div class="thumbnail">
+                            <img src="<?= $img_ok ?>" alt="<?= $descricao_prog; ?> " width="300" height="300">
+                            <p><?= $descricao_prog; ?></p>
+                        </div>
+                    </div>
+                    <?php
+                }
+                ?>
+                <ul class="">
+                    <li></li>
+                </ul>
+            </div>
     </body>
 </html>
