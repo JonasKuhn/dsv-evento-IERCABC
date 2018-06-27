@@ -49,24 +49,24 @@ include './menu.php';
                         where a.cod_evento = e.cod_evento
                         and e.cod_evento = p.cod_evento
                         and p.cod_tipo_prog = tp.cod_tipo_prog
-                        and tp.cod_tipo_prog = 6";
+                        and tp.cod_tipo_prog = 1";
                 $query = $mysqli->query($sql);
                 while ($dados = $query->fetch_array()) {
                     $descricao_prog = $dados['descricao_prog'];
+                    $hora_inicio_prog = $dados['hora_inicio_prog'];
+                    $hora_fim_prog = $dados['hora_fim_prog'];
                     
                     ?>
-                    <div class="col-sm-4">
-                        <div class="thumbnail">
-                            <img src="<?= $img_ok ?>" alt="<?= $descricao_prog; ?> " width="300" height="300">
-                            <p><?= $descricao_prog; ?></p>
-                        </div>
+                <div>
+                    <div >
+                        <ul>
+                            <li><?= $hora_inicio_prog;?>, <?= $descricao_prog;?></li>
+                        </ul>
                     </div>
-                    <?php
+                </div>
+                <?php
                 }
                 ?>
-                <ul class="">
-                    <li></li>
-                </ul>
             </div>
     </body>
 </html>
