@@ -1,6 +1,10 @@
+
+
+
 <?php
 //Menu 
 include './menu.php';
+include '../conexao.php';
 ?>
 <!-- Page Header -->
 <header class="masthead" style="background-image: url('../img/sobre-bg.jpg')">
@@ -21,14 +25,34 @@ include './menu.php';
 <div class="container">
     <div class="row">
         <div class="col-lg-8 col-md-10 mx-auto">
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe nostrum ullam eveniet pariatur voluptates odit, fuga atque ea nobis sit soluta odio, adipisci quas excepturi maxime quae totam ducimus consectetur?</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius praesentium recusandae illo eaque architecto error, repellendus iusto reprehenderit, doloribus, minus sunt. Numquam at quae voluptatum in officia voluptas voluptatibus, minus!</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut consequuntur magnam, excepturi aliquid ex itaque esse est vero natus quae optio aperiam soluta voluptatibus corporis atque iste neque sit tempora!</p>
+            <?php
+    
+                $sql = "Select titulo_sobre, descricao_sobre "
+                      . "from tb_sobre_evento";
+
+                $query = $pdo->query($sql); 
+                while($dados = $query->fetch()) {
+
+
+                $titulo_sobre = $dados ['titulo_sobre'];
+                $descricao_sobre = $dados ['descricao_sobre'];
+        
+        
+            ?>;
+
+            <p>titulo<?= $titulo_sobre;?><br><br> <br>
+
+            descrição<?= $descricao_sobre;?><br><br><br> </p>
+    
+            <?php
+                  }
+            ?>
         </div>
+        
+        
+        <h3>Galeria de Imagens</h3>
+        <img src="../img/1.jpg" alt="">
     </div>
+    
 </div>
-
 <hr>
-
-
-
