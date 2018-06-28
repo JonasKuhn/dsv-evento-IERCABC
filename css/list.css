@@ -162,3 +162,12 @@ footer .glyphicon {
 .col-6{
     list-style-type: none;
 }
+
+.gimg{
+   text-align: right;
+}
+.floa{
+    float: left;
+    margin-top: 1em;
+    
+}

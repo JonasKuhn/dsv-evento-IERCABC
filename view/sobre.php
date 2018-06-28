@@ -24,8 +24,20 @@ include '../conexao.php';
 <!-- Main Content -->
 <div class="container">
     <div class="row">
+        <div class="gimg">
+        <h3>Galeria de Imagens</h3>
+        <img class="floa" src="../img/3.jpg" alt=""><br>
+        <img class="floa" src="../img/3.jpg" alt=""><br>
+        <img class="floa" src="../img/3.jpg" alt=""><br>
+        <img class="floa" src="../img/3.jpg" alt=""><br>
+        <img class="floa" src="../img/3.jpg" alt=""><br>
+        <img class="floa" src="../img/3.jpg" alt=""><br>
+         </div>
+        
+        
         <div class="col-lg-8 col-md-10 mx-auto">
-            <?php
+            
+                <?php
     
                 $sql = "Select titulo_sobre, descricao_sobre "
                       . "from tb_sobre_evento";
@@ -37,22 +49,22 @@ include '../conexao.php';
                 $titulo_sobre = $dados ['titulo_sobre'];
                 $descricao_sobre = $dados ['descricao_sobre'];
         
+                ?>;
+
+                <p>titulo<?= $titulo_sobre;?><br><br> <br>
+
+                descrição<?= $descricao_sobre;?><br><br><br> </p>
+
+                <?php
+                      }
+                ?>
+            
         
-            ?>;
-
-            <p>titulo<?= $titulo_sobre;?><br><br> <br>
-
-            descrição<?= $descricao_sobre;?><br><br><br> </p>
-    
-            <?php
-                  }
-            ?>
+        
+        
+        
         </div>
-        
-        
-        <h3>Galeria de Imagens</h3>
-        <img src="../img/1.jpg" alt="">
-    </div>
     
+    </div>
 </div>
 <hr>
