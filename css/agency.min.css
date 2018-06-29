@@ -13,7 +13,7 @@ a{color:#fed136}
 a:hover{color:#fec503}
 .text-primary{color:#fed136!important}
 h1,h2,h3,h4,h5,h6{font-weight:700;font-family:Montserrat,'Helvetica Neue',Helvetica,Arial,sans-serif}
-section{padding:100px 0}
+section{padding:50px 0}
 section h2.section-heading{font-size:40px;margin-top:0;margin-bottom:15px}
 section h3.section-subheading{font-size:16px;font-weight:400;font-style:italic;margin-bottom:75px;text-transform:none;font-family:'Droid Serif','Helvetica Neue',Helvetica,Arial,sans-serif}
 header.masthead{text-align:center;color:#fff;margin-top: 7.5%; background-image:url(../img/10.jpg);background-repeat:no-repeat;background-attachment:scroll;-webkit-background-size:cover;-moz-background-size:cover;-o-background-size:cover;background-size:cover}
@@ -22,7 +22,8 @@ header.masthead .intro-text .intro-lead-in{font-size:22px;font-style:italic;line
 header.masthead .intro-text .intro-heading{font-size:50px;font-weight:700;line-height:50px;margin-bottom:25px;font-family:Montserrat,'Helvetica Neue',Helvetica,Arial,sans-serif}
 
 .btn{font-family:Montserrat,'Helvetica Neue',Helvetica,Arial,sans-serif;font-weight:700}
-.btn-xl{font-size:18px;padding:20px 40px}.btn-primary{background-color:#fed136;border-color:#fed136}
+.btn-xl{font-size:18px;padding:20px 40px}
+.btn-primary{background-color:#fed136;border-color:#fed136}
 .btn-primary:active,
 .btn-primary:focus,
 .btn-primary:hover{background-color:#fec810!important;border-color:#fec810!important;color:#fff}
@@ -105,14 +106,14 @@ ul.social-buttons li a:active,ul.social-buttons li a:focus,ul.social-buttons li 
 }
 
 @media (min-width:768px){
-    header.masthead{text-align:center;color:#fff;margin-top: 7%; background-image:url(../img/10.jpg);
-                    background-repeat:no-repeat;background-attachment:scroll;-webkit-background-size:cover;-moz-background-size:cover;
-                    -o-background-size:cover;background-size:cover; background-size: 100%;}
+    header.masthead .intro-text {padding-top: 60px;padding-bottom: 0px;}
+    .btn-primary {margin-bottom: 25px;}
+    .btn-xl{font-size:15px;padding:10px 25px}
+    
     #mainNav{padding-top:10px;padding-bottom:10px;-webkit-transition:padding-top .3s,padding-bottom .3s;-moz-transition:padding-top .3s,padding-bottom .3s;transition:padding-top .3s,padding-bottom .3s;border:none;background-color:transparent}
     #mainNav .navbar-nav .nav-item .nav-link { padding: 0.5em 0.5em!important;}
     #mainNav .navbar-brand {font-size: 1.3em;-webkit-transition: all .3s;-moz-transition: all .3s; transition: all .3s;}
-    section{padding:150px 0}
-    header.masthead .intro-text{padding-top:300px;padding-bottom:200px}
+    section{padding:100px 0}
     header.masthead .intro-text .intro-lead-in{font-size:40px;font-style:italic;line-height:40px;margin-bottom:25px;font-family:'Droid Serif','Helvetica Neue',Helvetica,Arial,sans-serif}
     header.masthead .intro-text .intro-heading{font-size:75px;font-weight:700;line-height:75px;margin-bottom:50px;font-family:Montserrat,'Helvetica Neue',Helvetica,Arial,sans-serif}
     .timeline:before{left:50%}
@@ -149,7 +150,7 @@ ul.social-buttons li a:active,ul.social-buttons li a:focus,ul.social-buttons li 
 
 @media (min-width:1200px){
     header.masthead{margin-top: 6%; background-size: 100%;}
-    header.masthead .intro-text {padding-top: 180px;padding-bottom: 100px;}
+    header.masthead .intro-text {padding-top: 190px;padding-bottom: 100px;}
     #mainNav{padding-top:15px;padding-bottom:15px;}
     #mainNav .navbar-nav .nav-item .nav-link { padding: 1.1em 0.8em!important;}
     #mainNav .navbar-brand {font-size: 1.5em;}

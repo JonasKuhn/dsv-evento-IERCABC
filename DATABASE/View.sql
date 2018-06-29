@@ -23,3 +23,15 @@ where a.cod_evento = e.cod_evento
 and e.cod_cardapio = c.cod_cardapio
 and c.cod_cardapio = ct.cod_cardapio
 and ct.cod_item = i.cod_item;
+
+## BUSCA POR PONTO DE VENDAS
+CREATE VIEW busca_ponto_vendas AS
+SELECT c.*, tc.descricao_tipo_contato, cit.nome_cidade, est.uf
+FROM tb_admin as a, tb_evento AS e, tb_evento_contato AS ec, tb_contato AS c, tb_tipo_contato AS tc, tb_cidade as cit, tb_estado as est
+WHERE a.cod_evento = e.cod_evento
+AND e.cod_evento = ec.cod_evento
+AND ec.cod_contato = c.cod_contato
+AND c.cod_cidade = cit.cod_cidade
+AND cit.cod_estado = est.cod_estado
+AND c.cod_tipo_contato = tc.cod_tipo_contato
+AND tc.cod_tipo_contato = 1;
