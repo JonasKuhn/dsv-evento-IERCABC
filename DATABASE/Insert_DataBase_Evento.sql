@@ -38,21 +38,21 @@ INSERT INTO `tb_tipo_item` (`cod_tipo_item`, `descricao_tipo_item`, `valor_tipo_
 
 
 INSERT INTO `tb_item` (`cod_item`, `nome_item`, `descricao_item`, `valor_item`, `img_item`, `cod_tipo_item`) VALUES
-(1, 'Leitão a Paraguaia', null, null, null, 1),
-(2, 'Pernil',             null, null, null, 1),
-(3, 'Lombinho',           null, null, null, 1),
-(4, 'Costela',            null, null, null, 1),
-(5, 'Saladas', 'Repolho, Alface, Tomate, Pepino, Brócolis, Cebola ...', null, null, 3),
-(6, 'Pães',               null, null, null, 3),
-(7, 'Cuca',               null, null, null, 3),
-(8, 'Maionese',           null, null, null, 3),
-(9,  'Skol',            'Garrafas - 600ml / Latas - 350/473ml', '', null, 2),
-(10, 'Brahma',          'Garrafas - 600ml / Latas - 350/473ml', '', null, 2),
-(11, 'Barris de 20L',   'Chopp Fritz',                          '', null, 2),
-(12, 'Barris de 30L',   'Chopp Fritz',                          '', null, 2),
-(13, 'Barris de 50L',   'Chopp Fritz',                          '', null, 2),
-(14, 'Barris de 70L',   'Chopp Fritz',                          '', null, 2),
-(15, 'Caneca de Chopp', 'Chopp Fritz',                          '', null, 2);
+(1, 'Leitão a Paraguaia', '', '', '', 1),
+(2, 'Pernil',             '', '', '', 1),
+(3, 'Lombinho',           '', '', '', 1),
+(4, 'Costela',            '', '', '', 1),
+(5, 'Saladas', 'Repolho, Alface, Tomate, Pepino, Brócolis, Cebola ...', '', '', 3),
+(6, 'Pães',               '', '', '', 3),
+(7, 'Cuca',               '', '', '', 3),
+(8, 'Maionese',           '', '', '', 3),
+(9,  'Skol',            'Garrafas - 600ml / Latas - 350/473ml', '6.00', '', 2),
+(10, 'Brahma',          'Garrafas - 600ml / Latas - 350/473ml', '7.00', '', 2),
+(11, 'Barris de 20L',   'Chopp Fritz',                          '', '', 2),
+(12, 'Barris de 30L',   'Chopp Fritz',                          '', '', 2),
+(13, 'Barris de 50L',   'Chopp Fritz',                          '', '', 2),
+(14, 'Barris de 70L',   'Chopp Fritz',                          '', '', 2),
+(15, 'Caneca de Chopp', 'Chopp Fritz',                          '6.00', '', 2);
 
 
 INSERT INTO `tb_cardapio_tipo` (`cod_cardapio_tipo`, `cod_cardapio`, `cod_item`) VALUES 
@@ -74,7 +74,7 @@ INSERT INTO `tb_cardapio_tipo` (`cod_cardapio_tipo`, `cod_cardapio`, `cod_item`)
 
 
 INSERT INTO `tb_evento` (`cod_evento`, `nome_evento`, `nome_organizacao_evento`, `data_evento`, `rua_evento`, `nome_comunidade`, `cod_cardapio`, `cod_cidade`) VALUES
-(1, 'Nome do Evento_BD', 'Instituto Esportivo Recriativo Cultural Assistencial Beneficiente e Colônial', '2018-09-19', 'Jaboticaba', '', 1, 3);
+(1, '22ª Festa do Leitão', 'Instituto Esportivo Recriativo Cultural Assistencial Beneficiente e Colônial', '2018-09-19', 'Jaboticaba', 'Comunidade De Jaboticaba', 1, 3);
 
 
 INSERT INTO `tb_admin` (`cod_admin`, `login_admin`, `senha_admin`, `nome_admin`, `cod_evento`) VALUES
@@ -105,23 +105,20 @@ INSERT INTO `tb_programacao` (`cod_prog`, `descricao_prog`, `obs_prog`, `pavilha
 (3, 'Fala do presidente da comunidade e patrocinadores',    '', 'LOCAL', '10:30:00', null,        '', '', 3, 1),
 (4, 'Almoço especial preparado pela comunidade',            '', 'LOCAL', '11:00:00', null,        '', '', 4, 1),
 (5, 'Um parque de diversões.',                              '', 'LOCAL', '10:00:00', '22:00:00',  '', '', 5, 1),
-(6, 'Banda KN',                                             '', 'LOCAL', '10:30:00', '12:30:00',  '1.jpg', 'https://youtu.be/YvldBs1_p8A', 6, 1),
-(7, 'Ireno e Dari',                                         '', 'LOCAL', '13:00:00', '18:00:00',  '2.jpg', 'https://youtu.be/pNluSRVkJZw', 6, 1),
-(8, 'Banda KN',                                             '', 'LOCAL', '15:30:00', '17:30:00',  '',      '', 6, 1),
-(9, 'Banda Chopão',                                         '', 'LOCAL', '18:00:00', '22:00:00',  '3.jpg', 'https://youtu.be/oXVv9fwAAc4', 6, 1);
+(6, 'Banda KN',                                             '', 'LOCAL', '10:30:00', '12:30:00',  'kn.jpg', 'https://www.youtube.com/embed/YvldBs1_p8A?rel=0&controls=0&showinfo=0', 6, 1),
+(7, 'Ireno e Dari',                                         '', 'LOCAL', '13:00:00', '18:00:00',  'ireno_e_dari.jpg', 'https://www.youtube.com/embed/pNluSRVkJZw?controls=0&showinfo=0', 6, 1),
+(8, 'Banda KN',                                             '', 'LOCAL', '15:30:00', '17:30:00',  'kn.jpg',      'https://www.youtube.com/embed/YvldBs1_p8A?rel=0&controls=0&showinfo=0', 6, 1),
+(9, 'Banda Chopão',                                         '', 'LOCAL', '18:00:00', '22:00:00',  'choppao.jpg', 'https://www.youtube.com/embed/oXVv9fwAAc4?rel=0&controls=0&showinfo=0', 6, 1);
 
 
 INSERT INTO `tb_sobre_evento` (`cod_sobre_evento`, `titulo_sobre`, `descricao_sobre`, `img_sobre`, `cod_evento`) VALUES
-(1, 'Nossa História', 'Lorem Ipsum é simplesmente uma simulação de texto da indústria tipográfica e de impressos, 
-	e vem sendo utilizado desde o século XVI, quando um impressor desconhecido pegou uma bandeja de tipos e os 
-	embaralhou para fazer um livro de modelos de tipos. Lorem Ipsum sobreviveu não só a cinco séculos, como 
-	também ao salto para a editoração eletrônica, permanecendo essencialmente inalterado. Se popularizou na 
-	década de 60, quando a Letraset lançou decalques contendo passagens de Lorem Ipsum, e mais recentemente 
-	quando passou a ser integrado a softwares de editoração eletrônica como Aldus PageMaker.', '', 1),
-(2, 'Como Surgiu?', 'É um fato conhecido de todos que um leitor se distrairá com o conteúdo de texto legível 
-	de uma página quando estiver examinando sua diagramação. A vantagem de usar Lorem Ipsum é que ele tem uma 
-	distribuição normal de letras, ao contrário de "Conteúdo aqui, conteúdo aqui", fazendo com que ele tenha uma 
-	aparência similar a de um texto legível. Muitos softwares de publicação e editores de páginas na internet agora 
-	usam Lorem Ipsum como texto-modelo padrão, e uma rápida busca por lorem ipsum mostra vários websites ainda 
-	em sua fase de construção. Várias versões novas surgiram ao longo dos anos, eventualmente por acidente, e 
-	às vezes de propósito (injetando humor, e coisas do gênero).', '', 1);
+(1, 'Nossa História', 'A primeira Festa do leitão foi realizada no ano de 1996 e desde então vem sendo realizada anualmente, 
+	contando com cada vez mais atrações e novas estruturas. O evento atrai anualmente centenas de festeiros, que encontram em 
+	nossas dependências um delicioso almoço com base na carne suína e grandes atrações da região. Neste ano de 2018 a festa 
+	completará 22 anos de existência e para comemorar será inaugurado um novo pavilhão, tornando possível atender ainda melhor 
+	todos que quiserem se divertir e colaborar com a comunidade local.', '', 1),
+(2, 'Como Surgiu?', 'Tudo começou no ano de 1996, numa tarde de domingo onde a diretoria da associação estava reunida para tratar 
+	de assuntos diversos, durante a reunião foi sugerido por um dos integrantes, que fosse criado um evento que se tornasse tradicional 
+	e conhecido pela região, após um debate foi chegado ao um acordo e escolhido como tema a suinocultura, dando o nome de “Festa do leitão” 
+	ao evento. A suinocultura foi escolhida em virtude de ser marca registrada da comunidade, além da necessidade de estimular ainda mais o 
+	consumo da carne suína.', '', 1);

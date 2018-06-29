@@ -6,7 +6,7 @@
         <meta name="description" content="">
         <meta name="author" content="">
         <?php
-        include './conexao.php';
+        include 'conexao.php';
 
         $sql = "select e.* from tb_admin as a, tb_evento as e"
                 . " where a.cod_evento = e.cod_evento";
@@ -21,15 +21,15 @@
 
         <title><?= $nome_evento; ?></title>
 
-        <link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+        <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
-        <link href="../vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+        <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
         <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
         <link href='https://fonts.googleapis.com/css?family=Kaushan+Script' rel='stylesheet' type='text/css'>
         <link href='https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
         <link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700' rel='stylesheet' type='text/css'>
 
-        <link href="../css/agency.min.css" rel="stylesheet">
+        <link href="css/agency.min.css" rel="stylesheet">
 
     </head>
 
@@ -65,7 +65,7 @@
         </nav>
 
         <!-- CABECALHO -->
-        <header class="masthead" style="text-align:center;color:#fff;margin-top: 6%; background-image:url(../img/cabecalho.jpg);background-repeat:no-repeat;background-attachment:scroll;-webkit-background-size:cover;-moz-background-size:cover;-o-background-size:cover;background-size:cover">
+        <header class="masthead" style="text-align:center;color:#fff;margin-top: 6%; background-image:url(img/cabecalho.jpg);background-repeat:no-repeat;background-attachment:scroll;-webkit-background-size:cover;-moz-background-size:cover;-o-background-size:cover;background-size:cover">
             <div class="container">
                 <div class="intro-text">
                     <div style="height: 150px;"></div>   
@@ -91,7 +91,7 @@
                     while ($dados = $query->fetch_array()) {
                         $titulo_sobre = $dados['titulo_sobre'];
                         $descricao_sobre = $dados['descricao_sobre'];
-                        $dir = '../admin/upload/img/sobre/';
+                        $dir = 'admin/upload/img/sobre/';
                         $img = $dir . $dados['img_sobre'];
                         ?>
                         <img src="<?= $img; ?>" alt="" style="height: 300px;">
@@ -121,7 +121,7 @@
                 <hr>
 
                 <?php
-                include './conexao.php';
+                include 'conexao.php';
                 $sql = "select * from admin_evento_programacao_tipo_prog as x, tb_tipo_programacao as tp 
                     where x.cod_tipo_prog = tp.cod_tipo_prog 
                     and tp.descricao_tipo != 'shows'; ";
@@ -153,14 +153,14 @@
                 <div class="container" style="padding-top: 50px;">
                     <div class="row">
                         <?php
-                        include './conexao.php';
+                        include 'conexao.php';
                         $sql = "select * from admin_evento_programacao_tipo_prog as x, tb_tipo_programacao as tp 
                                 where x.cod_tipo_prog = tp.cod_tipo_prog 
                                 and tp.descricao_tipo = 'shows'
                                 order by x.hora_inicio_prog ASC; ";
 
                         $query = $mysqli->query($sql);
-                        $dir = '../admin/upload/img/programacao/';
+                        $dir = 'admin/upload/img/programacao/';
                         while ($dados = $query->fetch_array()) {
                             $cod_prog = $dados['cod_prog'];
                             $titulo = $dados['descricao_prog'];
@@ -201,14 +201,14 @@
         </section>
 
         <?php
-        include './conexao.php';
+        include 'conexao.php';
         $sql = "select * from admin_evento_programacao_tipo_prog as x, tb_tipo_programacao as tp 
                                 where x.cod_tipo_prog = tp.cod_tipo_prog 
                                 and tp.descricao_tipo = 'shows'
                                 order by x.hora_inicio_prog ASC; ";
 
         $query = $mysqli->query($sql);
-        $dir = '../admin/upload/img/programacao/';
+        $dir = 'admin/upload/img/programacao/';
         while ($dados = $query->fetch_array()) {
             $cod_prog = $dados['cod_prog'];
             $titulo = $dados['descricao_prog'];
@@ -260,7 +260,7 @@
         <!-- PONTOS DE VENDA -->
         <section id="pontosVenda" class="fundo-branco" 
                  style="text-align:center;margin-top: 7.5%; 
-                 background-image:url(../img/pontos_venda.jpeg);
+                 background-image:url(img/pontos_venda.jpeg);
                  background-repeat:no-repeat;
                  background-attachment:scroll;
                  -webkit-background-size:cover;
@@ -271,11 +271,11 @@
                 <div class="col-lg-12 text-center">
                     <h2 class="section-heading text-black" >PONTOS DE VENDA</h2>
                     <?php
-                    include './conexao.php';
+                    include 'conexao.php';
                     $sql = "select * from busca_ponto_vendas;";
 
                     $query = $mysqli->query($sql);
-                    $dir = '../admin/upload/img/programacao/';
+                    $dir = 'admin/upload/img/programacao/';
                     while ($dados = $query->fetch_array()) {
                         $nome = $dados['nome_contato'];
                         $telefone = $dados['telefone_contato'];
@@ -360,11 +360,11 @@
             </div>
         </footer>
 
-        <script src="../vendor/jquery/jquery.min.js"></script>
-        <script src="../vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-        <script src="../vendor/jquery-easing/jquery.easing.min.js"></script>
-        <script src="../js/jqBootstrapValidation.js"></script>
-        <script src="../js/contact_me.js"></script>
-        <script src="../js/agency.min.js"></script>
+        <script src="vendor/jquery/jquery.min.js"></script>
+        <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+        <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+        <script src="js/jqBootstrapValidation.js"></script>
+        <script src="js/contact_me.js"></script>
+        <script src="js/agency.min.js"></script>
     </body>
 </html>
