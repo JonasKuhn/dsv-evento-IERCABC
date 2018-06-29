@@ -116,7 +116,7 @@ INSERT INTO `tb_sobre_evento` (`cod_sobre_evento`, `titulo_sobre`, `descricao_so
 	contando com cada vez mais atrações e novas estruturas. O evento atrai anualmente centenas de festeiros, que encontram em 
 	nossas dependências um delicioso almoço com base na carne suína e grandes atrações da região. Neste ano de 2018 a festa 
 	completará 22 anos de existência e para comemorar será inaugurado um novo pavilhão, tornando possível atender ainda melhor 
-	todos que quiserem se divertir e colaborar com a comunidade local.', '', 1),
+	todos que quiserem se divertir e colaborar com a comunidade local.', 'comunidade.JPG', 1),
 (2, 'Como Surgiu?', 'Tudo começou no ano de 1996, numa tarde de domingo onde a diretoria da associação estava reunida para tratar 
 	de assuntos diversos, durante a reunião foi sugerido por um dos integrantes, que fosse criado um evento que se tornasse tradicional 
 	e conhecido pela região, após um debate foi chegado ao um acordo e escolhido como tema a suinocultura, dando o nome de “Festa do leitão” 

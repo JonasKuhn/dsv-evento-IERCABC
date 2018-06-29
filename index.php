@@ -75,7 +75,7 @@
         </header>
 
         <!-- SOBRE O EVENTO -->
-        <div class="container" style="padding-top: 100px;" id="sobreEvento">
+        <div class="container" style="padding-top: 50px;" id="sobreEvento">
             <div class="row">
                 <div class="col-lg-12 text-center">
                     <h1 class="section-heading text-uppercase">SOBRE O EVENTO</h1>
@@ -346,10 +346,10 @@
         <footer>
             <div class="container">
                 <div class="row">
-                    <div class="col-md-4">
-                        <span class="copyright">Copyright &copy; 
+                    <div class="col-md-12">
+                        <span style="font-size: 1.33em;" class="copyright">Copyright &copy; 
                             <span style="font-size: 1.1em;font-family: 'Kaushan Script';">
-                                <a class="js-scroll-trigger" href="#inicio"><?= $nome_evento; ?></a>
+                                <a class="js-scroll-trigger" href="#inicio"><?= $nome_evento; ?> </a>
                             </span> 2018
                         </span>
                     </div>
