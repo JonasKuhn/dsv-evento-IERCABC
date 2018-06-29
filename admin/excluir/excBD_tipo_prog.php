@@ -1,6 +1,6 @@
 <?php
 
-include '../conexao.php';
+include './conexao.php';
 $cod = $_GET['id'];
 $sql = "CALL del_tipo_prog($cod)";
 

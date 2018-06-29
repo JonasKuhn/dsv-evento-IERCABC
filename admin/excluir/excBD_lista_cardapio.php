@@ -1,6 +1,6 @@
 <?php
 
-include '../conexao.php';
+include './conexao.php';
 
 $xx = $_GET['id'];
 $sql = "CALL del_cardapio($xx)";
