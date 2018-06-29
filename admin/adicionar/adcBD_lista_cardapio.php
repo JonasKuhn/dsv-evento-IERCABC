@@ -1,6 +1,6 @@
 <?php
 
-include '../../conexao.php';
+include '../conexao.php';
 $x1 = $_POST['nome_cardapio'];
 $x2 = $_POST['obs_cardapio'];
 

@@ -25,7 +25,7 @@ if (isset($login_cookie)) {
                     </thead>
                     <tbody>
                         <?php
-                        include '../conexao.php';
+                        include 'conexao.php';
 
                         $selectSobre = "select * from tb_sobre_evento "
                                 . "where cod_evento = '$cod_eve';";

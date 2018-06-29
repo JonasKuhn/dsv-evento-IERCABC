@@ -1,6 +1,6 @@
 <?php
 
-include './../conexao.php';
+include '../conexao.php';
 
 $xx = $_GET['id'];
 $yy = $_GET['e'];

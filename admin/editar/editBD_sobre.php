@@ -1,6 +1,6 @@
 <?php
 
-include '../../conexao.php';
+include '../conexao.php';
 
 if ($_FILES['img_sobre'] != '') {
     $diretorio_img = "../upload/img/sobre/";

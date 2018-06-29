@@ -1,6 +1,6 @@
 <?php
 if (isset($login_cookie)) {
-    include './../conexao.php';
+    include '../conexao.php';
     $cod = $_GET['c'];
     $sql = "select * from tb_admin"
             . " where cod_admin = '$cod'";

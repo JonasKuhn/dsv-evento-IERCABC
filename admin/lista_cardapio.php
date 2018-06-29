@@ -25,7 +25,7 @@ if (isset($login_cookie)) {
                     </thead>
                     <tbody>
                         <?php
-                        include '../conexao.php';
+                        include 'conexao.php';
 
                         $selectListaCardapio = "select * from tb_cardapio";
 

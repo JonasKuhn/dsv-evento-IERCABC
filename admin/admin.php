@@ -19,7 +19,7 @@ if (isset($login_cookie)) {
                     </thead>
                     <tbody>
                         <?php
-                        include '../conexao.php';
+                        include 'conexao.php';
 
                         $selectAdmin = "select * from tb_admin;";
 

@@ -9,7 +9,7 @@
                     <select class="form-control" name="tipo_item">
                         <option value="0">Todos</option>
                         <?php
-                        include '../conexao.php';
+                        include 'conexao.php';
 
                         $selectTipoContato = "select * from tb_tipo_item;";
 
@@ -36,7 +36,7 @@
                     <label>Filtro por Evento</label>
                     <select class="form-control" required name="cod_evento">
                         <?php
-                        include '../conexao.php';
+                        include 'conexao.php';
 
                         $select = "select * from tb_evento";
 
@@ -65,7 +65,7 @@
                         <div class="col-sm-8 float-left">
                             <select class="form-control" required name="cod_cardapio">
                                 <?php
-                                include '../conexao.php';
+                                include 'conexao.php';
 
                                 $selectEvento = "select * from tb_cardapio";
 

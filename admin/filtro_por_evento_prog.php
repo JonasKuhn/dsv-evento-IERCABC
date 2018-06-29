@@ -9,7 +9,7 @@
                     <select class="form-control" name="tipo_prog">
                         <option value="0">Todos</option>
                         <?php
-                        include '../conexao.php';
+                        include 'conexao.php';
 
                         $selectTipoProg = "select * from tb_tipo_programacao;";
 
@@ -38,7 +38,7 @@
                         <div class="col-sm-8 float-left">
                             <select class="form-control" name="cod_evento">
                                 <?php
-                                include '../conexao.php';
+                                include 'conexao.php';
 
                                 $selectEvento = "select * from tb_evento";
 

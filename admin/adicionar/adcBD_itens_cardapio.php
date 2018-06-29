@@ -1,6 +1,6 @@
 <?php
 
-include '../../conexao.php';
+include '../conexao.php';
 
 $diretorio_img = "../upload/img/item/";
 $uploadfile = $diretorio_img . basename($_FILES['img_item']['name']);

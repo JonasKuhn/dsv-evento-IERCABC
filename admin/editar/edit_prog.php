@@ -1,6 +1,6 @@
 <?php
 if (isset($login_cookie)) {
-    include './../conexao.php';
+    include '../conexao.php';
     $id = $_GET['id'];
     $sql = "CALL sel_prog($id)";
     $query = $pdo->query($sql);

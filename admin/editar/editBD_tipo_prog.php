@@ -2,7 +2,7 @@
 
 //CONECTAR AO BANCO
 
-include '../../conexao.php';
+include '../conexao.php';
 
 $xx = $_GET['v'];
 $titulo_tipo = $_POST['titulo_tipo'];

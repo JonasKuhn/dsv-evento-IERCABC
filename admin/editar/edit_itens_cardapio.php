@@ -1,6 +1,6 @@
 <?php
 if (isset($login_cookie)) {
-    include './../conexao.php';
+    include '../conexao.php';
     $id = $_GET['id'];
     $cod_ca = $_GET['c'];
     $sql = "SELECT * 

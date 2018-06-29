@@ -18,7 +18,7 @@ if (isset($login_cookie)) {
                             </thead>
                             <tbody>
                                 <?php
-                                include '../conexao.php';
+                                include 'conexao.php';
 
                                 $sql = 'select e.*, c.*, es.uf, car.* from tb_evento as e, tb_cidade as c, tb_estado as es, tb_cardapio as car
                                         where e.cod_cidade = c.cod_cidade
@@ -61,7 +61,7 @@ if (isset($login_cookie)) {
                                     </thead>
                                     <tbody>
                                         <?php
-                                        include '../conexao.php';
+                                        include 'conexao.php';
 
                                         $sql = 'select * from admin_evento_cardapio_item as x, tb_tipo_item as ti
                                         where x.cod_tipo_item = ti.cod_tipo_item 
@@ -95,7 +95,7 @@ if (isset($login_cookie)) {
                                     </thead>
                                     <tbody>
                                         <?php
-                                        include '../conexao.php';
+                                        include 'conexao.php';
 
                                         $sql = 'select * from admin_evento_cardapio_item as x, tb_tipo_item as ti
                                         where x.cod_tipo_item = ti.cod_tipo_item 
@@ -135,7 +135,7 @@ if (isset($login_cookie)) {
                             </thead>
                             <tbody>
                                 <?php
-                                include '../conexao.php';
+                                include 'conexao.php';
 
                                 $sql = 'select * from admin_evento_programacao_tipo_prog as x, tb_tipo_programacao as tp
                                         where x.cod_tipo_prog = tp.cod_tipo_prog

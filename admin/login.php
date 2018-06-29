@@ -6,7 +6,7 @@ if (isset($entrar)) {
     $usuario = addslashes($_POST['login_admin']);
     $senha = md5(addslashes($_POST['senha_admin']));
 
-    require '../conexao.php';
+    require 'conexao.php';
 
     $sql = $pdo->query("SELECT * FROM tb_admin WHERE login_admin = '$usuario' AND senha_admin = '$senha'");
 

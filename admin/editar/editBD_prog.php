@@ -1,6 +1,6 @@
 <?php
 
-include '../../conexao.php';
+include '../conexao.php';
 
 if ($_FILES['img_prog'] != '') {
     $diretorio_img = "../upload/img/programacao/";
