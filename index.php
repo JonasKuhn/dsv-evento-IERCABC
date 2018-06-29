@@ -8,8 +8,10 @@
         <?php
         include 'conexao.php';
 
-        $sql = "select e.* from tb_admin as a, tb_evento as e"
-                . " where a.cod_evento = e.cod_evento";
+        $sql = "select e.*, c.nome_cidade, es.uf from tb_admin as a, tb_evento as e, tb_cidade as c, tb_estado as es"
+                . " where a.cod_evento = e.cod_evento"
+                . " and e.cod_cidade = c.cod_cidade"
+                . " and c.cod_estado = es.cod_estado";
 
         $query = $mysqli->query($sql);
         $dados = $query->fetch_array();
@@ -17,6 +19,9 @@
         $nome_evento = $dados['nome_evento'];
         $dt = explode("-", $dados['data_evento']);
         $data_evento = $dt[2] . "/" . $dt[1] . "/" . $dt[0];
+        $rua_evento = $dados['rua_evento'];
+        $cit = $dados['nome_cidade'];
+        $est = $dados['uf'];
         ?>
 
         <title><?= $nome_evento; ?></title>
@@ -268,28 +273,37 @@
                  -o-background-size:cover;
                  background-size:cover">
             <div class="container-fluid">
-                <div class="col-lg-12 text-center">
-                    <h2 class="section-heading text-black" >PONTOS DE VENDA</h2>
-                    <?php
-                    include 'conexao.php';
-                    $sql = "select * from busca_ponto_vendas;";
+                <div class="row">
+                    <div class="col-lg-6 text-center">
+                        <h2 class="section-heading text-black" >PONTOS DE VENDA</h2>
+                        <?php
+                        include 'conexao.php';
+                        $sql = "select * from busca_ponto_vendas;";
 
-                    $query = $mysqli->query($sql);
-                    $dir = 'admin/upload/img/programacao/';
-                    while ($dados = $query->fetch_array()) {
-                        $nome = $dados['nome_contato'];
-                        $telefone = $dados['telefone_contato'];
-                        $rua = $dados['rua_contato'];
-                        $nr = $dados['nr_contato'];
-                        $cit = $dados['nome_cidade'];
-                        $uf = $dados['uf'];
-                        ?>
+                        $query = $mysqli->query($sql);
+                        $dir = 'admin/upload/img/programacao/';
+                        while ($dados = $query->fetch_array()) {
+                            $nome = $dados['nome_contato'];
+                            $telefone = $dados['telefone_contato'];
+                            $rua = $dados['rua_contato'];
+                            $nr = $dados['nr_contato'];
+                            $cit = $dados['nome_cidade'];
+                            $uf = $dados['uf'];
+                            ?>
+                            <br>
+                            <h2 class="text-black " style="font-family: 'Kaushan Script';"><?= $nome; ?></h2>
+                            <h5 class="section-subheading text-black"><?= $telefone; ?></h5>
+                            <h5 class="section-subheading text-black"><?= $rua; ?> - <?= $nr; ?> - <?= $cit; ?> - <?= $uf; ?></h5>
+
+                        <?php } ?>
+                    </div>
+                    <div class="col-lg-6 text-center">
+                        <h2 class="section-heading text-black" >NOSSA LOCALIZAÇÃO</h2>
                         <br>
-                        <h2 class="text-black " style="font-family: 'Kaushan Script';"><?= $nome; ?></h2>
-                        <h5 class="section-subheading text-black"><?= $telefone; ?></h5>
-                        <h5 class="section-subheading text-black"><?= $rua; ?> - <?= $nr; ?> - <?= $cit; ?> - <?= $uf; ?></h5>
+                        <h3 class="text-black " style="font-family: 'Kaushan Script';"> <?= $rua_evento; ?> - <?= $cit; ?> -<?= $est; ?></h3>
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1097.8963231206403!2d-53.638260780708094!3d-27.141260197880563!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94fbb180ebea1f3f%3A0x73bed0c7c8bc99a5!2sComunidade+de+Jaboticaba!5e1!3m2!1spt-BR!2sbr!4v1530061874653" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
 
-                    <?php } ?>
+                    </div>
                 </div>
             </div>
         </section>
