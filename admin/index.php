@@ -1,5 +1,15 @@
 <?php
 $login_cookie = $_COOKIE['usuario'];
+
+include './conexao.php';
+
+$sql = "select e.* from tb_admin as a, tb_evento as e"
+        . " where e.cod_evento = a.cod_evento";
+
+$query = $pdo->query($sql);
+$dados = $query->fetch();
+$nome_evento = $dados['nome_evento'];
+
 if (isset($login_cookie)) {
     ?>
     <html>
@@ -209,7 +219,7 @@ if (isset($login_cookie)) {
                 <footer class="sticky-footer">
                     <div class="container">
                         <div class="text-center">
-                            <small>Copyright © Your Website 2018</small>
+                            <small>Copyright © <?= $nome_evento;?> 2018</small>
                         </div>
                     </div>
                 </footer>
