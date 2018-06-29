@@ -30,7 +30,7 @@ if (isset($login_cookie)) {
                     <select class="form-control" required name="cod_evento">
                         <option value="">Selecione um Evento</option>
                         <?php
-                        include '../conexao.php';
+                        include './conexao.php';
 
                         $selectEvento = "select * from tb_evento";
 

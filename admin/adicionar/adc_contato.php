@@ -8,7 +8,7 @@ if (isset($login_cookie)) {
                 <div class="col-sm-12">
                     <select class="form-control" name="tipo_contato">
                         <?php
-                        include '../conexao.php';
+                        include './conexao.php';
 
                         $selectTipoContato = "select * from tb_tipo_contato;";
 
@@ -78,7 +78,7 @@ if (isset($login_cookie)) {
                 <div class="col-sm-12">
                     <select class="form-control" name="cidade">
                         <?php
-                        include '../conexao.php';
+                        include './conexao.php';
 
                         $selectCidadeEstado = "call sel_cidade_estado();";
 
@@ -100,7 +100,7 @@ if (isset($login_cookie)) {
                 <label class="col-sm-5 control-label" required >Nome do Evento:</label>
                 <select class="form-control" required name="cod_evento">
                     <?php
-                    include '../conexao.php';
+                    include './conexao.php';
 
                     $selectEvento = "select * from tb_evento";
 

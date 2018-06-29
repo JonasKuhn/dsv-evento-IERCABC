@@ -43,7 +43,7 @@ if (isset($login_cookie)) {
                 <div class="col-sm-12">
                     <select class="form-control" name="cidade">
                         <?php
-                        include '../conexao.php';
+                        include './conexao.php';
 
                         $selectCidadeEstado = "call sel_cidade_estado();";
 
@@ -66,7 +66,7 @@ if (isset($login_cookie)) {
                 <div class="col-sm-12">
                     <select class="form-control" name="cardapio">
                         <?php
-                        include '../conexao.php';
+                        include './conexao.php';
 
                         $selectCardapio = "select * from tb_cardapio";
 

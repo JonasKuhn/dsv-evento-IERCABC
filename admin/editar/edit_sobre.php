@@ -1,6 +1,6 @@
 <?php
 if (isset($login_cookie)) {
-    include '../conexao.php';
+    include './conexao.php';
     $id = $_GET['id'];
     $sql = "SELECT * FROM tb_sobre_evento as se, tb_evento as e"
             . " where se.cod_evento = e.cod_evento"
@@ -44,7 +44,7 @@ if (isset($login_cookie)) {
                     <select class="form-control" required name="cod_evento">
                         <option value="">Selecione um Evento</option>
                         <?php
-                        include '../conexao.php';
+                        include './conexao.php';
 
                         $selectEvento = "select * from tb_evento";
 

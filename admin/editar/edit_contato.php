@@ -1,6 +1,6 @@
 <?php
 if (isset($login_cookie)) {
-    include '../conexao.php';
+    include './conexao.php';
     $id = $_GET['id'];
     $cod_e = $_GET['e'];
     $sql = "select * from tb_contato as c, tb_evento_contato as ec, tb_evento as e "
@@ -29,7 +29,7 @@ if (isset($login_cookie)) {
                 <div class="col-sm-12">
                     <select class="form-control" name="tipo_contato">
                         <?php
-                        include '../conexao.php';
+                        include './conexao.php';
 
                         $selectTipoContato = "select * from tb_tipo_contato;";
 
@@ -106,7 +106,7 @@ if (isset($login_cookie)) {
                 <div class="col-sm-12">
                     <select class="form-control" name="cidade">
                         <?php
-                        include '../conexao.php';
+                        include './conexao.php';
 
                         $selectCidadeEstado = "call sel_cidade_estado();";
 
@@ -134,7 +134,7 @@ if (isset($login_cookie)) {
                 <label class="col-sm-4 control-label" required >Nome do Evento:</label>
                 <select class="form-control" required name="cod_evento">
                     <?php
-                    include '../conexao.php';
+                    include './conexao.php';
 
                     $selectEvento = "select * from tb_evento";
 

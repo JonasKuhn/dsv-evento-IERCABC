@@ -9,7 +9,7 @@ if (isset($login_cookie)) {
                     <select class="form-control" name="cardapio">
                         <option value="">Selecione um Cardápio</option>
                         <?php
-                        include '../conexao.php';
+                        include './conexao.php';
 
                         $selectCardapio = "select * from tb_cardapio";
 
@@ -33,7 +33,7 @@ if (isset($login_cookie)) {
                     <select class="form-control" required name="tipo_item"> 
                         <option value="">Selecione um Tipo</option>
                         <?php
-                        include '../conexao.php';
+                        include './conexao.php';
 
                         $selectTipoItem = "select * from tb_tipo_item";
 

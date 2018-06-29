@@ -20,8 +20,9 @@ if (isset($login_cookie)) {
                                 <?php
                                 include 'conexao.php';
 
-                                $sql = 'select e.*, c.*, es.uf, car.* from tb_evento as e, tb_cidade as c, tb_estado as es, tb_cardapio as car
-                                        where e.cod_cidade = c.cod_cidade
+                                $sql = 'select e.*, c.*, es.uf, car.* from tb_admin as a, tb_evento as e, tb_cidade as c, tb_estado as es, tb_cardapio as car
+                                        where a.cod_evento = e.cod_evento
+                                        and e.cod_cidade = c.cod_cidade
                                         and e.cod_cardapio = car.cod_cardapio
                                         and c.cod_estado = es.cod_estado';
                                 $query = $pdo->query($sql);

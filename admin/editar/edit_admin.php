@@ -1,6 +1,6 @@
 <?php
 if (isset($login_cookie)) {
-    include '../conexao.php';
+    include './conexao.php';
     $cod = $_GET['c'];
     $sql = "select * from tb_admin"
             . " where cod_admin = '$cod'";
@@ -31,7 +31,7 @@ if (isset($login_cookie)) {
                 <div class="col-sm-12">
                     <select class="form-control" required name="cod_evento">
                         <?php
-                        include '../conexao.php';
+                        include './conexao.php';
 
                         $selectEvento = "select * from tb_evento";
 

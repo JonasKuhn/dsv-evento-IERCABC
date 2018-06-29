@@ -58,7 +58,7 @@ if (isset($login_cookie)) {
                     <select class="form-control" required name="tipo_prog"> 
                         <option value="">Selecione um Tipo</option>
                         <?php
-                        include '../conexao.php';
+                        include './conexao.php';
 
                         $selectTipoProg = "select * from tb_tipo_programacao";
 
@@ -82,7 +82,7 @@ if (isset($login_cookie)) {
                     <select class="form-control" required name="nome_evento">
                         <option value="">Selecione um Evento</option>
                         <?php
-                        include '../conexao.php';
+                        include './conexao.php';
 
                         $selectEvento = "select * from tb_evento";
 

@@ -1,6 +1,6 @@
 <?php
 if (isset($login_cookie)) {
-    include '../conexao.php';
+    include './conexao.php';
     $id = $_GET['id'];
     $sql = "CALL sel_prog($id)";
     $query = $pdo->query($sql);
@@ -72,7 +72,7 @@ if (isset($login_cookie)) {
                 <div class="col-sm-12">
                     <select class="form-control" required name="tipo_prog">
                         <?php
-                        include '../conexao.php';
+                        include './conexao.php';
 
                         $selectTipoProg = "select * from tb_tipo_programacao";
 
@@ -104,7 +104,7 @@ if (isset($login_cookie)) {
                     <select class="form-control" required name="cod_evento">
                         <option value="">Selecione um Evento</option>
                         <?php
-                        include '../conexao.php';
+                        include './conexao.php';
 
                         $selectEvento = "select * from tb_evento";
 
