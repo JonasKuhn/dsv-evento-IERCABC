@@ -9,7 +9,7 @@ include './menu.php';
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <meta name="description" content="">
         <meta name="author" content="">
-        <link rel="stylesheet" style="text\css" href="../css/.css">
+        <link rel="stylesheet" style="text\css" href="../css/list.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     </head>
@@ -48,8 +48,7 @@ include './menu.php';
                         from tb_admin as a, tb_evento as e, tb_programacao as p, tb_tipo_programacao as tp
                         where a.cod_evento = e.cod_evento
                         and e.cod_evento = p.cod_evento
-                        and p.cod_tipo_prog = tp.cod_tipo_prog
-                        and tp.cod_tipo_prog = 1";
+                        and p.cod_tipo_prog = tp.cod_tipo_prog ";
                 $query = $mysqli->query($sql);
                 while ($dados = $query->fetch_array()) {
                     $descricao_prog = $dados['descricao_prog'];
@@ -60,7 +59,7 @@ include './menu.php';
                 <div>
                     <div >
                         <ul>
-                            <li><?= $hora_inicio_prog;?>, <?= $descricao_prog;?></li>
+                            <li><?= $hora_inicio_prog;?><span></span> <?= $descricao_prog;?><?= $hora_fim_prog; ?></li>
                         </ul>
                     </div>
                 </div>
