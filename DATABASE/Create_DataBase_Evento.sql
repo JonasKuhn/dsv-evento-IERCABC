@@ -25,6 +25,7 @@ CREATE TABLE `tb_evento` (
     `data_evento` DATE,
     `rua_evento` VARCHAR(100),
     `nome_comunidade` VARCHAR(200) NOT NULL,
+    `banner_evento` VARCHAR(40),
     `cod_cardapio` INTEGER,
     `cod_cidade` INTEGER,
     CONSTRAINT `PK_tb_evento` PRIMARY KEY (`cod_evento`)

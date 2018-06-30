@@ -8,13 +8,13 @@
         <?php
         include 'conexao.php';
 
-        $sql = "select e.*, c.nome_cidade, es.uf from tb_admin as a, tb_evento as e, tb_cidade as c, tb_estado as es"
+        $sql1 = "select e.*, c.nome_cidade, es.uf from tb_admin as a, tb_evento as e, tb_cidade as c, tb_estado as es"
                 . " where a.cod_evento = e.cod_evento"
                 . " and e.cod_cidade = c.cod_cidade"
                 . " and c.cod_estado = es.cod_estado";
 
-        $query = $mysqli->query($sql);
-        $dados = $query->fetch_array();
+        $query1 = $mysqli->query($sql1);
+        $dados = $query1->fetch_array();
 
         $nome_evento = $dados['nome_evento'];
         $dt = explode("-", $dados['data_evento']);
@@ -22,6 +22,7 @@
         $rua_evento = $dados['rua_evento'];
         $cit = $dados['nome_cidade'];
         $est = $dados['uf'];
+        $banner = $dados['banner_evento'];
         ?>
 
         <title><?= $nome_evento; ?></title>
@@ -70,7 +71,7 @@
         </nav>
 
         <!-- CABECALHO -->
-        <header class="masthead" style="text-align:center;color:#fff;margin-top: 6%; background-image:url(img/cabecalho.jpg);background-repeat:no-repeat;background-attachment:scroll;-webkit-background-size:cover;-moz-background-size:cover;-o-background-size:cover;background-size:cover">
+        <header class="masthead" style="text-align:center;color:#fff;margin-top: 6%; background-image:url(admin/upload/img/evento/<?= $banner; ?>);background-repeat:no-repeat;background-attachment:scroll;-webkit-background-size:cover;-moz-background-size:cover;-o-background-size:cover;background-size:cover">
             <div class="container">
                 <div class="intro-text">
                     <div style="height: 150px;"></div>   
@@ -84,16 +85,16 @@
             <div class="row">
                 <div class="col-lg-12 text-center">
                     <h1 class="section-heading text-uppercase">SOBRE O EVENTO</h1>
-                    <h6 class="section-subheading text-muted">Um pouco da história do nosso Evento.</h6>
+                    <h6 class="section-subheading text_black">Um pouco da história do nosso Evento.</h6>
                     <hr>
                     <?php
-                    $sql = "select s.* from tb_admin as a, tb_evento as e, tb_sobre_evento as s
+                    $sql2 = "select s.* from tb_admin as a, tb_evento as e, tb_sobre_evento as s
                             where a.cod_evento = e.cod_evento
                             and e.cod_evento = s.cod_evento";
 
-                    $query = $mysqli->query($sql);
+                    $query2 = $mysqli->query($sql2);
 
-                    while ($dados = $query->fetch_array()) {
+                    while ($dados = $query2->fetch_array()) {
                         $titulo_sobre = $dados['titulo_sobre'];
                         $descricao_sobre = $dados['descricao_sobre'];
                         $dir = 'admin/upload/img/sobre/';
@@ -103,7 +104,7 @@
                         <hr>
                         <div class="col-sm-7 text-center" style="margin: 0 auto;">
                             <h3 style="font-family: 'Kaushan Script';"><?= $titulo_sobre; ?></h3>
-                            <p class="text-muted">
+                            <p class="text_black">
                                 <?= $descricao_sobre; ?>
                             </p>
                         </div>
@@ -119,21 +120,21 @@
         <section class="bg-light" id="portfolio">
             <div class="container">
                 <div class="col-lg-12 text-center">
-                    <h2 class="section-heading text-uppercase" >Programação</h2>
-                    <h6 class="section-subheading text-muted">Nossa programação para a <?= $nome_evento; ?>.</h6>
-                    <h4 class="section-subheading text-muted"><?= $data_evento; ?></h4>
+                    <h2 class="section-heading text_black text-uppercase" >Programação</h2>
+                    <h6 class="section-subheading text_black">Nossa programação para a <?= $nome_evento; ?>.</h6>
+                    <h4 class="section-subheading text_black"><?= $data_evento; ?></h4>
                 </div>
                 <hr>
 
                 <?php
                 include 'conexao.php';
-                $sql = "select * from admin_evento_programacao_tipo_prog as x, tb_tipo_programacao as tp 
+                $sql3 = "select * from admin_evento_programacao_tipo_prog as x, tb_tipo_programacao as tp 
                     where x.cod_tipo_prog = tp.cod_tipo_prog 
                     and tp.descricao_tipo != 'shows'; ";
 
-                $query = $mysqli->query($sql);
+                $query3 = $mysqli->query($sql3);
 
-                while ($dados = $query->fetch_array()) {
+                while ($dados = $query3->fetch_array()) {
                     $titulo = $dados['descricao_tipo'];
                     $descricao = $dados['descricao_prog'];
                     $hi = $dados['hora_inicio_prog'];
@@ -142,7 +143,7 @@
                     <div class="container text-center">
                         <div class="container">
                             <h4 class="section-heading text-uppercase" style="font-family: 'Kaushan Script';" ><?= $titulo; ?></h4>
-                            <h6 class="section-subheading text-muted"><?= $descricao; ?></h6>
+                            <h6 class="section-subheading text_black"><?= $descricao; ?></h6>
                             <ul class="list-inline">
                                 <li><?= $hi; ?></li>
                             </ul>
@@ -159,14 +160,14 @@
                     <div class="row">
                         <?php
                         include 'conexao.php';
-                        $sql = "select * from admin_evento_programacao_tipo_prog as x, tb_tipo_programacao as tp 
+                        $sql4 = "select * from admin_evento_programacao_tipo_prog as x, tb_tipo_programacao as tp 
                                 where x.cod_tipo_prog = tp.cod_tipo_prog 
                                 and tp.descricao_tipo = 'shows'
                                 order by x.hora_inicio_prog ASC; ";
 
-                        $query = $mysqli->query($sql);
+                        $query4 = $mysqli->query($sql4);
                         $dir = 'admin/upload/img/programacao/';
-                        while ($dados = $query->fetch_array()) {
+                        while ($dados = $query4->fetch_array()) {
                             $cod_prog = $dados['cod_prog'];
                             $titulo = $dados['descricao_prog'];
                             $img = $dir . $dados['img_prog'];
@@ -187,8 +188,7 @@
                                     <img class = "img-fluid" src = "<?= $img; ?>" alt = "<?= $dados['img_prog']; ?>">
                                 </a>
                                 <div class = "portfolio-caption">
-                                    <h3 style = "font-family: 'Kaushan Script';"><? = $titulo;
-                                        ?></h3>
+                                    <h3 style = "font-family: 'Kaushan Script';"><?= $titulo;?></h3>
                                     <br>
                                     <ul class="list-inline text-center">
                                         <li>Hora Início: <?= $hi; ?></li>
@@ -207,14 +207,14 @@
 
         <?php
         include 'conexao.php';
-        $sql = "select * from admin_evento_programacao_tipo_prog as x, tb_tipo_programacao as tp 
+        $sql5 = "select * from admin_evento_programacao_tipo_prog as x, tb_tipo_programacao as tp 
                                 where x.cod_tipo_prog = tp.cod_tipo_prog 
                                 and tp.descricao_tipo = 'shows'
                                 order by x.hora_inicio_prog ASC; ";
 
-        $query = $mysqli->query($sql);
+        $query5 = $mysqli->query($sql5);
         $dir = 'admin/upload/img/programacao/';
-        while ($dados = $query->fetch_array()) {
+        while ($dados = $query5->fetch_array()) {
             $cod_prog = $dados['cod_prog'];
             $titulo = $dados['descricao_prog'];
             $img = $dir . $dados['img_prog'];
@@ -273,16 +273,16 @@
                  -o-background-size:cover;
                  background-size:cover">
             <div class="container-fluid">
-                <div class="row">
-                    <div class="col-lg-6 text-center">
-                        <h2 class="section-heading text-black" >PONTOS DE VENDA</h2>
+                <div class="row" style="margin-left: 2%;">
+                    <div class="col-lg-5 text-center fundo_branco">
+                        <h2 class="section-heading text-black">PONTOS DE VENDA</h2>
                         <?php
                         include 'conexao.php';
-                        $sql = "select * from busca_ponto_vendas;";
+                        $sql6 = "select * from busca_ponto_vendas;";
 
-                        $query = $mysqli->query($sql);
+                        $query6 = $mysqli->query($sql6);
                         $dir = 'admin/upload/img/programacao/';
-                        while ($dados = $query->fetch_array()) {
+                        while ($dados = $query6->fetch_array()) {
                             $nome = $dados['nome_contato'];
                             $telefone = $dados['telefone_contato'];
                             $rua = $dados['rua_contato'];
@@ -297,11 +297,12 @@
 
                         <?php } ?>
                     </div>
-                    <div class="col-lg-6 text-center">
-                        <h2 class="section-heading text-black" >NOSSA LOCALIZAÇÃO</h2>
+                    <div class="col-lg-5 text-center fundo_branco">
+                        <h2 class="section-heading text-black" >LOCALIZAÇÃO</h2>
                         <br>
                         <h3 class="text-black " style="font-family: 'Kaushan Script';"> <?= $rua_evento; ?> - <?= $cit; ?> -<?= $est; ?></h3>
-                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1097.8963231206403!2d-53.638260780708094!3d-27.141260197880563!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94fbb180ebea1f3f%3A0x73bed0c7c8bc99a5!2sComunidade+de+Jaboticaba!5e1!3m2!1spt-BR!2sbr!4v1530061874653" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1097.8963231206403!2d-53.638260780708094!3d-27.141260197880563!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94fbb180ebea1f3f%3A0x73bed0c7c8bc99a5!2sComunidade+de+Jaboticaba!5e1!3m2!1spt-BR!2sbr!4v1530061874653" 
+                                width="500" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
 
                     </div>
                 </div>
@@ -311,10 +312,28 @@
         <!-- CONTATO -->
         <section id="contact">
             <div class="container">
+                <div class="text-center">
+                    <h2 class="section-heading text-uppercase">Contatos</h2>
+                    <?php
+                    include 'conexao.php';
+                    $sql7 = "select * from admin_evento_contato_tipo_contato as x, tb_tipo_contato as tc"
+                            . " where x.cod_tipo_contato = tc.cod_tipo_contato"
+                            . " and tc.cod_tipo_contato = 2;";
+
+                    $query7 = $mysqli->query($sql7);
+
+                    while ($dados = $query7->fetch_array()) {
+                        $nome = $dados['nome_contato'];
+                        $telefone = $dados['telefone_contato'];
+                        ?>
+                        <h2 style="font-family: 'Kaushan Script';color: white;"><?= $nome; ?></h2>
+                        <h5 class="section-subheading" style="color: white;"><?= $telefone; ?></h5>
+                        <br>
+                    <?php } ?>
+                </div>
                 <div class="row">
                     <div class="col-lg-12 text-center">
-                        <h2 class="section-heading text-uppercase">Contate-nos</h2>
-                        <h3 class="section-subheading text-white">Para mais informações entre em contato com nossos organizadores</h3>
+                        <h5 class="section-subheading text-white">Para mais informações entre em contato com nossos organizadores</h5>
                     </div>
                 </div>
                 <div class="row">
@@ -361,14 +380,11 @@
             <div class="container">
                 <div class="row">
                     <div class="col-md-12">
-                        <span style="font-size: 1.33em;" class="copyright">Copyright &copy; 
+                        <span style="font-size: 1.1em;" class="copyright">Copyright &copy; 
                             <span style="font-size: 1.1em;font-family: 'Kaushan Script';">
                                 <a class="js-scroll-trigger" href="#inicio"><?= $nome_evento; ?> </a>
                             </span> 2018
                         </span>
-                    </div>
-                    <div class="col-md-4">
-
                     </div>
                 </div>
             </div>

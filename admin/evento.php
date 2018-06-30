@@ -14,6 +14,7 @@ if (isset($login_cookie)) {
                             <th>Nome do Evento</th>
                             <th>Nome da Sociedade</th>
                             <th>Data do Evento</th>
+                            <th>Banner</th>
                             <th>Rua Evento</th>
                             <th>Nome da Comunidade</th>
                             <th>Cidade</th>
@@ -40,11 +41,13 @@ if (isset($login_cookie)) {
                             $cardapio = $dados['titulo_cardapio'];
                             $cidade = $dados['nome_cidade'];
                             $uf = $dados['uf'];
+                            $banner = $dados['banner_evento'];
                             ?>
                             <tr>
                                 <td><?= $nome; ?></td>
                                 <td><?= $nome_sociedade; ?></td>
                                 <td><?= $data; ?></td>
+                                <td><?= $banner; ?></td>
                                 <td><?= $rua; ?></td>
                                 <td><?= $comunidade; ?></td>
                                 <td><?= $cidade; ?></td>

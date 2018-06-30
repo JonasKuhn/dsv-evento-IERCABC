@@ -4,7 +4,7 @@ INSERT INTO `tb_estado` (`cod_estado`, `nome_estado`, `uf`) VALUES
 
 
 INSERT INTO `tb_cidade` (`cod_cidade`, `nome_cidade`, `cod_estado`) VALUES
-(1, 'Itapiranga', 1),
+(1, 'Itapiranga', 2),
 (2, 'Iporã do Oeste', 2),
 (3, 'São João do Oeste', 2),
 (4, 'Sede Capela', 2),
@@ -73,8 +73,8 @@ INSERT INTO `tb_cardapio_tipo` (`cod_cardapio_tipo`, `cod_cardapio`, `cod_item`)
 (15, 1, 15);
 
 
-INSERT INTO `tb_evento` (`cod_evento`, `nome_evento`, `nome_organizacao_evento`, `data_evento`, `rua_evento`, `nome_comunidade`, `cod_cardapio`, `cod_cidade`) VALUES
-(1, '22ª Festa do Leitão', 'Instituto Esportivo Recriativo Cultural Assistencial Beneficiente e Colônial', '2018-09-19', 'Jaboticaba', 'Comunidade De Jaboticaba', 1, 3);
+INSERT INTO `tb_evento` (`cod_evento`, `nome_evento`, `nome_organizacao_evento`, `data_evento`, `rua_evento`, `nome_comunidade`, `banner_evento`, `cod_cardapio`, `cod_cidade`) VALUES
+(1, '22ª Festa do Leitão', 'Instituto Esportivo Recriativo Cultural Assistencial Beneficiente e Colônial', '2018-09-19', 'Jaboticaba', 'Comunidade De Jaboticaba', 'cabecalho.jpg' ,1, 3);
 
 
 INSERT INTO `tb_admin` (`cod_admin`, `login_admin`, `senha_admin`, `nome_admin`, `cod_evento`) VALUES

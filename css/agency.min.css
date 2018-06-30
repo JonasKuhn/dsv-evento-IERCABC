@@ -21,6 +21,8 @@ header.masthead .intro-text{padding-top:150px;padding-bottom:100px}
 header.masthead .intro-text .intro-lead-in{font-size:22px;font-style:italic;line-height:22px;margin-bottom:25px;font-family:'Droid Serif','Helvetica Neue',Helvetica,Arial,sans-serif}
 header.masthead .intro-text .intro-heading{font-size:50px;font-weight:700;line-height:50px;margin-bottom:25px;font-family:Montserrat,'Helvetica Neue',Helvetica,Arial,sans-serif}
 
+.bg-orange{background-color: rgba(254, 141, 2, 0.2);}
+
 .btn{font-family:Montserrat,'Helvetica Neue',Helvetica,Arial,sans-serif;font-weight:700}
 .btn-xl{font-size:18px;padding:20px 40px}
 .btn-primary{background-color:#fed136;border-color:#fed136}
@@ -165,3 +167,12 @@ ul.social-buttons li a:active,ul.social-buttons li a:focus,ul.social-buttons li 
     .team-member h4{margin-top:25px;margin-bottom:0;text-transform:none}
     .team-member p{margin-top:0}
 } 
+
+.text_black{
+    color: black;
+}
+
+.fundo_branco{
+    background-color: rgba(255,255,255,0.5);
+    margin: 5px 40px;
+}

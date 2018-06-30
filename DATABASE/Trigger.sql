@@ -6,6 +6,7 @@ CREATE TABLE `tb_evento_bkp` (
     `data_evento` DATE,
     `rua_evento` VARCHAR(100),
     `nome_comunidade` VARCHAR(200),
+    `banner_evento` VARCHAR(40),
     `cod_cardapio` INTEGER NOT NULL REFERENCES tipo_cardapio(cod_cardapio),
     `cod_cidade` INTEGER NOT NULL REFERENCES tipo_cidade(cod_cidade)
 );
@@ -16,9 +17,9 @@ AFTER DELETE on tb_evento
 FOR EACH ROW
 BEGIN
 	INSERT INTO tb_evento_bkp (cod_evento,nome_evento,nome_organizacao_evento,data_evento,
-    rua_evento,nome_comunidade,cod_cardapio,cod_cidade)
+    rua_evento,nome_comunidade,banner_evento,cod_cardapio,cod_cidade)
     VALUES(old.cod_evento,old.nome_evento,old.nome_organizacao_evento,old.data_evento,
-    old.rua_evento, old.nome_comunidade, old.cod_cardapio, old.cod_cidade);
+    old.rua_evento, old.nome_comunidade,old.banner_evento, old.cod_cardapio, old.cod_cidade);
 END $$
 DELIMITER ;
 

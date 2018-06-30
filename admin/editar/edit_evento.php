@@ -24,9 +24,10 @@ if (isset($login_cookie)) {
     $cod_ci = $dados['cod_cidade'];
     $cidade = $dados['nome_cidade'];
     $uf = $dados['uf'];
+    $banner = $dados['banner_evento'];
     ?>   
     <div class="container col-sm-6">
-        <form class="form-horizontal" method="POST" action="editar/editBD_evento.php?v=<?= $id; ?>" enctype="multipart/form-data">
+        <form class="form-horizontal" method="POST" action="editar/editBD_evento.php?v=<?= $id; ?>&i=<?= $banner; ?>" enctype="multipart/form-data">
             <div class="form-group">
                 <label class="col-sm-4 control-label">Nome do Evento:</label>
                 <div class="col-sm-12">
@@ -45,6 +46,13 @@ if (isset($login_cookie)) {
                 <label class="col-sm-4 control-label">Data do Evento:</label>
                 <div class="col-sm-12">
                     <input type="date" required class="form-control" name="data" value="<?= $data; ?>"/>
+                </div>
+            </div>
+            <hr class="b-s-dashed">
+            <div class="form-group">
+                <label class="col-sm-8 control-label">Banner do Evento: <?= $banner; ?></label>
+                <div class="col-sm-12">
+                    <input type="file" class="form-control" name="banner"/>
                 </div>
             </div>
             <hr class="b-s-dashed">
@@ -124,7 +132,7 @@ if (isset($login_cookie)) {
                 </div>
             </div>
             <hr class="b-s-dashed">
-            <input class="btn btn-dark btn-block" type="submit" onclick="return editar('<?=$nome?>');" value="ATUALIZAR" name="ATUALIZAR">
+            <input class="btn btn-dark btn-block" type="submit" onclick="return editar('<?= $nome ?>');" value="ATUALIZAR" name="ATUALIZAR">
         </form>
     </div>
 <?php } ?>
