@@ -39,7 +39,7 @@
 
     </head>
 
-    <body id="inicio">
+    <body>
         <!-- MENU -->
         <nav class="navbar navbar-expand-lg navbar-dark fixed-top " style="background-color:  black;" id="mainNav">
             <div class="container">
@@ -71,12 +71,11 @@
         </nav>
 
         <!-- CABECALHO -->
-        <header class="masthead" style="text-align:center;color:#fff;margin-top: 6%; background-image:url(admin/upload/img/evento/<?= $banner; ?>);background-repeat:no-repeat;background-attachment:scroll;-webkit-background-size:cover;-moz-background-size:cover;-o-background-size:cover;background-size:cover">
+        <header id="inicio" class="masthead banner" 
+                style="background-image:url(admin/upload/img/evento/<?= $banner; ?>);">
             <div class="container">
-                <div class="intro-text">
-                    <div style="height: 150px;"></div>   
+                <div class="intro-text">   
                 </div>
-                <a class="btn btn-primary btn-xl text-uppercase js-scroll-trigger" href="#sobreEvento">Sobre Nosso Evento</a>
             </div>
         </header>
 
@@ -84,7 +83,7 @@
         <div class="container" style="padding-top: 50px;" id="sobreEvento">
             <div class="row">
                 <div class="col-lg-12 text-center">
-                    <h1 class="section-heading text-uppercase">SOBRE O EVENTO</h1>
+                    <h2 class="section-subheading text-uppercase">SOBRE O EVENTO</h2>
                     <h6 class="section-subheading text_black">Um pouco da história do nosso Evento.</h6>
                     <hr>
                     <?php
@@ -100,9 +99,9 @@
                         $dir = 'admin/upload/img/sobre/';
                         $img = $dir . $dados['img_sobre'];
                         ?>
-                        <img src="<?= $img; ?>" alt="" style="height: 300px;">
+                        <img src="<?= $img; ?>" alt="<?= $dados['img_sobre'] ?>">
                         <hr>
-                        <div class="col-sm-7 text-center" style="margin: 0 auto;">
+                        <div class="col-sm-10 text-center" style="margin: 0 auto;">
                             <h3 style="font-family: 'Kaushan Script';"><?= $titulo_sobre; ?></h3>
                             <p class="text_black">
                                 <?= $descricao_sobre; ?>
@@ -120,7 +119,7 @@
         <section class="bg-light" id="portfolio">
             <div class="container">
                 <div class="col-lg-12 text-center">
-                    <h2 class="section-heading text_black text-uppercase" >Programação</h2>
+                    <h2 class="section-subheading text_black text-uppercase" >Programação</h2>
                     <h6 class="section-subheading text_black">Nossa programação para a <?= $nome_evento; ?>.</h6>
                     <h4 class="section-subheading text_black"><?= $data_evento; ?></h4>
                 </div>
@@ -142,7 +141,7 @@
 
                     <div class="container text-center">
                         <div class="container">
-                            <h4 class="section-heading text-uppercase" style="font-family: 'Kaushan Script';" ><?= $titulo; ?></h4>
+                            <h4 class="section-subheading text-uppercase" style="font-family: 'Kaushan Script';" ><?= $titulo; ?></h4>
                             <h6 class="section-subheading text_black"><?= $descricao; ?></h6>
                             <ul class="list-inline">
                                 <li><?= $hi; ?></li>
@@ -154,9 +153,9 @@
                 }
                 ?>
                 <div class="container text-center">
-                    <h4 class="section-heading text-uppercase" style="font-family: 'Kaushan Script';" >SHOWS</h4>
+                    <h2 class="section-heading text-uppercase" style="font-family: 'Kaushan Script';" >SHOWS</h2>
                 </div>
-                <div class="container" style="padding-top: 50px;">
+                <div class="container" style="padding-top: 15px;">
                     <div class="row">
                         <?php
                         include 'conexao.php';
@@ -178,7 +177,7 @@
 
                             <!-- Inicio Modal -->
 
-                            <div class = "col-md-3 portfolio-item">
+                            <div class = "col-md-6 portfolio-item">
                                 <a class="portfolio-link" data-toggle="modal" href="#portfolioModal<?= $cod_prog; ?>">
                                     <div class="portfolio-hover">
                                         <div class="portfolio-hover-content">
@@ -188,7 +187,7 @@
                                     <img class = "img-fluid" src = "<?= $img; ?>" alt = "<?= $dados['img_prog']; ?>">
                                 </a>
                                 <div class = "portfolio-caption">
-                                    <h3 style = "font-family: 'Kaushan Script';"><?= $titulo;?></h3>
+                                    <h3 style = "font-family: 'Kaushan Script';"><?= $titulo; ?></h3>
                                     <br>
                                     <ul class="list-inline text-center">
                                         <li>Hora Início: <?= $hi; ?></li>
@@ -231,7 +230,7 @@
                                 <div class="col-lg-12">
                                     <div class="modal-body">
                                         <h2 class="text-uppercase"><?= $titulo; ?></h2>
-                                        <iframe style="margin: 0 auto; "width="480" height="300" src="<?= $video; ?>" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                                        <iframe class="video" src="<?= $video; ?>" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
                                         <hr>
                                         <ul class="list-inline">
                                             <li>Hora Início: <?= $hi; ?></li>
@@ -257,7 +256,7 @@
         <section id="cardapio">
             <div class="container">
                 <div class="col-lg-12 text-center">
-                    <h2 class="section-heading text-uppercase">CARDÁPIO</h2>
+                    <h2 class="section-subheading text-uppercase">CARDÁPIO</h2>
                 </div>                
             </div>
         </section>
@@ -274,8 +273,8 @@
                  background-size:cover">
             <div class="container-fluid">
                 <div class="row" style="margin-left: 2%;">
-                    <div class="col-lg-5 text-center fundo_branco">
-                        <h2 class="section-heading text-black">PONTOS DE VENDA</h2>
+                    <div class="col-lg-11 text-center fundo_branco">
+                        <h2 class="section-subheading text-black">PONTOS DE VENDA</h2>
                         <?php
                         include 'conexao.php';
                         $sql6 = "select * from busca_ponto_vendas;";
@@ -287,22 +286,22 @@
                             $telefone = $dados['telefone_contato'];
                             $rua = $dados['rua_contato'];
                             $nr = $dados['nr_contato'];
-                            $cit = $dados['nome_cidade'];
+                            $cit_l = $dados['nome_cidade'];
                             $uf = $dados['uf'];
                             ?>
                             <br>
                             <h2 class="text-black " style="font-family: 'Kaushan Script';"><?= $nome; ?></h2>
                             <h5 class="section-subheading text-black"><?= $telefone; ?></h5>
-                            <h5 class="section-subheading text-black"><?= $rua; ?> - <?= $nr; ?> - <?= $cit; ?> - <?= $uf; ?></h5>
+                            <h5 class="section-subheading text-black"><?= $rua; ?> - <?= $nr; ?> - <?= $cit_l; ?> - <?= $uf; ?></h5>
 
                         <?php } ?>
                     </div>
-                    <div class="col-lg-5 text-center fundo_branco">
-                        <h2 class="section-heading text-black" >LOCALIZAÇÃO</h2>
+                    <div class="col-lg-11 text-center map fundo_branco">
+                        <h2 class="section-subheading text-black" >LOCALIZAÇÃO</h2>
                         <br>
-                        <h3 class="text-black " style="font-family: 'Kaushan Script';"> <?= $rua_evento; ?> - <?= $cit; ?> -<?= $est; ?></h3>
-                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1097.8963231206403!2d-53.638260780708094!3d-27.141260197880563!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94fbb180ebea1f3f%3A0x73bed0c7c8bc99a5!2sComunidade+de+Jaboticaba!5e1!3m2!1spt-BR!2sbr!4v1530061874653" 
-                                width="500" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+                        <h4 class="text-black " style="font-family: 'Kaushan Script';"> <?= $rua_evento; ?> - <?= $cit; ?> -<?= $est; ?></h4>
+                        <iframe class="maps" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1097.8963231206403!2d-53.638260780708094!3d-27.141260197880563!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94fbb180ebea1f3f%3A0x73bed0c7c8bc99a5!2sComunidade+de+Jaboticaba!5e1!3m2!1spt-BR!2sbr!4v1530061874653" 
+                                frameborder="0" style="border:0" allowfullscreen></iframe>
 
                     </div>
                 </div>
@@ -313,7 +312,8 @@
         <section id="contact">
             <div class="container">
                 <div class="text-center">
-                    <h2 class="section-heading text-uppercase">Contatos</h2>
+                    <h2 class="section-subheading text-uppercase" style="color:white; ">Contatos</h2>
+                    <br>
                     <?php
                     include 'conexao.php';
                     $sql7 = "select * from admin_evento_contato_tipo_contato as x, tb_tipo_contato as tc"
@@ -326,7 +326,7 @@
                         $nome = $dados['nome_contato'];
                         $telefone = $dados['telefone_contato'];
                         ?>
-                        <h2 style="font-family: 'Kaushan Script';color: white;"><?= $nome; ?></h2>
+                        <h3 style="font-family: 'Kaushan Script';color: white;"><?= $nome; ?></h3>
                         <h5 class="section-subheading" style="color: white;"><?= $telefone; ?></h5>
                         <br>
                     <?php } ?>
@@ -340,7 +340,7 @@
                     <div class="col-lg-12">
                         <form id="contactForm" action="mail/contact_me.php" method="post" name="sentMessage" novalidate="novalidate">
                             <div class="row">
-                                <div class="col-md-6">
+                                <div class="col-md-12">
                                     <div class="form-group">
                                         <input class="form-control" id="name" type="text" placeholder="Insira seu nome..." 
                                                required="required" data-validation-required-message="Por favor digite seu nome completo.">
@@ -356,7 +356,7 @@
                                         <p class="help-block text-danger"></p>
                                     </div>
                                 </div>
-                                <div class="col-md-6">
+                                <div class="col-md-12">
                                     <div class="form-group">
                                         <textarea class="form-control" id="message" placeholder="Insira sua mensagem..." 
                                                   required="required" data-validation-required-message="Por favor digite sua mensagem."></textarea>
@@ -380,7 +380,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-md-12">
-                        <span style="font-size: 1.1em;" class="copyright">Copyright &copy; 
+                        <span class="copyright">Copyright &copy; 
                             <span style="font-size: 1.1em;font-family: 'Kaushan Script';">
                                 <a class="js-scroll-trigger" href="#inicio"><?= $nome_evento; ?> </a>
                             </span> 2018
