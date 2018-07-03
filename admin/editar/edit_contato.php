@@ -19,11 +19,11 @@ if (isset($login_cookie)) {
     $img = $dados['img_contato'];
     $rua = $dados['rua_contato'];
     $nr = $dados['nr_contato'];
-    $ciadade = $dados['cod_cidade'];
+    $cod_ci = $dados['cod_cidade'];
     $tipo = $dados['cod_tipo_contato'];
     ?>   
     <div class="container col-sm-6">
-        <form class="form-horizontal" method="POST" action="editar/editBD_contato.php?v=<?=$id;?>&i=<?=$img;?>" enctype="multipart/form-data">
+        <form class="form-horizontal" method="POST" action="editar/editBD_contato.php?v=<?= $id; ?>&i=<?= $img; ?>" enctype="multipart/form-data">
             <div>
                 <label class="col-sm-5 control-label" required >Tipo do Contato:</label>
                 <div class="col-sm-12">
@@ -102,26 +102,29 @@ if (isset($login_cookie)) {
             </div>
             <hr class="b-s-dashed">
             <div>
-                <label class="col-sm-4 control-label" required >Nome da Cidade:</label>
+                <label class="col-sm-5 control-label" required >Nome da Cidade:</label>
                 <div class="col-sm-12">
                     <select class="form-control" name="cidade">
                         <?php
                         include './conexao.php';
 
-                        $selectCidadeEstado = "call sel_cidade_estado();";
+                        $selectCidade = "select *"
+                                . "from tb_cidade as c, tb_estado as e "
+                                . "where c.cod_estado = e.cod_estado;";
 
-                        $queryCidadeEstado = $pdo->query($selectCidadeEstado);
+                        $queryCidade = $pdo->query($selectCidade);
 
-                        while ($dados = $queryCidadeEstado->fetch()) {
+                        while ($dados = $queryCidade->fetch()) {
                             $nome_cidade = $dados['nome_cidade'];
                             $cod_cidade = $dados['cod_cidade'];
-                            if ($cod_cidade == $ciadade) {
+
+                            if ($cod_ci == $cod_cidade) {
                                 ?>
-                                <option selected="true" value="<?= $cod_cidade; ?>"><?= $cod_tipo_contato; ?> - <?= $nome_cidade; ?></option>
+                                <option selected="true" value="<?= $cod_cidade; ?>"><?= $cod_cidade; ?> - <?= $nome_cidade; ?></option>
                                 <?php
-                            } else if ($cod_cidade != $ciadade) {
+                            } else if ($cod_ci != $cod_cidade) {
                                 ?>
-                                <option value="<?= $cod_cidade; ?>"><?= $cod_tipo_contato; ?> - <?= $nome_cidade; ?></option>
+                                <option value="<?= $cod_cidade; ?>"><?= $cod_cidade; ?> - <?= $nome_cidade; ?></option>
                                 <?php
                             }
                         }
@@ -158,7 +161,7 @@ if (isset($login_cookie)) {
                 </select>
             </div>
             <hr class="b-s-dashed">
-            <input class="btn btn-dark btn-block" type="submit" onclick="return excluir('<?=$nome?>');" value="ATUALIZAR" name="ATUALIZAR">
+            <input class="btn btn-dark btn-block" type="submit" onclick="return editar('<?= $nome ?>');" value="ATUALIZAR" name="ATUALIZAR">
         </form>
     </div>
 <?php } ?>

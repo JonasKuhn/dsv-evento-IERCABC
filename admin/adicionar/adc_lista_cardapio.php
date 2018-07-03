@@ -11,9 +11,9 @@ if (isset($login_cookie)) {
             </div>
             <hr class="b-s-dashed">
             <div class="form-group">
-                <label class="col-sm-4 control-label">Obs do Cardápio:</label>
+                <label for="desc" class="col-sm-4 control-label">Obs do Cardápio:</label>
                 <div class="col-sm-12">
-                    <input type="text" class="form-control" name="obs_cardapio" placeholder="Digite a Observação do Cardápio:">
+                    <textarea class="form-control" rows="5" id="desc" name="obs_cardapio" placeholder="Digite a Observação do Cardápio..."></textarea>
                 </div>
             </div>
             <hr class="b-s-dashed">

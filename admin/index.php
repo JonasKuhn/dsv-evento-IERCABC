@@ -17,6 +17,7 @@ if (isset($login_cookie)) {
             <meta charset="utf-8">
             <meta http-equiv="X-UA-Compatible" content="IE=edge">
             <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+            <link rel="shortcut icon" href="../img/icon.png" type="image/x-icon"/>
             <meta name="description" content="">
             <meta name="author" content="">
             <title><?= $login_cookie; ?> - Intranet</title>
@@ -207,7 +208,7 @@ if (isset($login_cookie)) {
                         include './navegacao.php';
                         include ('./editar/edit_admin.php');
                         break;
-                    
+
                     default :
                         $menu = 'Home';
                         include './navegacao.php';
@@ -219,7 +220,7 @@ if (isset($login_cookie)) {
                 <footer class="sticky-footer">
                     <div class="container">
                         <div class="text-center">
-                            <small>Copyright © <?= $nome_evento;?> 2018</small>
+                            <small>Copyright © <?= $nome_evento; ?> 2018</small>
                         </div>
                     </div>
                 </footer>

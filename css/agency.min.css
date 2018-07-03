@@ -101,18 +101,7 @@ footer span.copyright{font-size:90%;line-height:40px;text-transform:none;font-fa
 footer ul.quicklinks{font-size:90%;line-height:40px;margin-bottom:0;text-transform:none;font-family:Montserrat,'Helvetica Neue',Helvetica,Arial,sans-serif}
 ul.social-buttons{margin-bottom:0}ul.social-buttons li a{font-size:20px;line-height:40px;display:block;width:40px;height:40px;-webkit-transition:all .3s;-moz-transition:all .3s;transition:all .3s;color:#fff;border-radius:100%;outline:0;background-color:#212529}
 ul.social-buttons li a:active,ul.social-buttons li a:focus,ul.social-buttons li a:hover{background-color:#fed136}
-
-.banner{
-    text-align:center;
-    color:#fff;
-    margin-top: 6%; 
-    background-repeat:no-repeat;
-    background-attachment:scroll;
-    -webkit-background-size:cover;
-    -moz-background-size:cover;
-    -o-background-size:cover;
-    background-size:cover;
-}
+.banner{text-align:center;color:#fff;margin-top: 6%;background-repeat:no-repeat;background-attachment:scroll;-webkit-background-size:cover;-moz-background-size:cover;-o-background-size:cover;background-size:cover;}
 
 @media (min-width:320px){
     .map{height: 380px;}
@@ -140,10 +129,25 @@ ul.social-buttons li a:active,ul.social-buttons li a:focus,ul.social-buttons li 
     .video {margin: 0 auto;width: 224px;height: 139px;}
     .portfolio-modal{margin-top: 17%;}
     footer {padding: 5px 0;}
+    .text-center h1{padding: 0px;}
+    .tittulo-cardapio{font-family: 'Cabin Sketch', cursive; color: #fec503; font-size: 3em;margin-top: -30px;}
+    .cardapio{width: 300px;height: 415px;background-image:url(../img/cardapio.png);background-repeat:no-repeat;background-size: 100%;}
+    .cardapio h3{padding-top: 15px;padding-left: 0px;font-size: 1em;}
+    .inner-cardapio{margin-top: 0px; width: 135px;}
+    .inner-cardapio h4{font-family: 'Kaushan Script'; padding-left: 2px; color: white;font-size: 0.8em;}
+    .inner-cardapio p{font-size: 0.5em;margin-left: 10px;color: white;}
+    .carosel{width: 190px;margin-right: -15px;margin-top: -45px;}
+    .inner-cardapio-ac{margin-top: 60px; width: 130px;}
+    .inner-cardapio-ac h3{font-size: 0.8em;}
+    .inner-cardapio-ac h4{font-family: 'Kaushan Script'; padding-left: 2px; color: white;font-size: 0.7em;margin-bottom: -10px;}
+    .inner-cardapio-ac p{font-size: 0.5em;margin-left: 10px;color: white;padding-right: 22px;padding-top: 12px;margin-bottom: 0px;color: white;}
+    .comidas{width: 330px;margin-left: -50px;}
+    .inner-cardapio-obs h3{font-size: 0.9em;}
+    .inner-cardapio-obs h4 {font-family: 'Kaushan Script';font-size: 0.8em;width: 177px;color: white;}
+    .inner-cardapio-obs {margin-top: -56px;margin-left: 105px;}
 }
 
 @media (min-width:360px){
-
     .map{height: 300px;}
     .maps{width: 95%;height: 70%;}
     h1,h2,h3,h4,h5,h6{font-weight:600;font-family:Montserrat,'Helvetica Neue',Helvetica,Arial,sans-serif}
@@ -167,6 +171,26 @@ ul.social-buttons li a:active,ul.social-buttons li a:focus,ul.social-buttons li 
     .portfolio-modal .modal-content h2 {font-size: 2em;margin-bottom: 15px;}
     .video {margin: 0 auto;width: 270px;height: 180px;}
     .portfolio-modal{margin-top: 17%;}
+    .text-center h1{padding: 0px;}
+    .tittulo-cardapio{font-family: 'Cabin Sketch', cursive; color: #fec503; font-size: 3em;margin-top: -30px;}
+    .cardapio{width: 332px;height: 448px;background-image:url(../img/cardapio.png);background-repeat:no-repeat;background-size: 100%;}
+    .cardapio h3 {padding-top: 25px;padding-left: 9px;font-size: 1.2em;}
+    .inner-cardapio{margin-top: 0px; width: 150px;}
+    .inner-cardapio h4{font-family: 'Kaushan Script'; padding-left: 2px; color: white;font-size: 0.9em;}
+    .inner-cardapio p{font-size: 0.5em;margin-left: 10px;color: white;}
+    .carosel{width: 190px;margin-right: -15px;margin-top: -45px;}
+    .inner-cardapio-ac{margin-top: 60px; width: 130px;}
+    .inner-cardapio-ac h3{font-size: 0.8em;}
+    .inner-cardapio-ac h4{font-family: 'Kaushan Script'; padding-left: 2px; color: white;font-size: 0.7em;margin-bottom: -10px;}
+    .inner-cardapio-ac p{font-size: 0.5em;margin-left: 10px;color: white;padding-right: 22px;padding-top: 12px;margin-bottom: 0px;color: white;}
+    .comidas {width: 360px;margin-left: -45px;}
+    .inner-cardapio-obs h4 {margin-left: 45px;color: white;font-family: 'Kaushan Script';font-size: 0.8em;width: 175px;}
+    .inner-cardapio-obs {margin-top: -48px;margin-left: 87px;}
+}
+
+@media (min-width:374px){
+    .comidas {width: 360px;margin-left: -38px;}
+    .cardapio {width: 332px;height: 448px;}
 }
 
 @media (min-width:413px){
@@ -194,6 +218,11 @@ ul.social-buttons li a:active,ul.social-buttons li a:focus,ul.social-buttons li 
     .portfolio-modal .modal-content h2 {font-size: 2em;margin-bottom: 15px;}
     .video {margin: 0 auto;width: 320px;height: 200px;}
     .portfolio-modal{margin-top: 25%;}
+    .cardapio{width: 330px;height: 448px;}
+    .comidas{    margin-left: -15px;}
+    .map {
+        height: 350px;
+    }
 }
 
 @media (min-width:767px){
@@ -234,6 +263,14 @@ ul.social-buttons li a:active,ul.social-buttons li a:focus,ul.social-buttons li 
     .timeline>li.timeline-inverted>.timeline-panel{float:right;padding:0 30px 20px 20px;text-align:left}
     section#contact .form-group input.form-control {height: 70px;font-size: 1.5em;}
     section#contact .form-group textarea.form-control {height: 220px;font-size: 1.5em;}
+    .comidas{width: 720px;}
+    .carosel {width: 173px;margin-right: 0px;margin-top: 10px;}
+    .cardapio h3{padding-top: 45px;}
+    .inner-cardapio h4 {font-family: 'Kaushan Script';padding-left: 2px;color: white;font-size: 1em;}
+    .inner-cardapio-ac h3 {font-size: 0.9em;margin-left: -35px;}
+    .inner-cardapio {margin-top: 0px;width: 270px;}
+    .inner-cardapio-obs {margin-top: -80px;margin-left: 90px;}
+    .inner-cardapio-obs h3 {padding-top: 25px;padding-left: 55px;font-size: 1.2em;}
 }
 
 @media (min-width:800px){
@@ -257,17 +294,30 @@ ul.social-buttons li a:active,ul.social-buttons li a:focus,ul.social-buttons li 
     .text-center h5 {font-size: 1.5em;}
     .maps {width: 100%;height: 78%;}
     .btn-primary {font-size: 20px;}
+    .cardapio{width: 443px;height: 600px;background-image:url(../img/cardapio.png);background-repeat:no-repeat;background-size: 100%;}
+    .comidas {width: 960px;}
+    .cardapio h3 {padding-top: 35px;font-size: 2em;}
+    .inner-cardapio h4 {font-size: 1.2em;padding-left: 20px;}
+    .inner-cardapio p {font-size: 0.8em;margin-left: 20px;}
+    .inner-cardapio-ac h3{font-size: 1.2em;}
+    .inner-cardapio-ac h4 {font-size: 1.2em;}
+    .inner-cardapio-ac p {font-size: 0.7em;}
+    .carosel {width: 240px;margin-right: 0px;margin-top: -17px;}
+    .inner-cardapio {margin-top: 0px;width: 333px;}
+    .inner-cardapio-obs {margin-top: -19px;margin-left: 114px;}
+    .inner-cardapio-obs h4 {margin-left: 62px;color: white;font-family: 'Kaushan Script';font-size: 0.9em;width: 195px;}
+    .inner-cardapio-obs h3 {padding-top: 35px;font-size: 1.5em;}
 }
 
 @media (min-width:1200px){
     #mainNav {padding-top: 10px;padding-bottom: 10px;}
     #mainNav .navbar-nav .nav-item .nav-link {padding: 1em 1em!important;font-size: 0.8em;}
     header.masthead{margin-top: 5%; background-size: 100%;}
-    header.masthead .intro-text {padding-top: 270px;padding-bottom: 260px;}
-    .text-center h2 {font-size: 2em;margin-bottom: 5px;}
+    header.masthead .intro-text {padding-top: 270px;padding-bottom: 210px;}
+    .text-center h2 {font-size: 1.5em;margin-bottom: 5px;}
     .text-center h3 {font-size: 2em;}
     .text-center h6 {font-size: 1.2em;}
-    .text-center h5 {font-size: 1em;}
+    .text-center h5 {font-size: 0.9em;}
     .text-center img {width: 50%;}
     p {line-height: 1.5;font-size: 1em;}
     .text-center h6 {font-size: 1.1em;}
@@ -297,6 +347,21 @@ ul.social-buttons li a:active,ul.social-buttons li a:focus,ul.social-buttons li 
     .portfolio-modal .modal-content {width: 80%;}
     .video {width: 800px;height: 460px;}
     .modal-body li {font-size: 1.3em;}
+    .tittulo-cardapio{font-family: 'Cabin Sketch', cursive; color: #fec503; font-size: 3em;}
+    .cardapio{width: 825px;height: 720px;background-image:url(../img/cardapio.png);background-repeat:no-repeat;background-size: 100%;}
+    .cardapio h3{padding-top: 40px;padding-left: 40px;font-size: 2.2em;}
+    .inner-cardapio h4{font-family: 'Kaushan Script'; padding-left: 25px; color: white;}
+    .text-center h1{padding: 0px;}
+    .inner-cardapio p{font-size: 0.9em;margin-left: 25px;color: white;  }
+    .inner-cardapio{margin-top: 20px;}
+    .inner-cardapio-ac{margin-top: 140px;}
+    .inner-cardapio p{font-size: 0.9em; }
+    .comidas {width: 100%;}
+    .inner-cardapio-ac h3 {font-size: 1.2em;}
+    .carosel {width: 323px;margin-right: 0px;margin-top: 10px;}
+    .inner-cardapio-obs h3{font-size: 1.5em;}
+    .inner-cardapio-obs h4{font-family: 'Kaushan Script'; font-size: 1.2em; width: 400px;margin-left: 15px;padding-right: 14px;color: white;}
+    .inner-cardapio-obs {margin-top: 359px;margin-left: -50px;}
 } 
 
 @media (min-width:1280px){
@@ -305,6 +370,7 @@ ul.social-buttons li a:active,ul.social-buttons li a:focus,ul.social-buttons li 
 
 @media(min-width:1360px){
     header.masthead .intro-text {padding-top: 265px;padding-bottom: 260px;}
+
 }
 
 .text_black{

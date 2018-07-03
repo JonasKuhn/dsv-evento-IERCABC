@@ -66,9 +66,9 @@ if (isset($login_cookie)) {
             </div>
             <hr class="b-s-dashed">
             <div class="form-group">
-                <label class="col-sm-4 control-label">Descrição do Item:</label>
+                <label for="desc" class="col-sm-4 control-label">Descrição do Item:</label>
                 <div class="col-sm-12">
-                    <input type="text" class="form-control" name="descricao_item" placeholder="Digite uma Descrição...">
+                    <textarea class="form-control" rows="5" id="desc" name="descricao_item" placeholder="Digite uma Descrição..."></textarea>
                 </div>
             </div>
             <hr class="b-s-dashed">

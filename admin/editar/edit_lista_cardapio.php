@@ -23,7 +23,8 @@ if (isset($login_cookie)) {
             <div class="form-group">
                 <label class="col-sm-4 control-label">Obs do Cardápio:</label>
                 <div class="col-sm-12">
-                    <input type="text" class="form-control"  value="<?= $obs_cardapio; ?>" name="obs_cardapio" placeholder="Digite a Observação do Cardápio:">
+                    <textarea class="form-control" rows="5"
+                            name="obs_cardapio" placeholder="Digite a Observação do Cardápio..."><?= $obs_cardapio; ?></textarea>
                 </div>
             </div>
             <hr class="b-s-dashed">

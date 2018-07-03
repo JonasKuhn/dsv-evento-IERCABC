@@ -24,7 +24,7 @@ if (isset($login_cookie)) {
     ?>   
     <div class="container col-sm-6">
         <form class="form-horizontal" method="POST" 
-              action="editar/editBD_itens_cardapio.php?v=<?=$id;?>&i=<?=$img_item;?>" enctype="multipart/form-data">
+              action="editar/editBD_itens_cardapio.php?v=<?= $id; ?>&i=<?= $img_item; ?>" enctype="multipart/form-data">
             <div class="form-group">
                 <label class="col-sm-8 control-label">Cardápio:</label>
                 <div class="col-sm-12">
@@ -102,18 +102,19 @@ if (isset($login_cookie)) {
             <div class="form-group">
                 <label class="col-sm-4 control-label">Descrição do Item:</label>
                 <div class="col-sm-12">
-                    <input type="text" class="form-control" value="<?=$descricao_item; ?>" name="descricao_item" placeholder="Digite uma Descrição...">
+                    <textarea class="form-control" rows="5"
+                              name="descricao_item" placeholder="Digite uma Descrição..."><?= $descricao_item; ?></textarea>
                 </div>
             </div>
             <hr class="b-s-dashed">
             <div class="form-group">
-                <label class="col-sm-4 control-label">Imagem: <?= $img_item; ?></label>
+                <label class="col-sm-8 control-label">Imagem: <?= $img_item; ?></label>
                 <div class="col-sm-12">
                     <input type="file" class="form-control" name="img_item">
                 </div>
             </div>
             <hr class="b-s-dashed">
-            <input class="btn btn-dark btn-block" type="submit" onclick="return editar('<?=$nome_item?>');" value="ATUALIZAR" name="ATUALIZAR">
+            <input class="btn btn-dark btn-block" type="submit" onclick="return editar('<?= $nome_item ?>');" value="ATUALIZAR" name="ATUALIZAR">
         </form>
     </div>
 <?php } ?>

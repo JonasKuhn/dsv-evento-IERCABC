@@ -11,9 +11,10 @@ if (isset($login_cookie)) {
             </div>
             <hr class="b-s-dashed">
             <div class="form-group">
-                <label class="col-sm-6 control-label">Descrição:</label>
+                <label class="col-sm-4 control-label">Descrição:</label>
                 <div class="col-sm-12">
-                    <input type="text" class="form-control" name="descricao_prog" placeholder="Digite a descrição da Programação...">
+                    <textarea class="form-control" rows="5"
+                              name="descricao_item" placeholder="Digite uma Descrição..."><?= $descricao_item; ?></textarea>
                 </div>
             </div>
             <hr class="b-s-dashed">

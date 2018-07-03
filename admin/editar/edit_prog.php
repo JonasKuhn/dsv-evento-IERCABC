@@ -17,7 +17,7 @@ if (isset($login_cookie)) {
     $cod_t_p = $dados['cod_tipo_prog'];
     ?>   
     <div class="container col-sm-6">
-        <form class="form-horizontal" method="POST" action="editar/editBD_prog.php?v=<?=$id;?>&i=<?= $img_prog; ?>" enctype="multipart/form-data">
+        <form class="form-horizontal" method="POST" action="editar/editBD_prog.php?v=<?= $id; ?>&i=<?= $img_prog; ?>" enctype="multipart/form-data">
             <div class="form-group">
                 <label class="col-sm-6 control-label">Título:</label>
                 <div class="col-sm-12">
@@ -26,9 +26,10 @@ if (isset($login_cookie)) {
             </div>
             <hr class="b-s-dashed">
             <div class="form-group">
-                <label class="col-sm-6 control-label">Descrição:</label>
+                <label class="col-sm-4 control-label">Descrição:</label>
                 <div class="col-sm-12">
-                    <input type="text" class="form-control" value="<?= $obs_prog; ?>" name="obs_prog" placeholder="Digite a descrição da Programação...">
+                    <textarea class="form-control" rows="5"
+                              name="obs_prog" placeholder="Digite a descrição da Programação..."><?= $obs_prog; ?></textarea>
                 </div>
             </div>
             <hr class="b-s-dashed">

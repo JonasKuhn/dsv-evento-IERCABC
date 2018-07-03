@@ -26,6 +26,7 @@
         ?>
 
         <title><?= $nome_evento; ?></title>
+        <link rel="shortcut icon" href="img/icon.png" type="image/x-icon"/>
 
         <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
@@ -34,8 +35,26 @@
         <link href='https://fonts.googleapis.com/css?family=Kaushan+Script' rel='stylesheet' type='text/css'>
         <link href='https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
         <link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700' rel='stylesheet' type='text/css'>
+        <!-- NOVAS -->
+        <link href="https://fonts.googleapis.com/css?family=Fredericka+the+Great" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Cabin+Sketch" rel="stylesheet">
 
         <link href="css/agency.min.css" rel="stylesheet">
+
+        <script type="text/javascript" src="vendor/jquery/jquery-1.4.4.min.js"></script>
+        <script src="vendor/jquery-easing/jquery.easing.1.3.js" type="text/javascript"></script>
+        <script src="vendor/booklet/jquery.booklet.1.1.0.min.js" type="text/javascript"></script>
+        <link href="vendor/booklet/jquery.booklet.1.1.0.css" type="text/css" rel="stylesheet" media="screen" />
+        <link rel="stylesheet" href="css/style.css" type="text/css" media="screen"/>
+
+        <script src="vendor/cufon/cufon-yui.js" type="text/javascript"></script>
+        <script type="text/javascript">
+            Cufon.replace('h1,p,.b-counter');
+            Cufon.replace('.book_wrapper a', {hover: true});
+            Cufon.replace('.title', {textShadow: '1px 1px #C59471', fontFamily: 'ChunkFive'});
+            Cufon.replace('.reference a', {textShadow: '1px 1px #C59471', fontFamily: 'ChunkFive'});
+            Cufon.replace('.loading', {textShadow: '1px 1px #000', fontFamily: 'ChunkFive'});
+        </script>
 
     </head>
 
@@ -152,56 +171,57 @@
                     <?php
                 }
                 ?>
+            </div>
+
+            <div class="container" style="padding-top: 15px;">
                 <div class="container text-center">
                     <h2 class="section-heading text-uppercase" style="font-family: 'Kaushan Script';" >SHOWS</h2>
                 </div>
-                <div class="container" style="padding-top: 15px;">
-                    <div class="row">
-                        <?php
-                        include 'conexao.php';
-                        $sql4 = "select * from admin_evento_programacao_tipo_prog as x, tb_tipo_programacao as tp 
+                <div class="row">
+                    <?php
+                    include 'conexao.php';
+                    $sql4 = "select * from admin_evento_programacao_tipo_prog as x, tb_tipo_programacao as tp 
                                 where x.cod_tipo_prog = tp.cod_tipo_prog 
                                 and tp.descricao_tipo = 'shows'
                                 order by x.hora_inicio_prog ASC; ";
 
-                        $query4 = $mysqli->query($sql4);
-                        $dir = 'admin/upload/img/programacao/';
-                        while ($dados = $query4->fetch_array()) {
-                            $cod_prog = $dados['cod_prog'];
-                            $titulo = $dados['descricao_prog'];
-                            $img = $dir . $dados['img_prog'];
-                            $hi = $dados['hora_inicio_prog'];
-                            $hf = $dados['hora_fim_prog'];
-                            $pavilhao = $dados['pavilhao_prog'];
-                            ?>
-
-                            <!-- Inicio Modal -->
-
-                            <div class = "col-md-6 portfolio-item">
-                                <a class="portfolio-link" data-toggle="modal" href="#portfolioModal<?= $cod_prog; ?>">
-                                    <div class="portfolio-hover">
-                                        <div class="portfolio-hover-content">
-                                            <i class="fa fa-plus fa-3x"></i>
-                                        </div>
-                                    </div>
-                                    <img class = "img-fluid" src = "<?= $img; ?>" alt = "<?= $dados['img_prog']; ?>">
-                                </a>
-                                <div class = "portfolio-caption">
-                                    <h3 style = "font-family: 'Kaushan Script';"><?= $titulo; ?></h3>
-                                    <br>
-                                    <ul class="list-inline text-center">
-                                        <li>Hora Início: <?= $hi; ?></li>
-                                        <li>Hora Fim: <?= $hf; ?></li>
-                                        <li>Local: <?= $pavilhao; ?></li>
-                                    </ul>
-                                </div>                                
-                            </div>
-                            <?php
-                        }
+                    $query4 = $mysqli->query($sql4);
+                    $dir = 'admin/upload/img/programacao/';
+                    while ($dados = $query4->fetch_array()) {
+                        $cod_prog = $dados['cod_prog'];
+                        $titulo = $dados['descricao_prog'];
+                        $img = $dir . $dados['img_prog'];
+                        $hi = $dados['hora_inicio_prog'];
+                        $hf = $dados['hora_fim_prog'];
+                        $pavilhao = $dados['pavilhao_prog'];
                         ?>
-                    </div>
+
+                        <!-- Inicio Modal -->
+
+                        <div class = "col-md-6 portfolio-item">
+                            <a class="portfolio-link" data-toggle="modal" href="#portfolioModal<?= $cod_prog; ?>">
+                                <div class="portfolio-hover">
+                                    <div class="portfolio-hover-content">
+                                        <i class="fa fa-plus fa-3x"></i>
+                                    </div>
+                                </div>
+                                <img class = "img-fluid" src = "<?= $img; ?>" alt = "<?= $dados['img_prog']; ?>">
+                            </a>
+                            <div class = "portfolio-caption">
+                                <h3 style = "font-family: 'Kaushan Script';"><?= $titulo; ?></h3>
+                                <br>
+                                <ul class="list-inline text-center">
+                                    <li>Hora Início: <?= $hi; ?></li>
+                                    <li>Hora Fim: <?= $hf; ?></li>
+                                    <li>Local: <?= $pavilhao; ?></li>
+                                </ul>
+                            </div>                                
+                        </div>
+                        <?php
+                    }
+                    ?>
                 </div>
-            </div>
+            </div>  
         </section>
 
         <?php
@@ -253,17 +273,147 @@
         ?>
 
         <!-- CARDÁPIO -->
-        <section id="cardapio">
-            <div class="container">
-                <div class="col-lg-12 text-center">
-                    <h2 class="section-subheading text-uppercase">CARDÁPIO</h2>
+        <section id="cardapio" style="background-image:url(img/wood.jpg);">
+            <div class="container-fluid">
+                <div class="col-sm-12" >
+                    <h1 class="section-subheading text-uppercase text-center tittulo-cardapio">CARDÁPIO</h1>
+                    <div class="container">
+                        <div class="row comidas">
+                            <div class="col-sm-6">
+                                <div class="cardapio col-12">
+                                    <h3 style="font-family: 'Kaushan Script'; color: white;">COMIDAS</h3>
+                                    <div class="row">
+                                        <div class="col-sm-6 inner-cardapio">
+                                            <?php
+                                            include './conexao.php';
+                                            $sql = "select * from admin_evento_cardapio_item"
+                                                    . " where cod_tipo_item = 1;";
+                                            $query = $mysqli->query($sql);
+
+                                            while ($dados = $query->fetch_array()) {
+                                                $nome_item = $dados['nome_item'];
+                                                $img_item = $dados['img_item'];
+                                                $valor_item = $dados['valor_item'];
+                                                $descricao_item = $dados['descricao_item'];
+                                                $valor = $dados['valor_item'];
+                                                ?>
+                                                <h4><?= $nome_item; ?></h4>
+                                                <p> <?= $descricao_item; ?></p>
+
+                                                <?php
+                                            }
+                                            ?>
+                                        </div>
+
+                                        <div class="col-sm-6 inner-cardapio-ac">
+                                            <h3 style="font-family: 'Kaushan Script'; color: white; text-align: center;">ACOMPANHAMENTOS</h3>
+                                            <?php
+                                            include './conexao.php';
+                                            $sql = "select * from admin_evento_cardapio_item"
+                                                    . " where cod_tipo_item = 3;";
+                                            $query = $mysqli->query($sql);
+
+                                            while ($dados = $query->fetch_array()) {
+                                                $nome_item = $dados['nome_item'];
+                                                $img_item = $dados['img_item'];
+                                                $valor_item = $dados['valor_item'];
+                                                $descricao_item = $dados['descricao_item'];
+                                                $valor = $dados['valor_item'];
+                                                ?>
+                                                <h4 style="font-family: 'Kaushan Script'; color: white;"><?= $nome_item; ?></h4>
+                                                <p style="margin-left: 15px;padding-right: 14px;color: white;"> <?= $descricao_item; ?></p>
+
+                                                <?php
+                                            }
+                                            ?>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-7 float-right carosel">
+                                        <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
+                                            <div class="carousel-inner">
+                                                <?php
+                                                include './conexao.php';
+                                                $sql = "select * from admin_evento_cardapio_item"
+                                                        . " where cod_tipo_item = 1;";
+                                                $query = $mysqli->query($sql);
+                                                $cont = 0;
+
+                                                while ($dados = $query->fetch_array()) {
+                                                    $img_item = $dados['img_item'];
+                                                    if ($cont == 0) {
+                                                        ?>
+                                                        <div class="carousel-item active">
+                                                            <img class="d-block w-100" src="admin/upload/img/item/<?= $img_item; ?>" alt="<?= $img_item; ?>">
+                                                        </div>
+                                                        <?php
+                                                    } else {
+                                                        ?>
+                                                        <div class="carousel-item">
+                                                            <img class="d-block w-100" src="admin/upload/img/item/<?= $img_item; ?>" alt="<?= $img_item; ?>">
+                                                        </div>
+                                                        <?php
+                                                    }
+                                                    $cont++;
+                                                }
+                                                ?>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="cardapio col-sm-12">
+                                    <h3 style="font-family: 'Kaushan Script'; color: white;">BEBIDAS</h3>
+                                    <div class="row">
+                                        <div class="col-sm-6 inner-cardapio">
+                                            <?php
+                                            include './conexao.php';
+                                            $sql = "select * from admin_evento_cardapio_item"
+                                                    . " where cod_tipo_item = 2;";
+                                            $query = $mysqli->query($sql);
+
+                                            while ($dados = $query->fetch_array()) {
+                                                $nome_item = $dados['nome_item'];
+                                                $img_item = $dados['img_item'];
+                                                $valor_item = $dados['valor_item'];
+                                                $descricao_item = $dados['descricao_item'];
+                                                $valor = $dados['valor_item'];
+                                                ?>
+                                                <h4 style="color: white;"><?= $nome_item; ?></h4>
+                                                <p style="color: white;"> <?= $descricao_item; ?></p>
+
+                                                <?php
+                                            }
+                                            ?>
+                                        </div>
+                                        <div class="col-sm-4 inner-cardapio-obs">
+                                            <h3 style="font-family: 'Kaushan Script'; color: white; text-align: center;">OBSERVAÇÕES</h3>
+                                            <?php
+                                            include './conexao.php';
+                                            $sql = "select obs_cardapio from tb_cardapio";
+                                            $query = $mysqli->query($sql);
+
+                                            while ($dados = $query->fetch_array()) {
+                                                $nome_item = $dados['obs_cardapio'];
+                                                ?>
+                                                <h4> <?= $nome_item; ?></h4>
+
+                                                <?php
+                                            }
+                                            ?>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>                
             </div>
         </section>
 
         <!-- PONTOS DE VENDA -->
         <section id="pontosVenda" class="fundo-branco" 
-                 style="text-align:center;margin-top: 7.5%; 
+                 style="text-align:center;margin-top: 0%; 
                  background-image:url(img/pontos_venda.jpeg);
                  background-repeat:no-repeat;
                  background-attachment:scroll;
@@ -275,26 +425,30 @@
                 <div class="row" style="margin-left: 2%;">
                     <div class="col-lg-11 text-center fundo_branco">
                         <h2 class="section-subheading text-black">PONTOS DE VENDA</h2>
-                        <?php
-                        include 'conexao.php';
-                        $sql6 = "select * from busca_ponto_vendas;";
+                        <div class="row">
+                            <?php
+                            include 'conexao.php';
+                            $sql6 = "select * from busca_ponto_vendas;";
 
-                        $query6 = $mysqli->query($sql6);
-                        $dir = 'admin/upload/img/programacao/';
-                        while ($dados = $query6->fetch_array()) {
-                            $nome = $dados['nome_contato'];
-                            $telefone = $dados['telefone_contato'];
-                            $rua = $dados['rua_contato'];
-                            $nr = $dados['nr_contato'];
-                            $cit_l = $dados['nome_cidade'];
-                            $uf = $dados['uf'];
-                            ?>
-                            <br>
-                            <h2 class="text-black " style="font-family: 'Kaushan Script';"><?= $nome; ?></h2>
-                            <h5 class="section-subheading text-black"><?= $telefone; ?></h5>
-                            <h5 class="section-subheading text-black"><?= $rua; ?> - <?= $nr; ?> - <?= $cit_l; ?> - <?= $uf; ?></h5>
+                            $query6 = $mysqli->query($sql6);
+                            $dir = 'admin/upload/img/programacao/';
+                            while ($dados = $query6->fetch_array()) {
+                                $nome = $dados['nome_contato'];
+                                $telefone = $dados['telefone_contato'];
+                                $rua = $dados['rua_contato'];
+                                $nr = $dados['nr_contato'];
+                                $cit_l = $dados['nome_cidade'];
+                                $uf = $dados['uf'];
+                                ?>
 
-                        <?php } ?>
+                                <div class="col-sm-4">
+                                    <hr>
+                                    <h2 class="text-black " style="font-family: 'Kaushan Script';"><?= $nome; ?></h2>
+                                    <h5 class="section-subheading text-black"><?= $telefone; ?></h5>
+                                    <h5 class="section-subheading text-black"><?= $rua; ?> - <?= $cit_l; ?> - <?= $uf; ?></h5>
+                                </div>
+                            <?php } ?>
+                        </div>
                     </div>
                     <div class="col-lg-11 text-center map fundo_branco">
                         <h2 class="section-subheading text-black" >LOCALIZAÇÃO</h2>
@@ -327,7 +481,9 @@
                         $telefone = $dados['telefone_contato'];
                         ?>
                         <h3 style="font-family: 'Kaushan Script';color: white;"><?= $nome; ?></h3>
-                        <h5 class="section-subheading" style="color: white;"><?= $telefone; ?></h5>
+                        <i class="fa fa-fw fa-whatsapp" style="color: white;"></i>
+                        <span class="section-subheading" style="color: white;"><?= $telefone; ?></span>
+                        <br>
                         <br>
                     <?php } ?>
                 </div>
@@ -390,7 +546,7 @@
             </div>
         </footer>
 
-        <script src="vendor/jquery/jquery.min.js"></script>
+        <script src="vendor/jquery/jquery.min.js" type="text/javascript"></script>
         <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
         <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
         <script src="js/jqBootstrapValidation.js"></script>

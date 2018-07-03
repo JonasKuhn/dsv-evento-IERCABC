@@ -7,8 +7,7 @@ INSERT INTO `tb_cidade` (`cod_cidade`, `nome_cidade`, `cod_estado`) VALUES
 (1, 'Itapiranga', 2),
 (2, 'Iporã do Oeste', 2),
 (3, 'São João do Oeste', 2),
-(4, 'Sede Capela', 2),
-(5, 'Tunápolis', 2);
+(4, 'Tunápolis', 2);
 
 
 INSERT INTO `tb_tipo_contato` (`cod_tipo_contato`, `descricao_tipo_contato`) VALUES 
@@ -19,16 +18,21 @@ INSERT INTO `tb_tipo_contato` (`cod_tipo_contato`, `descricao_tipo_contato`) VAL
 
 INSERT INTO `tb_contato` (`cod_contato`, `nome_contato`, `telefone_contato`, `email_contato`, `img_contato`, 
 	`rua_contato`, `nr_contato`, `cod_cidade`, `cod_tipo_contato`) VALUES
-(1, 'Agropecuária Bressler', '(49) 93636-1023', null, null, 'Rua Rio Pardo', '101', 3, 1),
-(2, 'Sorveteria Tropical', '(49) 93677-0400', null, null, 'Rua do Comércio', '221', 1, 1),
-(3, 'Bar e Lanchonete Capelense', null, null, null, 'Rua Sede Capela', '-', 1, 1),
-(4, 'Restaurante Pauli', '(49) 93632-1128', null, null, 'Rua Afonso Rodrigues', '14', 5, 1),
-(5, 'Hora Certa Conveniencia e Cervejaria', '(49) 3634-2104', null, null, 'Rua Gustavo Fetter', '1118', 2, 1),
-(6, 'Beno Inácio Bressler', '(49) 99987-1515', null, null, 'Local Evento_BD', '000', 4, 2);
-
+(1, 'Agropecuária Bressler',                '(49) 93636-1023', '', '', 'Rua Rio Pardo',        '101',  3, 1),
+(2, 'Sorveteria Tropical',                  '(49) 93677-0400', '', '', 'Rua do Comércio',      '221',  1, 1),
+(3, 'Bar e Lanchonete Capelense',           '',                '', '', 'Sede Capela',      '-',        1, 1),
+(4, 'Restaurante Pauli',                    '(49) 93632-1128', '', '', 'Rua Afonso Rodrigues', '14',   4, 1),
+(5, 'Hora Certa Conveniencia e Cervejaria', '(49) 3634-1179',  '', '', 'Rua Gustavo Fetter',   '1118', 2, 1),
+(6, 'Mercado Kuster',                       '(49) 3636-3232',  '', '', 'Jaboticaba',           '',     3, 1),
+(7, 'Termas São João',                      '(49) 3636-1034',  '', '', 'Jaboticaba',           '',     3, 1),
+(8, 'Casa de Carnes Stulp',                 '(49) 3636-1144',  '', '', '',                     '',     3, 1),
+(9, 'ME Moda Enxovais',                     '(49) 99836-8730', '', '', 'Rua do Comércio',      '',     1, 1),
+(10, 'Canto Alemã',                         '(49) 3637-0097',  '', '', 'Cristo Rei',           '',     1, 1),
+(11, 'Bar do Petry',                        '',                '', '', 'Beato Roque',          '',     3, 1),
+(12, 'Beno Inácio Bressler',                '(49) 99987-1515', '', '', '',                     '',     3, 2);
 
 INSERT INTO `tb_cardapio` (`cod_cardapio`, `titulo_cardapio`, `obs_cardapio`) VALUES
-(1, 'Cardápio do 22º Evento', '');
+(1, 'Cardápio do 22º Evento', 'Adultos: R$ 25,00<br>Crianças até 11 anos: R$ 12,00<br>(Somente antecipado até <br>as 12:00 do dia 18/08)<br>Almoço vale ingresso <br>livre para os três shows');
 
 
 INSERT INTO `tb_tipo_item` (`cod_tipo_item`, `descricao_tipo_item`, `valor_tipo_item`, `obs_tipo_item`) VALUES 
@@ -38,21 +42,20 @@ INSERT INTO `tb_tipo_item` (`cod_tipo_item`, `descricao_tipo_item`, `valor_tipo_
 
 
 INSERT INTO `tb_item` (`cod_item`, `nome_item`, `descricao_item`, `valor_item`, `img_item`, `cod_tipo_item`) VALUES
-(1, 'Leitão a Paraguaia', '', '', '', 1),
-(2, 'Pernil',             '', '', '', 1),
-(3, 'Lombinho',           '', '', '', 1),
-(4, 'Costela',            '', '', '', 1),
-(5, 'Saladas', 'Repolho, Alface, Tomate, Pepino, Brócolis, Cebola ...', '', '', 3),
-(6, 'Pães',               '', '', '', 3),
-(7, 'Cuca',               '', '', '', 3),
-(8, 'Maionese',           '', '', '', 3),
-(9,  'Skol',            'Garrafas - 600ml / Latas - 350/473ml', '6.00', '', 2),
-(10, 'Brahma',          'Garrafas - 600ml / Latas - 350/473ml', '7.00', '', 2),
-(11, 'Barris de 20L',   'Chopp Fritz',                          '', '', 2),
-(12, 'Barris de 30L',   'Chopp Fritz',                          '', '', 2),
-(13, 'Barris de 50L',   'Chopp Fritz',                          '', '', 2),
-(14, 'Barris de 70L',   'Chopp Fritz',                          '', '', 2),
-(15, 'Caneca de Chopp', 'Chopp Fritz',                          '6.00', '', 2);
+(1, 'Leitão a Assado',       '',                '', 'leitao a paraguaia.jpg', 1),
+(2, 'Pernil',                '',                '', 'pernil.jpg', 1),
+(3, 'Lombinho',              '',                '', 'lombinho.jpg', 1),
+(4, 'Pururuca',              '',                '', 'pururuca.jpg', 1),
+(5, 'Carne Suína no Forno',  '',                '', 'carne-de-porco-assada.jpg', 1),
+(6, 'Bife Suíno a Milanesa', '',                '', 'Bife-Suino-a-Milanesa.jpg', 1),
+(7, 'Churrasco Suíno',       'Servido na Mesa', '', 'Churrasco-Suino.jpg', 1),
+(8, 'Saladas Diversas', '', '', '', 3),
+(9, 'Pães',            '', '', '', 3),
+(10, 'Cuca',            '', '', '', 3),
+(11,  'Skol',                 'Garrafas-600ml / Latas-350/473ml', '6.00', '', 2),
+(12, 'Brahma',                'Garrafas-600ml / Latas-350/473ml', '7.00', '', 2),
+(13, 'Barris de Chopp Fritz', '20L / 30L / 50L / 70L',                '',     '', 2),
+(14, 'Caneca de Chopp Fritz', '',                                     '6.00', '', 2);
 
 
 INSERT INTO `tb_cardapio_tipo` (`cod_cardapio_tipo`, `cod_cardapio`, `cod_item`) VALUES 
@@ -69,8 +72,7 @@ INSERT INTO `tb_cardapio_tipo` (`cod_cardapio_tipo`, `cod_cardapio`, `cod_item`)
 (11, 1, 11),
 (12, 1, 12),
 (13, 1, 13),
-(14, 1, 14),
-(15, 1, 15);
+(14, 1, 14);
 
 
 INSERT INTO `tb_evento` (`cod_evento`, `nome_evento`, `nome_organizacao_evento`, `data_evento`, `rua_evento`, `nome_comunidade`, `banner_evento`, `cod_cardapio`, `cod_cidade`) VALUES
@@ -87,7 +89,13 @@ INSERT INTO `tb_evento_contato` (`cod_evento_contato`, `cod_contato`, `cod_event
 (3, 3, 1),
 (4, 4, 1),
 (5, 5, 1),
-(6, 6, 1);
+(6, 6, 1),
+(7, 7, 1),
+(8, 8, 1),
+(9, 9, 1),
+(10, 10, 1),
+(11, 11, 1),
+(12, 12, 1);
 
 
 INSERT INTO `tb_tipo_programacao` (`cod_tipo_prog`, `descricao_tipo`) VALUES
@@ -105,10 +113,9 @@ INSERT INTO `tb_programacao` (`cod_prog`, `descricao_prog`, `obs_prog`, `pavilha
 (3, 'Fala do presidente da comunidade e patrocinadores',    '', 'LOCAL', '10:30:00', null,        '', '', 3, 1),
 (4, 'Almoço especial preparado pela comunidade',            '', 'LOCAL', '11:00:00', null,        '', '', 4, 1),
 (5, 'Um parque de diversões.',                              '', 'LOCAL', '10:00:00', '22:00:00',  '', '', 5, 1),
-(6, 'Banda KN',                                             '', 'LOCAL', '10:30:00', '12:30:00',  'kn.jpg', 'https://www.youtube.com/embed/YvldBs1_p8A?rel=0&controls=0&showinfo=0', 6, 1),
-(7, 'Ireno e Dari',                                         '', 'LOCAL', '13:00:00', '18:00:00',  'ireno_e_dari.jpg', 'https://www.youtube.com/embed/pNluSRVkJZw?controls=0&showinfo=0', 6, 1),
-(8, 'Banda KN',                                             '', 'LOCAL', '15:30:00', '17:30:00',  'kn.jpg',      'https://www.youtube.com/embed/YvldBs1_p8A?rel=0&controls=0&showinfo=0', 6, 1),
-(9, 'Banda Chopão',                                         '', 'LOCAL', '18:00:00', '22:00:00',  'choppao.jpg', 'https://www.youtube.com/embed/oXVv9fwAAc4?rel=0&controls=0&showinfo=0', 6, 1);
+(6, 'Banda KN',                                             '', 'LOCAL', '15:00:00', '19:00:00',  'kn.jpg', 'https://www.youtube.com/embed/YvldBs1_p8A?rel=0&controls=0&showinfo=0', 6, 1),
+(7, 'Banda Festão',                                         '', 'LOCAL', '10:00:00', '15:00:00',  'ireno_e_dari.jpg', 'https://www.youtube.com/embed/pNluSRVkJZw?controls=0&showinfo=0', 6, 1),
+(8, 'Banda Chopão',                                         '', 'LOCAL', '19:00:00', '23:00:00',  'choppao.jpg', 'https://www.youtube.com/embed/oXVv9fwAAc4?rel=0&controls=0&showinfo=0', 6, 1);
 
 
 INSERT INTO `tb_sobre_evento` (`cod_sobre_evento`, `titulo_sobre`, `descricao_sobre`, `img_sobre`, `cod_evento`) VALUES

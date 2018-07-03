@@ -56,7 +56,7 @@ if (isset($login_cookie)) {
                 </div>
             </div>
             <hr class="b-s-dashed">
-            <input class="btn btn-dark btn-block" type="submit" onclick="return excluir('<?= $nome ?>');" value="ATUALIZAR" name="ATUALIZAR">
+            <input class="btn btn-dark btn-block" type="submit" onclick="return editar('<?= $nome ?>');" value="ATUALIZAR" name="ATUALIZAR">
         </form>
     </div>
 <?php } ?>
