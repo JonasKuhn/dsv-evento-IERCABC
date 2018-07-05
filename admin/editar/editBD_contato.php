@@ -3,7 +3,7 @@
 include '../conexao.php';
 
 if ($_FILES['img_contato'] != '') {
-    $diretorio_img = "../upload/img/contato/";
+    $diretorio_img = "../../upload/img/contato/";
     $uploadfile = $diretorio_img . basename($_FILES['img_contato']['name']);
     $nome = $_FILES['img_contato']['name'];
     move_uploaded_file($_FILES['img_contato']['tmp_name'], $uploadfile);

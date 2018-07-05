@@ -14,7 +14,7 @@ if (isset($login_cookie)) {
                 <label class="col-sm-4 control-label">Descrição:</label>
                 <div class="col-sm-12">
                     <textarea class="form-control" rows="5"
-                              name="descricao_item" placeholder="Digite uma Descrição..."><?= $descricao_item; ?></textarea>
+                              name="descricao_prog" placeholder="Digite uma Descrição..."><?= $descricao_item; ?></textarea>
                 </div>
             </div>
             <hr class="b-s-dashed">

@@ -2,7 +2,7 @@
 
 include '../conexao.php';
 
-$diretorio_img = "../upload/img/sobre/";
+$diretorio_img = "../../upload/img/sobre/";
 $uploadfile = $diretorio_img . basename($_FILES['img_sobre']['name']);
 $nome = $_FILES['img_sobre']['name'];
 move_uploaded_file($_FILES['img_sobre']['tmp_name'], $uploadfile);

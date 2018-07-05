@@ -91,7 +91,7 @@
 
         <!-- CABECALHO -->
         <header id="inicio" class="masthead banner" 
-                style="background-image:url(admin/upload/img/evento/<?= $banner; ?>);">
+                style="background-image:url(upload/img/evento/<?= $banner; ?>);">
             <div class="container">
                 <div class="intro-text">   
                 </div>
@@ -115,7 +115,7 @@
                     while ($dados = $query2->fetch_array()) {
                         $titulo_sobre = $dados['titulo_sobre'];
                         $descricao_sobre = $dados['descricao_sobre'];
-                        $dir = 'admin/upload/img/sobre/';
+                        $dir = 'upload/img/sobre/';
                         $img = $dir . $dados['img_sobre'];
                         ?>
                         <img src="<?= $img; ?>" alt="<?= $dados['img_sobre'] ?>">
@@ -186,7 +186,7 @@
                                 order by x.hora_inicio_prog ASC; ";
 
                     $query4 = $mysqli->query($sql4);
-                    $dir = 'admin/upload/img/programacao/';
+                    $dir = 'upload/img/programacao/';
                     while ($dados = $query4->fetch_array()) {
                         $cod_prog = $dados['cod_prog'];
                         $titulo = $dados['descricao_prog'];
@@ -232,7 +232,7 @@
                                 order by x.hora_inicio_prog ASC; ";
 
         $query5 = $mysqli->query($sql5);
-        $dir = 'admin/upload/img/programacao/';
+        $dir = 'upload/img/programacao/';
         while ($dados = $query5->fetch_array()) {
             $cod_prog = $dados['cod_prog'];
             $titulo = $dados['descricao_prog'];
@@ -343,13 +343,13 @@
                                                     if ($cont == 0) {
                                                         ?>
                                                         <div class="carousel-item active">
-                                                            <img class="d-block w-100" src="admin/upload/img/item/<?= $img_item; ?>" alt="<?= $img_item; ?>">
+                                                            <img class="d-block w-100" src="upload/img/item/<?= $img_item; ?>" alt="<?= $img_item; ?>">
                                                         </div>
                                                         <?php
                                                     } else {
                                                         ?>
                                                         <div class="carousel-item">
-                                                            <img class="d-block w-100" src="admin/upload/img/item/<?= $img_item; ?>" alt="<?= $img_item; ?>">
+                                                            <img class="d-block w-100" src="upload/img/item/<?= $img_item; ?>" alt="<?= $img_item; ?>">
                                                         </div>
                                                         <?php
                                                     }
@@ -428,10 +428,11 @@
                         <div class="row">
                             <?php
                             include 'conexao.php';
+                            /*VIEW DE BUSCA POR PONTOS DE VENDAS*/
                             $sql6 = "select * from busca_ponto_vendas;";
 
                             $query6 = $mysqli->query($sql6);
-                            $dir = 'admin/upload/img/programacao/';
+                            $dir = 'upload/img/programacao/';
                             while ($dados = $query6->fetch_array()) {
                                 $nome = $dados['nome_contato'];
                                 $telefone = $dados['telefone_contato'];
@@ -470,6 +471,12 @@
                     <br>
                     <?php
                     include 'conexao.php';
+                    
+                    /*
+                     * UTILIZADO VIEW PARA A BUSCA DE CONTATOS 
+                     * NESSE CASO A BUSCA PELOS PONTOS DE VENDAS 
+                     * E ORGANIZADORES
+                    */
                     $sql7 = "select * from admin_evento_contato_tipo_contato as x, tb_tipo_contato as tc"
                             . " where x.cod_tipo_contato = tc.cod_tipo_contato"
                             . " and tc.cod_tipo_contato = 2;";

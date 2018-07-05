@@ -3,7 +3,7 @@
 include '../conexao.php';
 
 if ($_FILES['img_prog'] != '') {
-    $diretorio_img = "../upload/img/programacao/";
+    $diretorio_img = "../../upload/img/programacao/";
     $uploadfile = $diretorio_img . basename($_FILES['img_prog']['name']);
     $nome = $_FILES['img_prog']['name'];
     move_uploaded_file($_FILES['img_prog']['tmp_name'], $uploadfile);
@@ -22,6 +22,7 @@ $x7 = $_POST['video_prog'];
 $x8 = $_POST['tipo_prog'];
 $x9 = $_POST['cod_evento'];
 
+/*PROCEDIMENTO RESPONSÁVEL POR ATUALIZAR A PROGRAMAÇÃO*/
 $sql = "CALL atualiza_prog('$xx','$x1','$x2','$x3','$x4','$x5','$x6','$x7','$x8','$x9');";
 
 if ($pdo->query($sql)) {

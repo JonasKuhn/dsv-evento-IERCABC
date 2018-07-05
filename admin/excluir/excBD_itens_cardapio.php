@@ -4,6 +4,8 @@ include './conexao.php';
 
 $xx = $_GET['id'];
 $yy = $_GET['c'];
+
+/*PROCEDURE RESPONSÁVEL POR DELETAR ITENS DO CARDÁPIO*/
 $sql = "CALL del_cardapio_item($xx, $yy)";
 
 if ($pdo->query($sql)) {

@@ -13,7 +13,6 @@ if (isset($login_cookie)) {
                             <tr>
                                 <th>Nome</th>
                                 <th>Login</th>
-                                <th>Senha</th>
                                 <th>Evento Ativo</th>
                                 <th>Editar</th>
                             </tr>
@@ -35,7 +34,6 @@ if (isset($login_cookie)) {
                                 <tr>
                                     <td><?= $nome; ?></td>
                                     <td><?= $login; ?></td>
-                                    <td>xxxxxxxxxxxxxx</td>
                                     <td><?= $evento_ativo; ?></td>
                                     <td>
                                         <a href="?url=edit_admin.php&c=<?= $cod; ?>" title="EDITAR"><i class="fa fa-2x fa-edit pr-3 pl-3"></i></a>

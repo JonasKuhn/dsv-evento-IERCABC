@@ -63,7 +63,8 @@ if (isset($login_cookie)) {
                                     <tbody>
                                         <?php
                                         include 'conexao.php';
-
+                                        
+                                        /*UTILIZADO VIEW PARA A BUSCA DOS ITENS DE CARDÁPIOS*/
                                         $sql = 'select * from admin_evento_cardapio_item as x, tb_tipo_item as ti
                                         where x.cod_tipo_item = ti.cod_tipo_item 
                                         and ti.cod_tipo_item != 2';
@@ -137,7 +138,8 @@ if (isset($login_cookie)) {
                             <tbody>
                                 <?php
                                 include 'conexao.php';
-
+                                
+                                /*UTILIZADO VIEW PARA A BUSCA DAS PROGRAMAÇÕES E SEUS TIPOS*/
                                 $sql = 'select * from admin_evento_programacao_tipo_prog as x, tb_tipo_programacao as tp
                                         where x.cod_tipo_prog = tp.cod_tipo_prog
                                         order by x.hora_inicio_prog ASC;';
