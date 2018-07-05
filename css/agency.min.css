@@ -1,0 +1,383 @@
+/*!
+ * Start Bootstrap - Agency v4.1.1 (https://startbootstrap.com/template-overviews/agency)
+ * Copyright 2013-2018 Start Bootstrap
+ * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap-agency/blob/master/LICENSE)
+ */
+body{
+    overflow-x:hidden;
+    font-family:'Roboto Slab','Helvetica Neue',Helvetica,Arial,sans-serif
+}
+
+p{line-height:1.75; text-align: justify;}
+a{color:#fed136}
+a:hover{color:#fec503}
+.text-primary{color:#fed136!important}
+h1,h2,h3,h4,h5,h6{font-weight:700;font-family:Montserrat,'Helvetica Neue',Helvetica,Arial,sans-serif}
+section{padding:50px 0}
+section h2.section-heading{font-size:40px;margin-top:0;margin-bottom:15px}
+section h3.section-subheading{font-size:16px;font-weight:400;font-style:italic;margin-bottom:75px;text-transform:none;font-family:'Droid Serif','Helvetica Neue',Helvetica,Arial,sans-serif}
+header.masthead .intro-text{padding-top:150px;padding-bottom:100px}
+header.masthead .intro-text .intro-lead-in{font-size:22px;font-style:italic;line-height:22px;margin-bottom:25px;font-family:'Droid Serif','Helvetica Neue',Helvetica,Arial,sans-serif}
+header.masthead .intro-text .intro-heading{font-size:50px;font-weight:700;line-height:50px;margin-bottom:25px;font-family:Montserrat,'Helvetica Neue',Helvetica,Arial,sans-serif}
+
+.bg-orange{background-color: rgba(254, 141, 2, 0.2);}
+
+.btn{font-family:Montserrat,'Helvetica Neue',Helvetica,Arial,sans-serif;font-weight:700}
+.btn-xl{font-size:18px;padding:20px 40px}
+.btn-primary{background-color:#fed136;border-color:#fed136}
+.btn-primary:active,
+.btn-primary:focus,
+.btn-primary:hover{background-color:#fec810!important;border-color:#fec810!important;color:#fff}
+.btn-primary:active,
+.btn-primary:focus{box-shadow:0 0 0 .2rem rgba(254,209,55,.5)!important}::-moz-selection{background:#fed136;text-shadow:none}::selection{background:#fed136;text-shadow:none}
+img::selection{background:0 0}
+img::-moz-selection{background:0 0}
+#mainNav{background-color:#212529}
+#mainNav .navbar-toggler{font-size:12px;right:0;padding:13px;text-transform:uppercase;color:#fff;border:0;background-color:#fed136;font-family:Montserrat,'Helvetica Neue',Helvetica,Arial,sans-serif}
+#mainNav .navbar-brand{color:#fed136;font-family:'Kaushan Script','Helvetica Neue',Helvetica,Arial,cursive}
+#mainNav .navbar-brand.active,
+#mainNav .navbar-brand:active,
+#mainNav .navbar-brand:focus,
+#mainNav .navbar-brand:hover{color:#fec503}
+#mainNav .navbar-nav .nav-item .nav-link{font-size:90%;font-weight:400;padding:.75em 0;letter-spacing:1px;color:#fff;font-family:Montserrat,'Helvetica Neue',Helvetica,Arial,sans-serif}
+#mainNav .navbar-nav .nav-item .nav-link.active,
+#mainNav .navbar-nav .nav-item .nav-link:hover{color:#fed136}
+.service-heading{margin:15px 0;text-transform:none}
+#portfolio .portfolio-item{right:0;margin:0 0 15px}
+#portfolio .portfolio-item .portfolio-link{position:relative;display:block;max-width:400px;margin:0 auto;cursor:pointer}
+#portfolio .portfolio-item .portfolio-link .portfolio-hover{position:absolute;width:100%;height:100%;-webkit-transition:all ease .5s;-moz-transition:all ease .5s;transition:all ease .5s;opacity:0;background:rgba(254,209,54,.9)}
+#portfolio .portfolio-item .portfolio-link .portfolio-hover:hover{opacity:1}
+#portfolio .portfolio-item .portfolio-link .portfolio-hover .portfolio-hover-content{font-size:20px;position:absolute;top:50%;width:100%;height:20px;margin-top:-12px;text-align:center;color:#fff}
+#portfolio .portfolio-item .portfolio-link .portfolio-hover .portfolio-hover-content i{margin-top:-12px}
+#portfolio .portfolio-item .portfolio-link .portfolio-hover .portfolio-hover-content h3,#portfolio .portfolio-item .portfolio-link .portfolio-hover .portfolio-hover-content h4{margin:0}
+#portfolio .portfolio-item .portfolio-caption{max-width:400px;margin:0 auto;padding:25px;text-align:center;background-color:#fff}
+#portfolio .portfolio-item .portfolio-caption h4{margin:0;text-transform:none}
+#portfolio .portfolio-item .portfolio-caption p{font-size:16px;font-style:italic;margin:0;font-family:'Droid Serif','Helvetica Neue',Helvetica,Arial,sans-serif}
+#portfolio *{z-index:2}
+.portfolio-modal{padding-right:0!important}
+.portfolio-modal .modal-dialog{margin:1rem;max-width:100vw}
+.portfolio-modal .modal-content{padding:0px 0;text-align:center; width: 45%; margin: 0 auto;}
+.portfolio-modal .modal-content h2{font-size:3em;margin-bottom:15px}
+.portfolio-modal .modal-content p{margin-bottom:30px}
+.portfolio-modal .modal-content p.item-intro{font-size:16px;font-style:italic;margin:20px 0 30px;font-family:'Droid Serif','Helvetica Neue',Helvetica,Arial,sans-serif}
+.portfolio-modal .modal-content ul.list-inline{margin-top:0;margin-bottom:30px}
+.portfolio-modal .modal-content img{margin-bottom:30px}
+.portfolio-modal .modal-content button{cursor:pointer}
+.portfolio-modal .close-modal{position:absolute;top:25px;right:25px;width:75px;height:75px;cursor:pointer;background-color:transparent}
+.portfolio-modal .close-modal:hover{opacity:.3}
+.portfolio-modal .close-modal .lr{z-index:1051;width:1px;height:75px;margin-left:35px;-webkit-transform:rotate(45deg);-ms-transform:rotate(45deg);transform:rotate(45deg);background-color:#212529}
+.portfolio-modal .close-modal .lr .rl{z-index:1052;width:1px;height:75px;-webkit-transform:rotate(90deg);-ms-transform:rotate(90deg);transform:rotate(90deg);background-color:#212529}
+.timeline{position:relative;padding:0;list-style:none}
+.timeline:before{position:absolute;top:0;bottom:0;left:40px;width:2px;margin-left:-1.5px;content:'';background-color:#e9ecef}
+.timeline>li{position:relative;min-height:50px;margin-bottom:50px}
+.timeline>li:after,
+.timeline>li:before{display:table;content:' '}
+.timeline>li:after{clear:both}
+.timeline>li .timeline-panel{position:relative;float:right;width:100%;padding:0 20px 0 100px;text-align:left}
+.timeline>li .timeline-panel:before{right:auto;left:-15px;border-right-width:15px;border-left-width:0}
+.timeline>li .timeline-panel:after{right:auto;left:-14px;border-right-width:14px;border-left-width:0}
+.timeline>li .timeline-image{position:absolute;z-index:100;left:0;width:80px;height:80px;margin-left:0;text-align:center;color:#fff;border:7px solid #e9ecef;border-radius:100%;background-color:#fed136}
+.timeline>li .timeline-image h4{font-size:10px;line-height:14px;margin-top:12px}
+.timeline>li.timeline-inverted>.timeline-panel{float:right;padding:0 20px 0 100px;text-align:left}
+.timeline>li.timeline-inverted>.timeline-panel:before{right:auto;left:-15px;border-right-width:15px;border-left-width:0}
+.timeline>li.timeline-inverted>.timeline-panel:after{right:auto;left:-14px;border-right-width:14px;border-left-width:0}
+.timeline>li:last-child{margin-bottom:0}
+.timeline .timeline-heading h4{margin-top:0;color:inherit}
+.timeline .timeline-heading h4.subheading{text-transform:none}
+.timeline .timeline-body>p,.timeline .timeline-body>ul{margin-bottom:0}
+section#contact{background-color:#212529;background-image:url(../img/map-image.png);background-repeat:no-repeat;background-position:center}
+section#contact .section-heading{color:#fff}
+section#contact .form-group{margin-bottom:25px}
+section#contact .form-group input,section#contact .form-group textarea{padding:20px}
+section#contact .form-group input.form-control{height:auto}
+section#contact .form-group textarea.form-control{height:248px}
+section#contact .form-control:focus{border-color:#fed136;box-shadow:none}
+section#contact ::-webkit-input-placeholder{font-weight:700;color:#ced4da;font-family:Montserrat,'Helvetica Neue',Helvetica,Arial,sans-serif}
+section#contact :-moz-placeholder{font-weight:700;color:#ced4da;font-family:Montserrat,'Helvetica Neue',Helvetica,Arial,sans-serif}
+section#contact ::-moz-placeholder{font-weight:700;color:#ced4da;font-family:Montserrat,'Helvetica Neue',Helvetica,Arial,sans-serif}
+section#contact :-ms-input-placeholder{font-weight:700;color:#ced4da;font-family:Montserrat,'Helvetica Neue',Helvetica,Arial,sans-serif}
+footer{padding:25px 0;text-align:center}
+footer span.copyright{font-size:90%;line-height:40px;text-transform:none;font-family:Montserrat,'Helvetica Neue',Helvetica,Arial,sans-serif}
+footer ul.quicklinks{font-size:90%;line-height:40px;margin-bottom:0;text-transform:none;font-family:Montserrat,'Helvetica Neue',Helvetica,Arial,sans-serif}
+ul.social-buttons{margin-bottom:0}ul.social-buttons li a{font-size:20px;line-height:40px;display:block;width:40px;height:40px;-webkit-transition:all .3s;-moz-transition:all .3s;transition:all .3s;color:#fff;border-radius:100%;outline:0;background-color:#212529}
+ul.social-buttons li a:active,ul.social-buttons li a:focus,ul.social-buttons li a:hover{background-color:#fed136}
+.banner{text-align:center;color:#fff;margin-top: 6%;background-repeat:no-repeat;background-attachment:scroll;-webkit-background-size:cover;-moz-background-size:cover;-o-background-size:cover;background-size:cover;}
+
+@media (min-width:320px){
+    .map{height: 380px;}
+    .maps{width: 98%;height: 65%;}
+    #mainNav .navbar-nav .nav-item .nav-link {padding: .4em 0;}
+    h1,h2,h3,h4,h5,h6{font-weight:600;font-family:Montserrat,'Helvetica Neue',Helvetica,Arial,sans-serif}
+    .banner{margin-top: 17%;background-size: 100%;}
+    header.masthead .intro-text{padding-top: 0px;padding-bottom: 0px;}
+    .intro-text{height: 125px;}
+    .text-center h2{font-size: 1.5em;margin-bottom: 0px;}
+    .text-center h3{font-size: 1.5em;}
+    .text-center h4{font-size: 1.2em;}
+    .text-center h5 {font-size: 1rem;}
+    .text-center h6{font-size: 1em;}
+    .text-center img{width: 75%;}
+    .text-center li{font-size: 1em;}
+    span{font-size: 0.9em !important;}
+    p {line-height: 1.4; font-size: 0.9em;}
+    .fundo_branco {margin: 12px 20px 1px 1px !important;}
+    section#contact .form-group textarea.form-control {height: 200px;}
+    section#contact .form-group input.form-control {height: 40px;}
+    .btn-xl {font-size: 15px; padding: 8px 20px;}
+    .portfolio-modal .modal-content {padding: 0px 0;text-align: center;width: 100%;margin: 0 auto;}
+    .portfolio-modal .modal-content h2 {font-size: 2em;margin-bottom: 15px;}
+    .video {margin: 0 auto;width: 224px;height: 139px;}
+    .portfolio-modal{margin-top: 17%;}
+    footer {padding: 5px 0;}
+    .text-center h1{padding: 0px;}
+    .tittulo-cardapio{font-family: 'Cabin Sketch', cursive; color: #fec503; font-size: 3em;margin-top: -30px;}
+    .cardapio{width: 300px;height: 415px;background-image:url(../img/cardapio.png);background-repeat:no-repeat;background-size: 100%;}
+    .cardapio h3{padding-top: 15px;padding-left: 0px;font-size: 1em;}
+    .inner-cardapio{margin-top: 0px; width: 135px;}
+    .inner-cardapio h4{font-family: 'Kaushan Script'; padding-left: 2px; color: white;font-size: 0.8em;}
+    .inner-cardapio p{font-size: 0.5em;margin-left: 10px;color: white;}
+    .carosel{width: 190px;margin-right: -15px;margin-top: -45px;}
+    .inner-cardapio-ac{margin-top: 60px; width: 130px;}
+    .inner-cardapio-ac h3{font-size: 0.8em;}
+    .inner-cardapio-ac h4{font-family: 'Kaushan Script'; padding-left: 2px; color: white;font-size: 0.7em;margin-bottom: -10px;}
+    .inner-cardapio-ac p{font-size: 0.5em;margin-left: 10px;color: white;padding-right: 22px;padding-top: 12px;margin-bottom: 0px;color: white;}
+    .comidas{width: 330px;margin-left: -50px;}
+    .inner-cardapio-obs h3{font-size: 0.9em;}
+    .inner-cardapio-obs h4 {font-family: 'Kaushan Script';font-size: 0.8em;width: 177px;color: white;}
+    .inner-cardapio-obs {margin-top: -56px;margin-left: 105px;}
+}
+
+@media (min-width:360px){
+    .map{height: 300px;}
+    .maps{width: 95%;height: 70%;}
+    h1,h2,h3,h4,h5,h6{font-weight:600;font-family:Montserrat,'Helvetica Neue',Helvetica,Arial,sans-serif}
+    .banner{margin-top: 15%;background-size: 100%;}
+    header.masthead .intro-text{padding-top: 0px;padding-bottom: 0px;}
+    .intro-text{height: 140px;}
+    .text-center h2{font-size: 1.5em;margin-bottom: 0px;}
+    .text-center h3{font-size: 1.5em;}
+    .text-center h4{font-size: 1.2em;}
+    .text-center h5 {font-size: 1rem;}
+    .text-center h6{font-size: 1em;}
+    .text-center img{width: 75%;}
+    .text-center li{font-size: 1.2em;}
+    span{font-size: 1em !important;}
+    p {line-height: 1.5;}
+    .fundo_branco {margin: 12px 20px 1px 1px !important;}
+    section#contact .form-group textarea.form-control {height: 200px;}
+    section#contact .form-group input.form-control {height: 50px;}
+    .btn-xl {font-size: 15px; padding: 8px 20px;}
+    .portfolio-modal .modal-content {padding: 0px 0;text-align: center;width: 100%;margin: 0 auto;}
+    .portfolio-modal .modal-content h2 {font-size: 2em;margin-bottom: 15px;}
+    .video {margin: 0 auto;width: 270px;height: 180px;}
+    .portfolio-modal{margin-top: 17%;}
+    .text-center h1{padding: 0px;}
+    .tittulo-cardapio{font-family: 'Cabin Sketch', cursive; color: #fec503; font-size: 3em;margin-top: -30px;}
+    .cardapio{width: 332px;height: 448px;background-image:url(../img/cardapio.png);background-repeat:no-repeat;background-size: 100%;}
+    .cardapio h3 {padding-top: 25px;padding-left: 9px;font-size: 1.2em;}
+    .inner-cardapio{margin-top: 0px; width: 150px;}
+    .inner-cardapio h4{font-family: 'Kaushan Script'; padding-left: 2px; color: white;font-size: 0.9em;}
+    .inner-cardapio p{font-size: 0.5em;margin-left: 10px;color: white;}
+    .carosel{width: 190px;margin-right: -15px;margin-top: -45px;}
+    .inner-cardapio-ac{margin-top: 60px; width: 130px;}
+    .inner-cardapio-ac h3{font-size: 0.8em;}
+    .inner-cardapio-ac h4{font-family: 'Kaushan Script'; padding-left: 2px; color: white;font-size: 0.7em;margin-bottom: -10px;}
+    .inner-cardapio-ac p{font-size: 0.5em;margin-left: 10px;color: white;padding-right: 22px;padding-top: 12px;margin-bottom: 0px;color: white;}
+    .comidas {width: 360px;margin-left: -45px;}
+    .inner-cardapio-obs h4 {margin-left: 45px;color: white;font-family: 'Kaushan Script';font-size: 0.8em;width: 175px;}
+    .inner-cardapio-obs {margin-top: -48px;margin-left: 87px;}
+}
+
+@media (min-width:374px){
+    .comidas {width: 360px;margin-left: -38px;}
+    .cardapio {width: 332px;height: 448px;}
+}
+
+@media (min-width:413px){
+    #mainNav .navbar-nav .nav-item .nav-link {padding: .9em 0;}
+    #mainNav .navbar-brand {font-size: 1.6em;}
+    #mainNav .navbar-toggler {font-size: 15px;}
+    h1,h2,h3,h4,h5,h6{font-weight:600;font-family:Montserrat,'Helvetica Neue',Helvetica,Arial,sans-serif}
+    .banner{margin-top: 15%;background-size: 100%;}
+    header.masthead .intro-text{padding-top: 0px;padding-bottom: 0px;}
+    .intro-text{height: 160px;}
+    .text-center h2{font-size: 1.8em;margin-bottom: 0px;}
+    .text-center h3{font-size: 1.8em;}
+    .text-center h4{font-size: 1.2em;}
+    .text-center h5 {font-size: 1rem;}
+    .text-center h6{font-size: 1em;}
+    .text-center img{width: 80%;}
+    .text-center li{font-size: 1.2em;}
+    span{font-size: 1em !important;}
+    p {line-height: 1.5; font-size: 1em;}
+    .fundo_branco {margin: 12px 20px 1px 1px !important;}
+    section#contact .form-group textarea.form-control {height: 200px;}
+    section#contact .form-group input.form-control {height: 50px;}
+    .btn-xl {font-size: 15px; padding: 8px 20px;}
+    .portfolio-modal .modal-content {padding: 0px 0;text-align: center;width: 100%;margin: 0 auto;}
+    .portfolio-modal .modal-content h2 {font-size: 2em;margin-bottom: 15px;}
+    .video {margin: 0 auto;width: 320px;height: 200px;}
+    .portfolio-modal{margin-top: 25%;}
+    .cardapio{width: 330px;height: 448px;}
+    .comidas{    margin-left: -15px;}
+    .map {
+        height: 350px;
+    }
+}
+
+@media (min-width:767px){
+    .banner{margin-top: 14%;}
+    .map{height: 600px;}
+    .maps{width: 90%;height: 75%;}
+    header.masthead .intro-text {padding-top: 60px;padding-bottom: 0px;}
+    .btn-primary {margin-bottom: 25px;}
+    .btn-xl{font-size:15px;padding:10px 25px}
+    .intro-text {height: 300px;}
+    .text-center li {font-size: 1.9em;}
+    .text-center h2 {font-size: 3.5em; margin-bottom: 0px;}
+    .text-center h6 {font-size: 1.8em;}
+    .text-center h3 {font-size: 3.6em;}
+    .text-center h5 {font-size: 2rem;}
+    .portfolio-caption h3{font-size: 3em;}
+    .video {width: 660px;height: 380px;}
+    .text-center h4 {font-size: 2em;}
+    p {line-height: 1.5;font-size: 1.8em;}
+    #portfolio .portfolio-item{margin:0 0 30px}
+    .portfolio-item img{width: 100%;}
+    .portfolio-modal .modal-content h2 {font-size: 3em;margin-bottom: 15px;}
+    .modal-body li {font-size: 1.8em;}
+    .btn-primary {font-size: 30px;}
+    .portfolio-modal {margin-top: 15%;}
+    #mainNav{padding-top:25px;padding-bottom:25px;-webkit-transition:padding-top .3s,padding-bottom .3s;-moz-transition:padding-top .3s,padding-bottom .3s;transition:padding-top .3s,padding-bottom .3s;border:none;background-color:transparent}
+    #mainNav .navbar-nav .nav-item .nav-link { padding: 0.6em 1em!important;font-size: 1.3em;}
+    #mainNav .navbar-brand {font-size: 2em;-webkit-transition: all .3s;-moz-transition: all .3s; transition: all .3s;}
+    #mainNav .navbar-toggler {font-size: 25px;}
+    section{padding:50px 0}
+    header.masthead .intro-text .intro-lead-in{font-size:40px;font-style:italic;line-height:40px;margin-bottom:25px;font-family:'Droid Serif','Helvetica Neue',Helvetica,Arial,sans-serif}
+    header.masthead .intro-text .intro-heading{font-size:75px;font-weight:700;line-height:75px;margin-bottom:50px;font-family:Montserrat,'Helvetica Neue',Helvetica,Arial,sans-serif}
+    .timeline:before{left:50%}
+    .timeline>li{min-height:100px;margin-bottom:100px}
+    .timeline>li .timeline-panel{float:left;width:41%;padding:0 20px 20px 30px;text-align:right}
+    .timeline>li .timeline-image{left:50%;width:100px;height:100px;margin-left:-50px}
+    .timeline>li .timeline-image h4{font-size:13px;line-height:18px;margin-top:16px}
+    .timeline>li.timeline-inverted>.timeline-panel{float:right;padding:0 30px 20px 20px;text-align:left}
+    section#contact .form-group input.form-control {height: 70px;font-size: 1.5em;}
+    section#contact .form-group textarea.form-control {height: 220px;font-size: 1.5em;}
+    .comidas{width: 720px;}
+    .carosel {width: 173px;margin-right: 0px;margin-top: 10px;}
+    .cardapio h3{padding-top: 45px;}
+    .inner-cardapio h4 {font-family: 'Kaushan Script';padding-left: 2px;color: white;font-size: 1em;}
+    .inner-cardapio-ac h3 {font-size: 0.9em;margin-left: -35px;}
+    .inner-cardapio {margin-top: 0px;width: 270px;}
+    .inner-cardapio-obs {margin-top: -80px;margin-left: 90px;}
+    .inner-cardapio-obs h3 {padding-top: 25px;padding-left: 55px;font-size: 1.2em;}
+}
+
+@media (min-width:800px){
+    #mainNav {padding-top: 15px;padding-bottom: 15px;}
+    .banner {margin-top: 11%;}
+    .portfolio-modal {margin-top: 0%;}
+    .video {width: 500px;height: 260px;}
+}
+
+@media (min-width:1024px){
+    .nav-item .nav-link {padding: 0.8em 0.5em!important; text-align: center;}
+    #mainNav .navbar-nav .nav-item .nav-link {padding: 0.6em 1em!important;font-size: 1em;}
+    header.masthead{margin-top: 8%;}
+    #mainNav{padding-top:10px;padding-bottom:10px;-webkit-transition:padding-top .3s,padding-bottom .3s;-moz-transition:padding-top .3s,padding-bottom .3s;transition:padding-top .3s,padding-bottom .3s;border:none;background-color:transparent}
+    #mainNav .navbar-brand {font-size: 2em;-webkit-transition: all .3s;-moz-transition: all .3s; transition: all .3s;}
+    .btn-primary {margin-bottom: 25px;}
+    header.masthead .intro-text {padding-top: 200px;padding-bottom: 200px;}
+    .video {width: 900px;height: 550px;}
+    .fundo_branco {margin: 9px 24px !important;}
+    .text-center h2 {font-size: 3em;margin-bottom: 0px;}
+    .text-center h5 {font-size: 1.5em;}
+    .maps {width: 100%;height: 78%;}
+    .btn-primary {font-size: 20px;}
+    .cardapio{width: 443px;height: 600px;background-image:url(../img/cardapio.png);background-repeat:no-repeat;background-size: 100%;}
+    .comidas {width: 960px;}
+    .cardapio h3 {padding-top: 35px;font-size: 2em;}
+    .inner-cardapio h4 {font-size: 1.2em;padding-left: 20px;}
+    .inner-cardapio p {font-size: 0.8em;margin-left: 20px;}
+    .inner-cardapio-ac h3{font-size: 1.2em;}
+    .inner-cardapio-ac h4 {font-size: 1.2em;}
+    .inner-cardapio-ac p {font-size: 0.7em;}
+    .carosel {width: 240px;margin-right: 0px;margin-top: -17px;}
+    .inner-cardapio {margin-top: 0px;width: 333px;}
+    .inner-cardapio-obs {margin-top: -19px;margin-left: 114px;}
+    .inner-cardapio-obs h4 {margin-left: 62px;color: white;font-family: 'Kaushan Script';font-size: 0.9em;width: 195px;}
+    .inner-cardapio-obs h3 {padding-top: 35px;font-size: 1.5em;}
+}
+
+@media (min-width:1200px){
+    #mainNav {padding-top: 10px;padding-bottom: 10px;}
+    #mainNav .navbar-nav .nav-item .nav-link {padding: 1em 1em!important;font-size: 0.8em;}
+    header.masthead{margin-top: 5%; background-size: 100%;}
+    header.masthead .intro-text {padding-top: 270px;padding-bottom: 210px;}
+    .text-center h2 {font-size: 1.5em;margin-bottom: 5px;}
+    .text-center h3 {font-size: 2em;}
+    .text-center h6 {font-size: 1.2em;}
+    .text-center h5 {font-size: 0.9em;}
+    .text-center img {width: 50%;}
+    p {line-height: 1.5;font-size: 1em;}
+    .text-center h6 {font-size: 1.1em;}
+    .text-center h4 {font-size: 1.1em;}
+    .text-center li {font-size: 1em;}    
+    .col-md-6 {max-width: 100%; flex: 1; -webkit-box-flex: 1;} 
+    .portfolio-caption h3 {font-size: 2em;}
+    .col-lg-11 {-webkit-box-flex: 1;-ms-flex: 1;flex: 1;max-width: 100%;}
+    #mainNav{padding-top:15px;padding-bottom:15px;}
+    #mainNav .navbar-nav .nav-item .nav-link { padding: 1.1em 0.8em!important;}
+    #mainNav .navbar-brand {font-size: 1.5em;}
+    .btn-primary {margin-bottom: 30px;}
+    .timeline>li{min-height:170px}
+    .timeline>li .timeline-panel{padding:0 20px 20px 100px}
+    .timeline>li .timeline-image{width:170px;height:170px;margin-left:-85px}
+    .timeline>li .timeline-image h4{margin-top:40px}
+    .timeline>li.timeline-inverted>.timeline-panel{padding:0 100px 20px 20px}
+    .team-member{margin-bottom:50px;text-align:center}
+    .team-member img{width:225px;height:225px;border:7px solid #fff}
+    .team-member h4{margin-top:25px;margin-bottom:0;text-transform:none}
+    .team-member p{margin-top:0}
+    .map {height: 625px;}
+    .col-md-12 {-webkit-box-flex: 1;-ms-flex: 1;flex: 1;max-width: 100%;}
+    section#contact .form-group input.form-control {height: 50px;font-size: 1em;}
+    section#contact .form-group textarea.form-control {height: 200px;font-size: 1em;}
+    .btn-primary {font-size: 15px;}
+    .portfolio-modal .modal-content {width: 80%;}
+    .video {width: 800px;height: 460px;}
+    .modal-body li {font-size: 1.3em;}
+    .tittulo-cardapio{font-family: 'Cabin Sketch', cursive; color: #fec503; font-size: 3em;}
+    .cardapio{width: 825px;height: 720px;background-image:url(../img/cardapio.png);background-repeat:no-repeat;background-size: 100%;}
+    .cardapio h3{padding-top: 40px;padding-left: 40px;font-size: 2.2em;}
+    .inner-cardapio h4{font-family: 'Kaushan Script'; padding-left: 25px; color: white;}
+    .text-center h1{padding: 0px;}
+    .inner-cardapio p{font-size: 0.9em;margin-left: 25px;color: white;  }
+    .inner-cardapio{margin-top: 20px;}
+    .inner-cardapio-ac{margin-top: 140px;}
+    .inner-cardapio p{font-size: 0.9em; }
+    .comidas {width: 100%;}
+    .inner-cardapio-ac h3 {font-size: 1.2em;}
+    .carosel {width: 323px;margin-right: 0px;margin-top: 10px;}
+    .inner-cardapio-obs h3{font-size: 1.5em;}
+    .inner-cardapio-obs h4{font-family: 'Kaushan Script'; font-size: 1.2em; width: 400px;margin-left: 15px;padding-right: 14px;color: white;}
+    .inner-cardapio-obs {margin-top: 359px;margin-left: -50px;}
+} 
+
+@media (min-width:1280px){
+    header.masthead .intro-text {padding-top: 235px;padding-bottom: 260px;}
+} 
+
+@media(min-width:1360px){
+    header.masthead .intro-text {padding-top: 265px;padding-bottom: 260px;}
+
+}
+
+.text_black{
+    color: black;
+}
+
+.fundo_branco{
+    background-color: rgba(255,255,255,0.5);
+    margin: 5px 40px;
+}

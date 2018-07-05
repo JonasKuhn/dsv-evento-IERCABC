@@ -1,0 +1,26 @@
+{
+  "name": "dsv-bootstrap",
+  "version": "1.0.0",
+  "description": "Desenvolvimento com bootstrap",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Jonas Kuhn",
+  "license": "ISC",
+  "dependencies": {
+    "bootstrap": "^4.1.1",
+    "jquery": "^3.3.1",
+    "npm": "^6.1.0",
+    "popper.js": "^1.14.3"
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JonasKuhn/dsv-bootstrap.git"
+  },
+  "bugs": {
+    "url": "https://github.com/JonasKuhn/dsv-bootstrap/issues"
+  },
+  "homepage": "https://github.com/JonasKuhn/dsv-bootstrap#readme"
+}

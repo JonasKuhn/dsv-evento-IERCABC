@@ -1,0 +1,23 @@
+
+# HTID:5952702: DO NOT REMOVE OR MODIFY THIS LINE AND THE LINES BELOW
+php_value display_errors 1
+# DO NOT REMOVE OR MODIFY THIS LINE AND THE LINES ABOVE HTID:5952702:
+
+# BEGIN WordPress
+RewriteRule ^index\.php$ – [L]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule . /index.php [L]
+# END WordPress
+
+ErrorDocument 401 /error_pages/401.html 
+
+## DirectoryIndex /error_pages/503.html
+
+<FilesMatch "^php5?\.(ini|cgi)$">
+Order Deny,Allow 
+Deny from All 
+Allow from env=REDIRECT_STATUS 
+</FilesMatch>
+
+IndexIgnore *
