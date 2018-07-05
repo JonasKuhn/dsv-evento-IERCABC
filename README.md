@@ -1,4 +1,4 @@
-# dsv-evento-IERCABC
+# dsv-jaboticabaeventos
 Desenvolvimento Web
 
 # Padrão de commit
